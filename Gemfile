@@ -5,6 +5,7 @@ gem "minima", "~> 2.0"
 gem "json"
 gem "hash-joiner"
 gem 'html-proofer'
+gem "mini_magick"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
