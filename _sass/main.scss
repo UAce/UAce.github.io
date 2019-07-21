@@ -6,8 +6,8 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvet
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
+$h1-font-size: rem-calc(30);
 $base-line-height: 1.5 !default;
-$h1-font-size: rem-calc(34);
 
 $spacing-unit:     30px !default;
 $table-text-align: left !default;
@@ -54,6 +54,7 @@ $small: 'screen and (min-width: #{$on-palm})';
 @import
   "utils/colors",
   "utils/mixins",
+  "components/canvas",
   "base",
   "layout",
   "syntax-highlighting",

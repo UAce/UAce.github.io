@@ -1,5 +1,4 @@
 title: UAce.github.io
-email: your-email@example.com
 permalink: pretty
 description: My personal website - Just a summer project.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -44,6 +43,12 @@ social_links:
   linkedin: in/yu-yueh-liu-667696121/
   facebook: YuYuehLiu
   email: yu-yueh@hotmail.com
+
+# canvas titles
+canvas:
+  index: Welcome!
+  resume: Find Out More.
+  about: My Passions & Interests.
 
 # Exclude from processing
 exclude:

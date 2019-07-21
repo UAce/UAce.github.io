@@ -98,6 +98,7 @@
 
           i {
             &.icon {
+                font-size: $base-font-size;
                 color: $grey-color-light;
             }
             &:hover {
