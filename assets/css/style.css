@@ -259,17 +259,6 @@ table {
         .site-nav .page-link:not(:last-child) {
           margin-right: 20px; } }
 
-.nav-bar {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 71.1111111111rem;
-  margin: 0 auto;
-  padding: 1.3888888889rem 0.5555555556rem 1.9444444444rem; }
-  @media screen and (min-width: 600px) {
-    .nav-bar {
-      padding: 1.3888888889rem 1.3888888889rem 2.7777777778rem; } }
-
 /**
  * Page content
  */
@@ -489,7 +478,7 @@ nav {
   nav header {
     font-weight: 700;
     text-align: center;
-    margin-bottom: 1.3888888889rem; }
+    margin-bottom: 0.5555555556rem; }
     @media screen and (min-width: 600px) {
       nav header {
         float: left;
@@ -513,6 +502,17 @@ nav {
         position: relative;
         padding: 0.2777777778rem;
         color: #e7e7e7; }
+
+.nav-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 71.1111111111rem;
+  margin: 0 auto;
+  padding: 0.5555555556rem 0.5555555556rem 0.5555555556rem; }
+  @media screen and (min-width: 600px) {
+    .nav-bar {
+      padding: 1.3888888889rem 1.3888888889rem 2.7777777778rem; } }
 
 /**
  * Wrapper
@@ -617,6 +617,7 @@ nav {
       .footer .social-media-list li:last-of-type {
         margin-right: 0; }
       .footer .social-media-list li i.icon {
+        font-size: 16px;
         color: #e7e7e7; }
       .footer .social-media-list li i:hover {
         color: #b11335;
@@ -641,15 +642,15 @@ nav {
   .about .social-links a {
     padding: 0 0.5555555556rem; }
     .about .social-links a:before {
-      font-size: 1.8888888889rem; }
+      font-size: 1.6666666667rem; }
   .about .social-links i {
-    font-size: 1.8888888889rem;
-    height: 1.8888888889rem;
-    width: 1.5111111111rem; }
+    font-size: 1.6666666667rem;
+    height: 1.6666666667rem;
+    width: 1.3333333333rem; }
 .about .avatar {
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 225px;
+  height: 225px;
   margin: 1.9444444444rem auto;
   border-radius: 50%; }
 .about h3 {
