@@ -1,0 +1,15 @@
+$text-color:       #111 !default;
+$header-color:     rgb(0, 0, 0) !default;
+$link-color:      #1a75eb !default;
+$accent-color:     #b11335 !default;
+
+$grey-color:       #818181 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+$orange-color:     #f6410a !default;
+
+/**
+  * Background colors
+  */
+$dark-background-color: rgba(12, 8, 3, 0.85);
+$page-content-color:    #fdfdfd !default;

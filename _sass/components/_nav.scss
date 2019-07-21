@@ -1,0 +1,51 @@
+nav {
+    @include delicate;
+
+    // margin-bottom: $small-gap;
+    text-align: right;
+  
+    @media #{$small} {
+    //   margin-bottom: 2 * $small-gap;
+    }
+  
+    header {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: $medium-gap;
+  
+      @media #{$small} {
+        float: left;
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+  
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+      text-align: center;
+  
+      @media #{$small} {
+        float: right;
+        text-align: right;
+      }
+  
+      li {
+        display: inline-block;
+  
+        &:first-child {
+          &:before {
+            content: none;
+          }
+        }
+  
+        a {
+          position: relative;
+          padding: $tiny-gap;
+          color: $grey-color-light;
+        }
+      }
+    }
+  }

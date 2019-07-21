@@ -1,7 +1,7 @@
-title: Your awesome title
+title: UAce.github.io
 email: your-email@example.com
 permalink: pretty
-description: Yu-Yueh Liu's personal website as a summer project.
+description: My personal website - Just a summer project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://uace.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -12,14 +12,38 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-theme: minima
+
+gems:
+  - jekyll-seo-tag
 plugins_dir: ./_plugins
 jekyll_get:
   - data: github
     json: "https://api.github.com/users/UAce/repos"
     cache: false
 plugins:
+  - jemoji
   - jekyll-feed
+
+# Config for image tag
+image:
+  source: assets/images
+  output: generated
+  presets:
+    users:
+      attr:
+        class: user-portrait
+        itemprop: image
+      width: 350
+    half:
+      width: 400
+      height: 400
+
+# Social links
+social_links:
+  github: UAce
+  linkedin: in/yu-yueh-liu-667696121/
+  facebook: YuYuehLiu
+  email: yu-yueh@hotmail.com
 
 # Exclude from processing
 exclude:

@@ -1,0 +1,47 @@
+.about {
+    .social-links {
+      display: block;
+      margin-bottom: $huge-gap;
+      text-align: center;
+  
+      a {
+        padding: 0 $small-gap;
+  
+        &:before {
+          font-size: $h1-font-size;
+        }
+      }
+  
+      i {
+        font-size: $h1-font-size;
+        height: $h1-font-size;
+        width: 0.8 * $h1-font-size;
+      }
+    }
+  
+    .avatar {
+        display: block;
+        width: 300px;
+        height: 300px;
+        margin: $big-gap auto;
+        border-radius: 50%;
+    }
+  
+    h3 {
+      text-align: center;
+    }
+  
+    .contact {
+      text-align: center;
+  
+      svg {
+        path {
+          fill: $text-color;
+  
+          &.at {
+            fill: $accent-color;
+          }
+        }
+      }
+    }
+  }

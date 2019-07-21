@@ -4,8 +4,7 @@
 # Description: Better images for Jekyll.
 #
 # Download: https://github.com/robwierzbowski/jekyll-image-tag
-# Documentation: https://github.com/robwierzbowski/jekyll-image-tag/readme.md
-# Issues: https://github.com/robwierzbowski/jekyll-image-tag/issues
+# Documentation: https://github.com/robwierzbowski/jekyll-image-tag/blob/master/readme.md
 #
 # Syntax:  {% image [preset or WxH] path/to/img.jpg [attr="value"] %}
 # Example: {% image poster.jpg alt="The strange case of Dr. Jekyll" %}
@@ -107,7 +106,6 @@ module Jekyll
       end
 
       image = MiniMagick::Image.open(image_source_path)
-      image.coalesce
       digest = Digest::MD5.hexdigest(image.to_blob).slice!(0..5)
 
       image_dir = File.dirname(instance[:src])
@@ -161,7 +159,6 @@ module Jekyll
           i.resize "#{gen_width}x#{gen_height}^"
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
-          i.layers "Optimize"
         end
 
         image.write gen_dest_file

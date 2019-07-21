@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
 
 <body>
-    <section id="about">
-    </section>
+    <div class="nav-wrapper">
+        <nav class="nav-bar">
+            {% include header.html %}
 
+            <ul class="header">
+                <li>
+                    <a href="/" title="Blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/resume" title="Resume">Resume</a>
+                </li>
+                <li>
+                    <a href="/about" title="About me">About</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+    {%- include footer.html -%}
 </body>
 
 </html>

@@ -1,0 +1,20 @@
+<footer>
+    <div class="footer">
+
+        <div class="wrapper">
+            <span>{{- site.description | escape -}}</span>
+            {% assign today_date = 'now' | date: '%s' %}
+            {% assign create_date = '1577836740' | date: '%s' %}
+            {% if today_date > create_date %}
+            <div class="copyright">&copy; 2019-{{ site.time | date: '%Y' }} Yu-Yueh Liu</div>
+            {% else %}
+            <div class="copyright">&copy; 2019 Yu-Yueh Liu 🐢</div>
+            {%- endif -%}
+            <div class="side-links"><a class="rss" title="RSS feed" href="/feed.xml">RSS</a></div>
+            <div class="social-links">
+                {%- include social.html -%}
+            </div>
+        </div>
+
+    </div>
+</footer>
