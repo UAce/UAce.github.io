@@ -19,8 +19,8 @@
 }
 
 .nav-wrapper {
-    position: relative;
-    background-color: $dark-background-color;
+    position: absolute;
+    background-color: $transparent-dark-background-color;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;

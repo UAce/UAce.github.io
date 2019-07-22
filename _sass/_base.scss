@@ -117,15 +117,12 @@
  /**
   * Links
   */
- a, i {
+ a {
   @include transition;
 
   text-decoration: none;
   &.title {
     color: $grey-color-light;
-  }
-  &.icon {
-    color: $grey-color-dark;
   }
 
   &:active,

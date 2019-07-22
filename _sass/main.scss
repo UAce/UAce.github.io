@@ -13,6 +13,7 @@ $spacing-unit:     30px !default;
 $table-text-align: left !default;
 
 $page-max-width: rem-calc(1280);
+$extra-huge-gap: rem-calc(80);
 $huge-gap: rem-calc(50);
 $big-gap: rem-calc(35);
 $medium-gap: rem-calc(25);
@@ -54,6 +55,8 @@ $small: 'screen and (min-width: #{$on-palm})';
 @import
   "utils/colors",
   "utils/mixins",
+  "utils/animations",
+  "components/canvas",
   "base",
   "layout",
   "syntax-highlighting",

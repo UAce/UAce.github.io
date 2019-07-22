@@ -17,7 +17,7 @@
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
+    // float: left;
   
     @include media-query($on-palm) {
       padding-right: 45px;
@@ -124,6 +124,8 @@
    * Page content
    */
   .page-content {
+    margin-top: $extra-huge-gap;
+    min-height: 60vh;
     padding: $spacing-unit 0;
     flex: 1 0 auto;
   }
