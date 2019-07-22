@@ -4,14 +4,14 @@ const particlesJSON = {
             "value": 160,
             "density": {
                 "enable": true,
-                "value_area": 300
+                "value_area": 400
             }
         },
         "color": {
-            "value": "#ff4a4a"
+            "value": "#008ecc"
         },
         "shape": {
-            "type": "polygon",
+            "type": "circle",
             "stroke": {
                 "width": 0,
                 "color": "#000000"
@@ -20,7 +20,7 @@ const particlesJSON = {
                 "nb_sides": 6
             },
             "image": {
-                "src": "https://image.flaticon.com/icons/png/512/87/87985.png",
+                "src": "",
                 "width": 100,
                 "height": 100
             }
@@ -36,25 +36,25 @@ const particlesJSON = {
             }
         },
         "size": {
-            "value": 7,
+            "value": 3,
             "random": true,
             "anim": {
                 "enable": false,
-                "speed": 10,
+                "speed": 4,
                 "size_min": 0.3,
                 "sync": false
             }
         },
         "line_linked": {
-            "enable": false,
-            "distance": 200,
+            "enable": true,
+            "distance": 100,
             "color": "#007ecc",
             "opacity": 0.5,
             "width": 2
         },
         "move": {
             "enable": true,
-            "speed": 4,
+            "speed": 3,
             "direction": "none",
             "random": true,
             "straight": false,
@@ -71,11 +71,11 @@ const particlesJSON = {
         "detect_on": "canvas",
         "events": {
             "onhover": {
-                "enable": false,
-                "mode": "repulse"
+                "enable": true,
+                "mode": "grab"
             },
             "onclick": {
-                "enable": false,
+                "enable": true,
                 "mode": "repulse"
             },
             "resize": true
@@ -88,7 +88,7 @@ const particlesJSON = {
                 }
             },
             "repulse": {
-                "distance": 50,
+                "distance": 100,
                 "duration": 0.2
             }
         }
@@ -97,3 +97,4 @@ const particlesJSON = {
 };
 // alert("Loading Particles.js");
 particlesJS("particles-js", particlesJSON);
+const scroller = new SweetScroll();

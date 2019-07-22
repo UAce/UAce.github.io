@@ -1,6 +1,153 @@
 /**
   * Background colors
   */
+@-webkit-keyframes pulse {
+  from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0; }
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -10px; }
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0; } }
+@keyframes pulse {
+  from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0; }
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -10px; }
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: .4;
+    top: 0; } }
+#particles-js {
+  background: rgba(5, 3, 1, 0.98);
+  display: flex;
+  vertical-align: bottom;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  #particles-js .header {
+    font-family: 'Playfair Display';
+    z-index: 1;
+    text-align: left;
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    #particles-js .header .site-title {
+      font-size: 50px;
+      display: block;
+      line-height: 1;
+      color: #FFF; }
+      @media screen and (min-width: 600px) {
+        #particles-js .header .site-title {
+          margin: 0;
+          font-size: 76px; } }
+    #particles-js .header .site-description {
+      font-size: 20px;
+      display: block;
+      line-height: 1;
+      color: #FFF;
+      margin-top: 10px; }
+      @media screen and (min-width: 600px) {
+        #particles-js .header .site-description {
+          font-size: 34px; } }
+  #particles-js .header-links {
+    margin: 10px; }
+    #particles-js .header-links .link {
+      color: #FFF;
+      text-decoration: none;
+      font-size: 15px;
+      margin: 10px; }
+      @media screen and (min-width: 600px) {
+        #particles-js .header-links .link {
+          font-size: 20px; } }
+  #particles-js .header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    #particles-js .header-icons a {
+      outline: 0 !important;
+      border: none !important;
+      outline-style: none !important;
+      -moz-outline-style: none !important;
+      padding: none;
+      margin: none; }
+    #particles-js .header-icons .icon {
+      text-align: center;
+      color: #FFF;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 50%;
+      border: 2px solid #FFF;
+      transition: all .5s; }
+      #particles-js .header-icons .icon:hover {
+        color: rgba(5, 3, 1, 0.98);
+        background: #FFF; }
+      #particles-js .header-icons .icon:active {
+        color: rgba(5, 3, 1, 0.98);
+        background: #FFF; }
+      @media screen and (min-width: 600px) {
+        #particles-js .header-icons .icon {
+          width: 30px;
+          height: 30px;
+          font-size: 30px; } }
+  #particles-js .down {
+    color: #FFF;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    outline: 0 !important;
+    border: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important; }
+    #particles-js .down .icon {
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      fill: #fff;
+      -webkit-animation: pulse 1.3s infinite;
+      animation: pulse 1.3s infinite; }
+      #particles-js .down .icon:hover {
+        color: #b11335; }
+      #particles-js .down .icon:active {
+        color: #b11335; }
+
 /**
  * Reset some basic elements
  */
@@ -82,20 +229,18 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
-a, i {
+a {
   transition: all 0.2s ease;
   text-decoration: none; }
-  a.title, i.title {
+  a.title {
     color: #e7e7e7; }
-  a.icon, i.icon {
-    color: #414141; }
-  a:active, a:hover, i:active, i:hover {
+  a:active, a:hover {
     color: #b11335; }
-  p a, p i {
+  p a {
     text-decoration: underline; }
-  .social-media-list a:hover, .social-media-list i:hover {
+  .social-media-list a:hover {
     text-decoration: none; }
-    .social-media-list a:hover .username, .social-media-list i:hover .username {
+    .social-media-list a:hover .username {
       text-decoration: underline; }
 
 /**
@@ -192,8 +337,7 @@ table {
   font-size: 26px;
   font-weight: 300;
   letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left; }
+  margin-bottom: 0; }
   @media screen and (max-width: 600px) {
     .site-title {
       padding-right: 45px; } }
@@ -263,6 +407,8 @@ table {
  * Page content
  */
 .page-content {
+  margin-top: 4.4444444444rem;
+  min-height: 60vh;
   padding: 30px 0;
   flex: 1 0 auto; }
 
@@ -532,8 +678,8 @@ nav {
       padding-left: 30px; } }
 
 .nav-wrapper {
-  position: relative;
-  background-color: rgba(12, 8, 3, 0.85);
+  position: absolute;
+  background-color: rgba(5, 3, 1, 0.8);
   width: 100%;
   max-width: 100%;
   margin: 0 auto; }
@@ -590,9 +736,9 @@ nav {
   .footer-col {
     float: left; } }
 .footer {
-  background: rgba(12, 8, 3, 0.85);
-  padding: 10px 0;
-  margin-top: 100px;
+  background: rgba(5, 3, 1, 0.98);
+  margin-top: auto;
+  padding: 15px 0;
   text-align: center;
   color: #FFF; }
   .footer .love {
@@ -639,14 +785,17 @@ nav {
   display: block;
   margin-bottom: 2.7777777778rem;
   text-align: center; }
-  .about .social-links a {
-    padding: 0 0.5555555556rem; }
-    .about .social-links a:before {
-      font-size: 1.6666666667rem; }
   .about .social-links i {
     font-size: 1.6666666667rem;
     height: 1.6666666667rem;
     width: 1.3333333333rem; }
+  .about .social-links a {
+    padding: 0 0.5555555556rem;
+    color: #414141; }
+    .about .social-links a:before {
+      font-size: 1.6666666667rem; }
+    .about .social-links a:active, .about .social-links a:hover {
+      color: #b11335; }
 .about .avatar {
   display: block;
   width: 225px;
