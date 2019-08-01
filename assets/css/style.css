@@ -160,6 +160,9 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html, body {
+  overflow-x: hidden; }
+
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #111;
@@ -172,7 +175,12 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -233,7 +241,8 @@ a {
   transition: all 0.2s ease;
   text-decoration: none; }
   a.title {
-    color: #e7e7e7; }
+    color: #e7e7e7;
+    font-size: 22.4px; }
   a:active, a:hover {
     color: #b11335; }
   p a {
@@ -407,7 +416,6 @@ table {
  * Page content
  */
 .page-content {
-  margin-top: 4.4444444444rem;
   min-height: 60vh;
   padding: 30px 0;
   flex: 1 0 auto; }
@@ -474,6 +482,12 @@ table {
   .one-half {
     width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); } }
+.filler {
+  height: 100px; }
+  @media screen and (min-width: 600px) {
+    .filler {
+      height: 60px; } }
+
 /**
  * Syntax highlighting styles
  */
@@ -628,8 +642,7 @@ nav {
     @media screen and (min-width: 600px) {
       nav header {
         float: left;
-        text-align: left;
-        margin-bottom: 0; } }
+        text-align: left; } }
   nav ul {
     margin: 0;
     padding: 0;
@@ -655,7 +668,7 @@ nav {
   height: 100%;
   max-width: 71.1111111111rem;
   margin: 0 auto;
-  padding: 0.5555555556rem 0.5555555556rem 0.5555555556rem; }
+  padding: 1.3888888889rem 0.5555555556rem 0.5555555556rem; }
   @media screen and (min-width: 600px) {
     .nav-bar {
       padding: 1.3888888889rem 1.3888888889rem 2.7777777778rem; } }
