@@ -483,7 +483,7 @@ table {
     width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); } }
 .filler {
-  height: 100px; }
+  height: 130px; }
   @media screen and (min-width: 600px) {
     .filler {
       height: 60px; } }
@@ -666,9 +666,8 @@ nav {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 71.1111111111rem;
   margin: 0 auto;
-  padding: 1.3888888889rem 0.5555555556rem 0.5555555556rem; }
+  padding: 2.7777777778rem 0.5555555556rem 1.3888888889rem; }
   @media screen and (min-width: 600px) {
     .nav-bar {
       padding: 1.3888888889rem 1.3888888889rem 2.7777777778rem; } }
@@ -748,51 +747,53 @@ nav {
 @media screen and (min-width: 600px) {
   .footer-col {
     float: left; } }
-.footer {
-  background: rgba(5, 3, 1, 0.98);
-  margin-top: auto;
-  padding: 15px 0;
-  text-align: center;
-  color: #FFF; }
-  .footer .love {
-    color: red; }
-  .footer a {
-    text-decoration: none;
-    margin: 0;
+footer {
+  width: 100%; }
+  footer .footer {
+    background: rgba(5, 3, 1, 0.98);
+    margin-top: auto;
+    padding: 15px 0;
+    text-align: center;
     color: #FFF; }
-    .footer a:hover {
-      color: #b11335; }
-    .footer a:active {
-      color: #b11335;
-      border-color: #b11335; }
-  .footer .social-media-list {
-    display: table;
-    margin: 0.5555555556rem auto; }
-    .footer .social-media-list li {
-      float: left;
-      margin: 0 5px; }
-      .footer .social-media-list li:first-of-type {
-        margin-left: 0; }
-      .footer .social-media-list li:last-of-type {
-        margin-right: 0; }
-      .footer .social-media-list li i.icon {
-        font-size: 16px;
-        color: #e7e7e7; }
-      .footer .social-media-list li i:hover {
+    footer .footer .love {
+      color: red; }
+    footer .footer a {
+      text-decoration: none;
+      margin: 0;
+      color: #FFF; }
+      footer .footer a:hover {
+        color: #b11335; }
+      footer .footer a:active {
         color: #b11335;
         border-color: #b11335; }
-      .footer .social-media-list li a {
-        transition: all 0.2s ease;
-        text-decoration: none;
-        display: block;
-        padding: 7.5px;
-        border: 1px solid #e7e7e7;
-        border-radius: 25px; }
-        .footer .social-media-list li a:active, .footer .social-media-list li a:hover {
+    footer .footer .social-media-list {
+      display: table;
+      margin: 0.5555555556rem auto; }
+      footer .footer .social-media-list li {
+        float: left;
+        margin: 0 5px; }
+        footer .footer .social-media-list li:first-of-type {
+          margin-left: 0; }
+        footer .footer .social-media-list li:last-of-type {
+          margin-right: 0; }
+        footer .footer .social-media-list li i.icon {
+          font-size: 16px;
+          color: #e7e7e7; }
+        footer .footer .social-media-list li i:hover {
           color: #b11335;
           border-color: #b11335; }
-      .footer .social-media-list li:hover .svg-icon {
-        fill: currentColor; }
+        footer .footer .social-media-list li a {
+          transition: all 0.2s ease;
+          text-decoration: none;
+          display: block;
+          padding: 7.5px;
+          border: 1px solid #e7e7e7;
+          border-radius: 25px; }
+          footer .footer .social-media-list li a:active, footer .footer .social-media-list li a:hover {
+            color: #b11335;
+            border-color: #b11335; }
+        footer .footer .social-media-list li:hover .svg-icon {
+          fill: currentColor; }
 
 .about .social-links {
   display: block;
