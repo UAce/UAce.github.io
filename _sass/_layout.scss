@@ -124,7 +124,6 @@
    * Page content
    */
   .page-content {
-    margin-top: $extra-huge-gap;
     min-height: 60vh;
     padding: $spacing-unit 0;
     flex: 1 0 auto;
@@ -213,5 +212,14 @@
     .one-half {
       width: -webkit-calc(50% - (#{$spacing-unit} / 2));
       width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+  }
+
+
+  .filler {
+    height: 100px;
+    
+    @media #{$small} {
+      height: 60px;
     }
   }
