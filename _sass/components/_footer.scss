@@ -65,7 +65,10 @@
     }
 }
 
-.footer {
+footer {
+  width: 100%;
+  
+ .footer {
     background: $dark-background-color;
     margin-top:auto; 
     padding: 15px 0;
@@ -124,4 +127,5 @@
           &:hover .svg-icon { fill: currentColor; }
         }
       }
+  }
 }
