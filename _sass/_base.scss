@@ -14,10 +14,6 @@
  /**
   * Basic styling
   */
- html, body {
-  overflow-x: hidden;
- }
-
  body {
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
    color: $text-color;
@@ -31,7 +27,6 @@
    display: flex;
    min-height: 100vh;
    flex-direction: column;
-   overflow: hidden;
    width: 100%;
    -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
