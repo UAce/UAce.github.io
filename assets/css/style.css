@@ -151,6 +151,12 @@
 /**
  * Reset some basic elements
  */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -649,7 +655,7 @@ nav {
     @media screen and (min-width: 600px) {
       nav ul {
         float: right;
-        text-align: right; } }
+        padding-right: 2rem; } }
     nav ul li {
       display: inline-block; }
       nav ul li:first-child:before {
