@@ -13,11 +13,10 @@
     text-align: left;
     color: #FFF;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     margin: 0 auto;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform:translateX(-50%);
 
     .site-title {
       font-size: 50px;
@@ -28,18 +27,6 @@
       @media #{$small} {
         margin: 0;
         font-size: 76px;
-      }
-    }
-
-    .site-description {
-      font-size: 20px;
-      display: block;
-      line-height: 1;
-      color: #FFF;
-      margin-top: 10px;
-
-      @media #{$small} {
-        font-size: 34px;
       }
     }
   }
@@ -132,7 +119,7 @@
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       width: 100px;
-      height: 100px;
+      height: 50px;
       fill: #fff;
       -webkit-animation: pulse 1.3s infinite;
       animation: pulse 1.3s infinite;

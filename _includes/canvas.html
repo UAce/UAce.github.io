@@ -1,12 +1,15 @@
 <div id="particles-js">
-    <div class="header">
-        <h1>
-            <span class="site-title">{{ title }}</span>
-        </h1>
-        {% if tag == 'resume' %}
-        <a target="_blank" class="button light capitalize styled_title nowrap"><i class="fa fa-download"></i> Download
-            Resume</a>
-        {%- endif -%}
+    <div>
+        <div class="header">
+            <h1>
+                <span class="site-title nowrap">{{ title }}</span>
+            </h1>
+            {% if tag == 'resume' %}
+            <a target="_blank" class="button light capitalize styled_title nowrap">
+                <i class="fa fa-download"></i>
+                Download Resume</a>
+            {%- endif -%}
+        </div>
     </div>
     <a class="down" href="#{{tag}}" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>

@@ -17,8 +17,7 @@
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 0;
-    padding-bottom: 4rem;
-    // float: left;
+    padding-bottom: 1rem;
   
     @include media-query($on-palm) {
       padding-right: 45px;
