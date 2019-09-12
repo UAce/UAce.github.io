@@ -46,7 +46,7 @@
   #particles-js .header {
     font-family: 'Playfair Display';
     z-index: 1;
-    text-align: left;
+    text-align: center;
     color: #FFF;
     position: absolute;
     top: 50%;
@@ -144,22 +144,69 @@
       -webkit-animation: pulse 1.3s infinite;
       animation: pulse 1.3s infinite; }
       #particles-js .down .icon:hover {
-        color: #b11335; }
+        color: #d4385a; }
       #particles-js .down .icon:active {
-        color: #b11335; }
+        color: #d4385a; }
+
+/**
+ * Meyer web reset
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 /**
  * Reset some basic elements
- */
-html, body {
+**/
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden; }
 
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4,
+h5, h6, p, blockquote, pre,
+hr, dl, dd, ol, ul, figure {
   margin: 0 auto;
   padding: 0; }
 
@@ -187,8 +234,8 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
+h1, h2, h3, h4, h5,
+h6, p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
@@ -217,12 +264,37 @@ figcaption {
   font-size: 14px; }
 
 /**
+* Buttons
+*/
+.button {
+  background: transparent;
+  border: 1px solid #d4385a;
+  border-radius: 2px;
+  color: #111;
+  font-weight: 400;
+  padding: 1.25rem;
+  font-family: sans-serif; }
+  .button:hover {
+    background-color: #d4385a;
+    color: #FFF;
+    cursor: pointer; }
+  .button.light {
+    color: #FFF; }
+    .button.light:hover {
+      color: #111; }
+  .button:focus {
+    outline: 0; }
+
+/**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: 30px; }
-  ul.header li:before, ol.header li:before {
+  ul.header li:before,
+  ol.header li:before {
     margin: 0 1.9444444444rem;
+    font-weight: 900;
     content: '\00b7';
     margin: 0 0.5em; }
 
@@ -240,13 +312,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   text-decoration: none; }
   a.title {
     color: #e7e7e7;
     font-size: 22.4px; }
   a:active, a:hover {
-    color: #b11335; }
+    color: #d4385a; }
   p a {
     text-decoration: underline; }
   .social-media-list a:hover {
@@ -325,7 +397,8 @@ table {
   border: 1px solid #e7e7e7; }
   table tr:nth-child(even) {
     background-color: #f6f6f6; }
-  table th, table td {
+  table th,
+  table td {
     padding: 10px 15px; }
   table th {
     background-color: #efefef;
@@ -333,6 +406,49 @@ table {
     border-bottom-color: #c8c8c8; }
   table td {
     border: 1px solid #e7e7e7; }
+
+/**
+ * Other
+ */
+.add-padding-top {
+  padding-top: 2rem; }
+
+.a_center {
+  text-align: center; }
+
+.w1-2 {
+  width: 50%; }
+
+.w1-3 {
+  width: 33%; }
+
+.w1-4 {
+  width: 25%; }
+
+.w1-5 {
+  width: 20%; }
+
+.dot:before {
+  margin: 0 0.2777777778rem;
+  font-weight: 600;
+  content: '\2022';
+  font-size: 15px; }
+
+.capitalize {
+  text-transform: uppercase; }
+
+.styled_title {
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  line-height: 1.6em;
+  font-weight: 550;
+  text-transform: uppercase; }
+
+.add-padding {
+  padding: 2rem; }
+
+.add-margin {
+  margin: 2rem; }
 
 /**
  * Site header
@@ -348,7 +464,8 @@ table {
   font-size: 26px;
   font-weight: 300;
   letter-spacing: -1px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding-bottom: 4rem; }
   @media screen and (max-width: 600px) {
     .site-title {
       padding-right: 45px; } }
@@ -419,12 +536,14 @@ table {
  */
 .page-content {
   width: 100%;
-  min-height: 60vh;
-  padding: 30px 0;
+  min-height: 100vh;
   flex: 1 0 auto; }
 
 .page-heading {
   font-size: 32px; }
+
+.post {
+  padding-top: 2rem; }
 
 .post-list-heading {
   font-size: 28px; }
@@ -442,6 +561,7 @@ table {
 .post-link {
   display: block;
   color: #111;
+  font-weight: 400;
   font-size: 24px; }
 
 /**
@@ -486,10 +606,10 @@ table {
     width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - (30px / 2)); } }
 .filler {
-  height: 130px; }
+  height: 135px; }
   @media screen and (min-width: 600px) {
     .filler {
-      height: 60px; } }
+      height: 67px; } }
 
 /**
  * Syntax highlighting styles
@@ -655,7 +775,7 @@ nav {
     @media screen and (min-width: 600px) {
       nav ul {
         float: right;
-        padding-right: 2rem; } }
+        padding-right: 3rem; } }
     nav ul li {
       display: inline-block; }
       nav ul li:first-child:before {
@@ -765,10 +885,10 @@ footer {
       margin: 0;
       color: #FFF; }
       footer .footer a:hover {
-        color: #b11335; }
+        color: #d4385a; }
       footer .footer a:active {
-        color: #b11335;
-        border-color: #b11335; }
+        color: #d4385a;
+        border-color: #d4385a; }
     footer .footer .social-media-list {
       display: table;
       margin: 0.5555555556rem auto; }
@@ -783,18 +903,18 @@ footer {
           font-size: 16px;
           color: #e7e7e7; }
         footer .footer .social-media-list li i:hover {
-          color: #b11335;
-          border-color: #b11335; }
+          color: #d4385a;
+          border-color: #d4385a; }
         footer .footer .social-media-list li a {
-          transition: all 0.2s ease;
+          transition: all 0.5s ease;
           text-decoration: none;
           display: block;
           padding: 7.5px;
           border: 1px solid #e7e7e7;
           border-radius: 25px; }
           footer .footer .social-media-list li a:active, footer .footer .social-media-list li a:hover {
-            color: #b11335;
-            border-color: #b11335; }
+            color: #d4385a;
+            border-color: #d4385a; }
         footer .footer .social-media-list li:hover .svg-icon {
           fill: currentColor; }
 
@@ -812,7 +932,7 @@ footer {
     .about .social-links a:before {
       font-size: 1.6666666667rem; }
     .about .social-links a:active, .about .social-links a:hover {
-      color: #b11335; }
+      color: #d4385a; }
 .about .avatar {
   display: block;
   width: 225px;
@@ -826,4 +946,60 @@ footer {
   .about .contact svg path {
     fill: #111; }
     .about .contact svg path.at {
-      fill: #b11335; }
+      fill: #d4385a; }
+
+.resume {
+  background-color: #efefef;
+  padding: 60px 0; }
+  .resume table {
+    transition: all 2s;
+    border: None;
+    color: #1f1e1e;
+    margin: 3rem auto;
+    font-size: 14.4px; }
+    .resume table th,
+    .resume table td,
+    .resume table tr {
+      border: None;
+      background-color: transparent; }
+    .resume table li:before {
+      margin: 0 0.2777777778rem;
+      font-weight: 900;
+      content: '\2022';
+      font-size: 18px; }
+    .resume table p {
+      line-height: 26px; }
+  .resume .resume_title {
+    font-size: 20.8px;
+    vertical-align: top;
+    text-align: center; }
+  .resume .resume_subtitle {
+    font-size: 12.8px;
+    letter-spacing: 0.10em;
+    line-height: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .resume .resume_company {
+    font-weight: 600; }
+    .resume .resume_company a {
+      border-bottom: 1px solid #f0d9de;
+      color: #d4385a;
+      font-weight: 700; }
+      .resume .resume_company a:active, .resume .resume_company a:hover, .resume .resume_company a:visited {
+        color: #f0d9de;
+        border-bottom: 1px solid #f0d9de;
+        cursor: pointer; }
+  .resume .work_exp {
+    padding-bottom: 2rem;
+    margin-right: 8rem;
+    text-align: justify; }
+
+.more {
+  text-align: center;
+  margin: 2rem auto; }
+
+.home {
+  margin-top: 2rem; }
+  .home .post-info {
+    border: 1px solid #e7e7e7;
+    padding: 2rem; }

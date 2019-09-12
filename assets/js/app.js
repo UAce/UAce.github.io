@@ -1,3 +1,19 @@
+var tag = document.currentScript.getAttribute('tag');
+var node_color, line_color = "";
+switch (tag) {
+    case "resume":
+        node_color = "#ff8282";
+        line_color = "#e60707";
+        break;
+    case "about":
+        node_color = "#34e09e";
+        line_color = "#00cc7e";
+        break;
+    default:
+        node_color = "#008ecc";
+        line_color = "#007ecc";
+        break;
+}
 const particlesJSON = {
     "particles": {
         "number": {
@@ -8,7 +24,7 @@ const particlesJSON = {
             }
         },
         "color": {
-            "value": "#008ecc"
+            "value": node_color
         },
         "shape": {
             "type": "circle",
@@ -40,7 +56,7 @@ const particlesJSON = {
             "random": true,
             "anim": {
                 "enable": false,
-                "speed": 4,
+                "speed": 3,
                 "size_min": 0.3,
                 "sync": false
             }
@@ -48,13 +64,13 @@ const particlesJSON = {
         "line_linked": {
             "enable": true,
             "distance": 100,
-            "color": "#007ecc",
+            "color": line_color,
             "opacity": 0.5,
             "width": 2
         },
         "move": {
             "enable": true,
-            "speed": 3,
+            "speed": 2,
             "direction": "none",
             "random": true,
             "straight": false,
