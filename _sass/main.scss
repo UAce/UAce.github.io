@@ -12,6 +12,7 @@ $h1-font-size:     rem-calc(30);
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
+$big-spacing-unit: 60px !default;
 $table-text-align: left !default;
 
 $page-max-width: rem-calc(1280);
@@ -59,11 +60,14 @@ $small: 'screen and (min-width: #{$on-palm})';
   "utils/mixins",
   "utils/animations",
   "components/canvas",
+  "reset",
   "base",
   "layout",
   "syntax-highlighting",
   "components/nav",
   "components/wrappers",
   "components/footer",
-  "pages/about"
+  "pages/about",
+  "pages/resume",
+  "pages/home"
 ;

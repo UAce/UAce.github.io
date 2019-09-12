@@ -17,6 +17,7 @@
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 0;
+    padding-bottom: 4rem;
     // float: left;
   
     @include media-query($on-palm) {
@@ -125,13 +126,16 @@
    */
   .page-content {
     width: 100%;
-    min-height: 60vh;
-    padding: $spacing-unit 0;
+    min-height: 100vh;
     flex: 1 0 auto;
   }
   
   .page-heading {
     @include relative-font-size(2);
+  }
+
+  .post {
+    padding-top: 2rem;
   }
   
   .post-list-heading {
@@ -155,6 +159,7 @@
   .post-link {
     display: block;
     color: $text-color;
+    font-weight: 400;
     @include relative-font-size(1.5);
   }
   
@@ -218,9 +223,9 @@
 
 
   .filler {
-    height: 130px;
+    height: 135px;
     
     @media #{$small} {
-      height: 60px;
+      height: 67px;
     }
   }

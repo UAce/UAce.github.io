@@ -1,5 +1,5 @@
 @mixin transition {
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 }
 
 @mixin delicate {
@@ -11,5 +11,20 @@
 
 @mixin dot {
     margin: 0 $big-gap;
+    font-weight: 900;
     content: '\00b7';
+}
+
+@mixin dot-tinygap {
+    margin: 0 $tiny-gap;
+    font-weight: 900;
+    content: '\2022';
+    font-size: 18px;
+}
+
+@mixin dot-small-tinygap {
+    margin: 0 $tiny-gap;
+    font-weight: 600;
+    content: '\2022';
+    font-size: 15px;
 }

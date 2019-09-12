@@ -2,88 +2,92 @@
   * Site footer
   */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
 }
-  
+
 .footer-heading {
-    @include relative-font-size(1.125);
-    margin-bottom: $spacing-unit / 2;
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
 .social-media-list {
-    list-style: none;
-    margin-left: 0;
+  list-style: none;
+  margin-left: 0;
 }
-  
+
 .footer-col-wrapper {
-    @include relative-font-size(0.9375);
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+  @include relative-font-size(0.9375);
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
 }
-  
+
 .footer-col {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+  width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+  width: calc(100% - (#{$spacing-unit} / 2));
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
 }
-  
+
 .footer-col-1,
 .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2));
 }
-  
+
 .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+  width: calc(100% - (#{$spacing-unit} / 2));
 }
-  
+
 @media screen and (min-width: $on-large) {
-    .footer-col-1 {
-      width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-      width:         calc(35% - (#{$spacing-unit} / 2));
-    }
-  
-    .footer-col-2 {
-      width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-      width:         calc(20% - (#{$spacing-unit} / 2));
-    }
-  
-    .footer-col-3 {
-      width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-      width:         calc(45% - (#{$spacing-unit} / 2));
-    }
+  .footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width: calc(35% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width: calc(20% - (#{$spacing-unit} / 2));
+  }
+
+  .footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width: calc(45% - (#{$spacing-unit} / 2));
+  }
 }
-  
+
 @media screen and (min-width: $on-medium) {
-    .footer-col {
-      float: left;
-    }
+  .footer-col {
+    float: left;
+  }
 }
 
 footer {
   width: 100%;
-  
- .footer {
+
+  .footer {
     background: $dark-background-color;
-    margin-top:auto; 
+    margin-top: auto;
     padding: 15px 0;
     text-align: center;
     color: #FFF;
+
     .love {
       color: red;
     }
+
     a {
       text-decoration: none;
       margin: 0;
       color: #FFF;
-      &:hover{
+
+      &:hover {
         color: $accent-color;
       }
+
       &:active {
         color: $accent-color;
         border-color: $accent-color;
@@ -91,41 +95,52 @@ footer {
     }
 
     .social-media-list {
-        display: table;
-        margin: $small-gap auto;
-        li {
-          float: left;
-          margin: 0 5px;
-          &:first-of-type { margin-left: 0 }
-          &:last-of-type { margin-right: 0 }
+      display: table;
+      margin: $small-gap auto;
 
-          i {
-            &.icon {
-                font-size: $base-font-size;
-                color: $grey-color-light;
-            }
-            &:hover {
-                color: $accent-color;
-                border-color: $accent-color;
-            }
+      li {
+        float: left;
+        margin: 0 5px;
+
+        &:first-of-type {
+          margin-left: 0
+        }
+
+        &:last-of-type {
+          margin-right: 0
+        }
+
+        i {
+          &.icon {
+            font-size: $base-font-size;
+            color: $grey-color-light;
           }
 
-          a {
-            @include transition;
-            text-decoration: none;
-            display: block;
-            padding: $spacing-unit / 4;
-            border: 1px solid $grey-color-light;
-            border-radius: 25px;
-          
-            &:active,
-            &:hover {
-              color: $accent-color;
-              border-color: $accent-color;
-            }
+          &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
           }
-          &:hover .svg-icon { fill: currentColor; }
+        }
+
+        a {
+          @include transition;
+          text-decoration: none;
+          display: block;
+          padding: $spacing-unit / 4;
+          border: 1px solid $grey-color-light;
+          border-radius: 25px;
+
+          &:active,
+          &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
+          }
+        }
+
+        &:hover .svg-icon {
+          fill: currentColor;
         }
       }
+    }
   }
 }

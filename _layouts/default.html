@@ -20,7 +20,7 @@
             </ul>
         </nav>
     </div>
-    {% if page.name == 'resume.md' %}
+    {% if page.name == 'resume.html' %}
     {% assign title = site.canvas.resume %}
     {% assign tag = 'resume' %}
     {% elsif page.name == 'about.html' %}
@@ -29,14 +29,15 @@
     {%- endif -%}
     {% if title %}
     {% include canvas.html %}
+    {{ content }}
     {% else %}
     <div class="filler"></div>
-    {%- endif -%}
-    <main class="page-content" aria-label="Content" id="page-content">
+    <div class="page-content" aria-label="Content" id="page-content">
         <div class="wrapper">
             {{ content }}
         </div>
-    </main>
+    </div>
+    {%- endif -%}
     {%- include footer.html -%}
 </body>
 

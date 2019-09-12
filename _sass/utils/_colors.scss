@@ -1,16 +1,19 @@
-$text-color:       #111 !default;
-$header-color:     rgb(0, 0, 0) !default;
-$link-color:      #1a75eb !default;
-$accent-color:     #b11335 !default;
+$text-color: #111 !default;
+$light-text-color: #FFF !default;
+$header-color: rgb(0, 0, 0) !default;
+$link-color: #1a75eb !default;
+$accent-color: #d4385a !default;
+$visited-accent-color: #f0d9de !default;
 
-$grey-color:       #818181 !default;
+$grey-color: #818181 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
-$orange-color:     #f6410a !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
+$orange-color: #f6410a !default;
 
 /**
   * Background colors
   */
 $dark-background-color: rgba(5, 3, 1, .98);
 $transparent-dark-background-color: rgba(5, 3, 1, 0.80);
-$page-content-color:    #fdfdfd !default;
+$page-content-color: #fdfdfd !default;
+$accent-background-color: #d4385a;

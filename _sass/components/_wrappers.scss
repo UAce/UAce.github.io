@@ -1,27 +1,27 @@
  /**
   * Wrapper
   */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-    @extend %clearfix;
-  
-    @media screen and (min-width: $on-large) {
-      max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-      max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-      padding-right: $spacing-unit;
-      padding-left: $spacing-unit;
-    }
-}
+ .wrapper {
+     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+     max-width: calc(#{$content-width} - (#{$spacing-unit}));
+     margin-right: auto;
+     margin-left: auto;
+     padding-right: $spacing-unit / 2;
+     padding-left: $spacing-unit / 2;
+     @extend %clearfix;
 
-.nav-wrapper {
-    position: absolute;
-    background-color: $transparent-dark-background-color;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-}
+     @media screen and (min-width: $on-large) {
+         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+         max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+         padding-right: $spacing-unit;
+         padding-left: $spacing-unit;
+     }
+ }
+
+ .nav-wrapper {
+     position: absolute;
+     background-color: $transparent-dark-background-color;
+     width: 100%;
+     max-width: 100%;
+     margin: 0 auto;
+ }

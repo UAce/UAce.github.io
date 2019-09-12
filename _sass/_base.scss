@@ -1,21 +1,22 @@
-/**
- * Reset some basic elements
- */
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+ /**
+  * Reset some basic elements
+ **/
+ html,
+ body {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+ }
 
- body, h1, h2, h3, h4, h5, h6,
- p, blockquote, pre, hr,
- dl, dd, ol, ul, figure {
+ body, h1, h2, h3, h4,
+ h5, h6, p,blockquote, pre,
+ hr, dl, dd, ol, ul, figure {
    margin: 0 auto;
    padding: 0;
  }
-  
- 
+
+
  /**
   * Basic styling
   */
@@ -24,43 +25,44 @@ html, body {
    color: $text-color;
    background-color: $page-content-color;
    -webkit-text-size-adjust: 100%;
-   -webkit-font-feature-settings: "kern" 1;
-      -moz-font-feature-settings: "kern" 1;
-        -o-font-feature-settings: "kern" 1;
-           font-feature-settings: "kern" 1;
+   -webkit-font-feature-settings: "kern"1;
+   -moz-font-feature-settings: "kern"1;
+   -o-font-feature-settings: "kern"1;
+   font-feature-settings: "kern"1;
    font-kerning: normal;
    display: flex;
    min-height: 100vh;
    flex-direction: column;
    width: 100%;
    -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
  }
- 
- 
- 
+
+
+
  /**
   * Set `margin-bottom` to maintain vertical rhythm
   */
- h1, h2, h3, h4, h5, h6,
- p, blockquote, pre,
+ h1, h2, h3, h4, h5,
+ h6, p, blockquote, pre,
  ul, ol, dl, figure,
  %vertical-rhythm {
    margin-bottom: $spacing-unit / 2;
  }
- 
- 
- 
+
+
+
  /**
   * `main` element
   */
  main {
-   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+   display: block;
+   /* Default value of `display` of `main` element is 'inline' in IE 11. */
  }
- 
- 
- 
+
+
+
  /**
   * Images
   */
@@ -68,91 +70,124 @@ html, body {
    max-width: 100%;
    vertical-align: middle;
  }
- 
- 
- 
+
+
+
  /**
   * Figures
   */
- figure > img {
+ figure>img {
    display: block;
  }
- 
+
  figcaption {
    font-size: $small-font-size;
  }
- 
- 
- 
+
+  /**
+  * Buttons
+  */
+  .button {
+    background: transparent;
+    border: 1px solid $accent-color;
+    border-radius: 2px;
+    color: $text-color;
+    font-weight: 400;
+    padding: 1.25rem;
+    font-family: sans-serif;
+
+    &:hover {
+      background-color: $accent-color;
+      color: $light-text-color;
+      cursor: pointer;
+    }
+
+    &.light {
+      color: $light-text-color;
+      &:hover {
+        color: $text-color;
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+  }
+
  /**
   * Lists
   */
- ul, ol {
+ ul,
+ ol {
    margin-left: $spacing-unit;
+
+   //  list-style-position: inside;
    &.header {
      li {
-      &:before {
-        @include dot;
-  
-        margin: 0 0.5em;
-      }
+       &:before {
+         @include dot;
+
+         margin: 0 0.5em;
+       }
      }
    }
+
    &.post-list {
-    li {
-    //  background-color: darken($grey-color-light, 4%);
-    }
-  }
+     li {
+       //  background-color: darken($grey-color-light, 4%);
+     }
+   }
  }
- 
+
  li {
-   > ul,
-   > ol {
+
+   >ul,
+   >ol {
      margin-bottom: 0;
    }
  }
- 
- 
- 
+
+
+
  /**
   * Headings
   */
  h1, h2, h3, h4, h5, h6 {
    font-weight: $base-font-weight;
  }
- 
- 
- 
+
  /**
   * Links
   */
  a {
-  @include transition;
+   @include transition;
 
-  text-decoration: none;
-  &.title {
-    color: $grey-color-light;
-    font-size: $medium-font-size;
-  }
+   text-decoration: none;
 
-  &:active,
-  &:hover {
-    color: $accent-color;
-  }
+   &.title {
+     color: $grey-color-light;
+     font-size: $medium-font-size;
+   }
 
-  p & {
-    text-decoration: underline;
-  }
+   &:active,
+   &:hover {
+     color: $accent-color;
+   }
 
-  .social-media-list &:hover {
-    text-decoration: none;
+   p & {
+     text-decoration: underline;
+   }
 
-    .username {
-      text-decoration: underline;
-    }
-  }
-}
- 
+   .social-media-list &:hover {
+     text-decoration: none;
+
+     .username {
+       text-decoration: underline;
+     }
+   }
+ }
+
  /**
   * Blockquotes
   */
@@ -163,14 +198,14 @@ html, body {
    @include relative-font-size(1.125);
    letter-spacing: -1px;
    font-style: italic;
- 
+
    > :last-child {
      margin-bottom: 0;
    }
  }
- 
- 
- 
+
+
+
  /**
   * Code formatting
   */
@@ -181,22 +216,22 @@ html, body {
    border-radius: 3px;
    background-color: #eef;
  }
- 
+
  code {
    padding: 1px 5px;
  }
- 
+
  pre {
    padding: 8px 12px;
    overflow-x: auto;
- 
-   > code {
+
+   >code {
      border: 0;
      padding-right: 0;
      padding-left: 0;
    }
- } 
- 
+ }
+
  /**
   * Clearfix
   */
@@ -205,21 +240,21 @@ html, body {
    display: table;
    clear: both;
  }
- 
- 
- 
+
+
+
  /**
   * Icons
   */
- 
+
  .orange {
    color: $orange-color;
  }
- 
+
  .grey {
    color: $grey-color;
  }
- 
+
  .svg-icon {
    width: 16px;
    height: 16px;
@@ -228,8 +263,8 @@ html, body {
    padding: 5px 3px 2px 5px;
    vertical-align: text-bottom;
  }
- 
- 
+
+
  /**
   * Tables
   */
@@ -240,20 +275,79 @@ html, body {
    color: lighten($text-color, 18%);
    border-collapse: collapse;
    border: 1px solid $grey-color-light;
+
    tr {
      &:nth-child(even) {
        background-color: lighten($grey-color-light, 6%);
      }
    }
-   th, td {
+
+   th,
+   td {
      padding: ($spacing-unit / 3) ($spacing-unit / 2);
    }
+
    th {
      background-color: lighten($grey-color-light, 3%);
      border: 1px solid darken($grey-color-light, 4%);
      border-bottom-color: darken($grey-color-light, 12%);
    }
+
    td {
      border: 1px solid $grey-color-light;
    }
  }
+
+
+ /**
+  * Other
+  */
+ .add-padding-top {
+  padding-top: 2rem;
+ }
+
+ .a_center {
+   text-align: center;
+ }
+
+ .w1-2 {
+   width: 50%;
+ }
+
+ .w1-3 {
+  width: 33%;
+}
+
+.w1-4 {
+  width: 25%;
+}
+
+.w1-5 {
+  width: 20%;
+}
+
+.dot {
+  &:before{
+    @include dot-small-tinygap;
+  }
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.styled_title {
+  @include relative-font-size(.75);
+  letter-spacing: 0.10em;
+  line-height: 1.6em;
+  font-weight: 550;
+  text-transform: uppercase;
+}
+
+.add-padding {
+  padding: 2rem;
+}
+
+.add-margin {
+  margin: 2rem;
+}

@@ -3,9 +3,12 @@
         <h1>
             <span class="site-title">{{ title }}</span>
         </h1>
+        {% if tag == 'resume' %}
+        <a target="_blank" class="button light capitalize styled_title"><i class="fa fa-download"></i> Download Resume</a>
+        {%- endif -%}
     </div>
     <a class="down" href="#{{tag}}" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
 </div>
 <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="{{ base.url | prepend: site.url }}/assets/js/app.js"></script>
+<script src="{{ base.url | prepend: site.url }}/assets/js/app.js" tag="{{tag}}"></script>
