@@ -49,11 +49,10 @@
     text-align: left;
     color: #FFF;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     margin: 0 auto;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translateX(-50%); }
     #particles-js .header .site-title {
       font-size: 50px;
       display: block;
@@ -63,15 +62,6 @@
         #particles-js .header .site-title {
           margin: 0;
           font-size: 76px; } }
-    #particles-js .header .site-description {
-      font-size: 20px;
-      display: block;
-      line-height: 1;
-      color: #FFF;
-      margin-top: 10px; }
-      @media screen and (min-width: 600px) {
-        #particles-js .header .site-description {
-          font-size: 34px; } }
   #particles-js .header-links {
     margin: 10px; }
     #particles-js .header-links .link {
@@ -139,7 +129,7 @@
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       width: 100px;
-      height: 100px;
+      height: 50px;
       fill: #fff;
       -webkit-animation: pulse 1.3s infinite;
       animation: pulse 1.3s infinite; }
@@ -472,7 +462,7 @@ table {
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
-  padding-bottom: 4rem; }
+  padding-bottom: 1rem; }
   @media screen and (max-width: 600px) {
     .site-title {
       padding-right: 45px; } }
