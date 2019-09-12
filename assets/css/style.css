@@ -46,7 +46,7 @@
   #particles-js .header {
     font-family: 'Playfair Display';
     z-index: 1;
-    text-align: center;
+    text-align: left;
     color: #FFF;
     position: absolute;
     top: 50%;
@@ -416,6 +416,9 @@ table {
 .a_center {
   text-align: center; }
 
+.w2-3 {
+  width: 66%; }
+
 .w1-2 {
   width: 50%; }
 
@@ -449,6 +452,10 @@ table {
 
 .add-margin {
   margin: 2rem; }
+
+.nowrap {
+  white-space: nowrap;
+  width: 100%; }
 
 /**
  * Site header
@@ -949,26 +956,14 @@ footer {
       fill: #d4385a; }
 
 .resume {
-  background-color: #efefef;
-  padding: 60px 0; }
-  .resume table {
-    transition: all 2s;
-    border: None;
-    color: #1f1e1e;
-    margin: 3rem auto;
-    font-size: 14.4px; }
-    .resume table th,
-    .resume table td,
-    .resume table tr {
-      border: None;
-      background-color: transparent; }
-    .resume table li:before {
-      margin: 0 0.2777777778rem;
-      font-weight: 900;
-      content: '\2022';
-      font-size: 18px; }
-    .resume table p {
-      line-height: 26px; }
+  width: 100%;
+  /* Clear floats after the columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ }
+  .resume * {
+    box-sizing: border-box; }
+  .resume .resume_wrapper {
+    padding: 60px 0;
+    background-color: #efefef; }
   .resume .resume_title {
     font-size: 20.8px;
     vertical-align: top;
@@ -991,8 +986,38 @@ footer {
         cursor: pointer; }
   .resume .work_exp {
     padding-bottom: 2rem;
-    margin-right: 8rem;
     text-align: justify; }
+  .resume .title {
+    float: left;
+    width: 30%;
+    padding: 10px; }
+  .resume .column {
+    float: left;
+    padding: 10px; }
+  .resume .row {
+    transition: all 2s;
+    border: None;
+    color: #1f1e1e;
+    font-size: 14.4px; }
+  .resume .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 2rem; }
+  @media screen and (max-width: 600px) {
+    .resume .title {
+      float: None;
+      width: 100%;
+      text-align: center; }
+    .resume .column {
+      width: 100%; } }
+  .resume li:before {
+    margin: 0 0.2777777778rem;
+    font-weight: 900;
+    content: '\2022';
+    font-size: 18px; }
+  .resume p {
+    line-height: 26px; }
 
 .more {
   text-align: center;
