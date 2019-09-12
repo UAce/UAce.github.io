@@ -310,6 +310,11 @@
    text-align: center;
  }
 
+
+ .w2-3 {
+  width: 66%;
+ }
+
  .w1-2 {
    width: 50%;
  }
@@ -350,4 +355,12 @@
 
 .add-margin {
   margin: 2rem;
+}
+
+.nowrap {
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  white-space: nowrap;
+  width:100%;
+  // min-width:1px;
 }
