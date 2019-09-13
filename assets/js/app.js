@@ -111,6 +111,5 @@ const particlesJSON = {
     },
     "retina_detect": true
 };
-// alert("Loading Particles.js");
 particlesJS("particles-js", particlesJSON);
 const scroller = new SweetScroll();

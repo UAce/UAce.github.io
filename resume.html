@@ -19,7 +19,7 @@ permalink: /resume/
                         Python
                     </li>
                     <li>
-                        Javascript
+                        JavaScript
                     </li>
                     <li>
                         HTML5 / CSS3
@@ -56,40 +56,107 @@ permalink: /resume/
                     <li>
                         Continuous Integration (Jenkins, TravisCI)
                     </li>
+                    <li>
+                        Amazon Web Services
+                    </li>
+                    <li>
+                        OpenStack
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="title w1-3">
-                <h1 class="resume_title" id="work_experience">Work Experience</h1>
+                <h1 class="resume_title" id="descriptionerience">Work Experience</h1>
             </div>
             <div class="column w2-3">
                 <div>
+                    <h2 class="resume_subtitle">Full Stack Developer Intern</h2>
+                    <span class="resume_company">
+                        <a href="https://ormuco.com/" target="_blank">
+                            Ormuco Inc.
+                        </a>
+                        , Montreal, CA, February 2019 – Present
+                    </span>
+                    <p class="description">
+                        Worked in a fast-paced environment with passionate developers to develop and maintain
+                        Ormuco's IaaS platform. Enhanced my JavaScript skills and learned AngularJS through this
+                        experience. Worked to improve the Ormuco Iaas platform UI, to improve existing features and
+                        to add new features to the platform such as Workflow as a Service (OpenStack Mistral).
+                        Worked largely with OpenStack products and performed QA/UAT testing.
+                    </p>
+                </div>
+                <div>
                     <h2 class="resume_subtitle">System Administrator DevOps Intern</h2>
-                    <span class="resume_company"><a>Broadsign</a>, Montreal, CA, September 2018 – April 2019</span>
-                    <p class="work_exp">
+                    <span class="resume_company">
+                        <a href="https://broadsign.com/" target="_blank">
+                            Broadsign
+                        </a>
+                        , Montreal, CA, September 2018 – April 2019
+                    </span>
+                    <p class="description">
                         Researched and created a proof of concept for centralized logging management solutions
-                        using AWS CloudWatch. Integrated functionality to dynamically create CloudWatch agent
-                        configuration files per application using ERB templates into existing Chef cookbooks.
+                        using AWS CloudWatch. Implemented functionality to dynamically create CloudWatch agent
+                        configuration files per internal team using ERB templates into existing Chef cookbooks.
                         Wrote Terraform and Cloudformation scripts to provision AWS resources.
                     </p>
                 </div>
                 <div>
                     <h2 class=" resume_subtitle">DevOps Intern</h2>
-                    <span class="resume_company"><a>Ericsson Inc.</a>, Montreal, CA, January 2018 – April 2018</span>
-                    <p class="work_exp">
+                    <span class="resume_company">
+                        <a href="https://www.ericsson.ca/en" target="_blank">
+                            Ericsson Canada Inc.
+                        </a>
+                        , Montreal, CA, January 2018 – April 2018
+                    </span>
+                    <p class="description">
                         Provisioned virtual machines for testing purposes with Ansible. Created and set up Docker
                         containers for functional testings. Wrote Jenkins 2 declarative pipeline scripts (groovy)
                         to automate the build, integration and deployment. Wrote bash scripts to automate the
-                        generation of daily reports for the overnight stress testings.
+                        generation of daily reports for the overnight load tests.
                     </p>
                 </div>
                 <div>
                     <h2 class=" resume_subtitle">Software Engineering Intern</h2>
-                    <span class="resume_company"><a>Bombardier Transportation</a>
+                    <span class="resume_company">
+                        <a href="https://www.bombardier.com/en/transportation.html" target="_blank">
+                            Bombardier Transportation
+                        </a>
                         , Montreal, CA, May 2017 – August 2017</span>
-                    <p class="work_exp">
-
+                    <p class="description">
+                        Worked with a group of interns using Scrum methodology to develop a CLI tool in Python to
+                        automate the deployment of train softwares and operating systems in AZUR metros. Created a
+                        Grafana dashboard showing metrics for team productivity using data stored in MariaDB and
+                        fetched from JIRA using REST API.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="title w1-3">
+                <h1 class="resume_title" id="projects">Personal Projects</h1>
+            </div>
+            <div class="column w2-3">
+                <div class="description">
+                    <h2 class="resume_subtitle">MobSlayer</h2>
+                    <p>
+                        Native android mobile game where the player's only task is to eliminate monsters from
+                        MapleStory. Players can acquire skills, unlock new maps and encounter new mobs as they level
+                        up.
+                    </p>
+                    <div class="demo_wrapper">
+                        {% image menu.png alt="Game Menu" class="demo" %}
+                        {% image sharp_eyes.png alt="Sharp Eyes Skill" class="demo" %}
+                        {% image levelup.png alt="Level up" class="demo" %}
+                        {% image slime_dmg.png alt="Attack Monster" class="demo" %}
+                    </div>
+                </div>
+                <div>
+                    <h2 class="resume_subtitle">gggolfclient</h2>
+                    <p class="description">
+                        A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time
+                        slots and make golf course reservations for wanted time slots. <u>Tools used</u>: Python,
+                        Docopt, Requests HTTP Library, Beautiful Soup Library.
                     </p>
                 </div>
             </div>

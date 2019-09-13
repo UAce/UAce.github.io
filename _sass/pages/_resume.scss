@@ -32,8 +32,7 @@
             color: $accent-color;
             font-weight: 700;
             &:active,
-            &:hover,
-            &:visited {
+            &:hover {
                 color: $visited-accent-color;
                 border-bottom: 1px solid $visited-accent-color;
                 cursor: pointer;
@@ -41,9 +40,18 @@
         }
     }
 
-    .work_exp {
+    .description {
         padding-bottom: 2rem;
         text-align: justify;
+    }
+
+    .demo {
+        height: 350px;
+    }
+
+    .demo_wrapper {
+        text-align: left;
+        padding-bottom: 3rem;
     }
 
     .title {
