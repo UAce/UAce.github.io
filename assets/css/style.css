@@ -54,12 +54,14 @@
     margin: 0 auto;
     transform: translateX(-50%); }
     #particles-js .header .site-title {
+      width: 300px;
       font-size: 50px;
       display: block;
       line-height: 1;
       color: #FFF; }
       @media screen and (min-width: 600px) {
         #particles-js .header .site-title {
+          width: 500px;
           margin: 0;
           font-size: 76px; } }
   #particles-js .header-links {
@@ -109,7 +111,7 @@
   #particles-js .down {
     color: #FFF;
     position: absolute;
-    bottom: 25px;
+    bottom: 20px;
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -970,13 +972,18 @@ footer {
       border-bottom: 1px solid #f0d9de;
       color: #d4385a;
       font-weight: 700; }
-      .resume .resume_company a:active, .resume .resume_company a:hover, .resume .resume_company a:visited {
+      .resume .resume_company a:active, .resume .resume_company a:hover {
         color: #f0d9de;
         border-bottom: 1px solid #f0d9de;
         cursor: pointer; }
-  .resume .work_exp {
+  .resume .description {
     padding-bottom: 2rem;
     text-align: justify; }
+  .resume .demo {
+    height: 350px; }
+  .resume .demo_wrapper {
+    text-align: left;
+    padding-bottom: 3rem; }
   .resume .title {
     float: left;
     width: 30%;
@@ -1016,5 +1023,6 @@ footer {
 .home {
   margin-top: 2rem; }
   .home .post-info {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     border: 1px solid #e7e7e7;
     padding: 2rem; }
