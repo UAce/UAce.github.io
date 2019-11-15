@@ -580,7 +580,10 @@ table {
   font-weight: 500; }
 
 .post {
-  padding-top: 2rem; }
+  padding-top: 10rem; }
+  @media screen and (min-width: 600px) {
+    .post {
+      padding-top: 6rem; } }
 
 .post-list-heading {
   font-size: 28px; }
