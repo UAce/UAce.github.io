@@ -21,10 +21,12 @@
     .article-title {
         color: $text-color;
         font-weight: 500;
-        @include relative-font-size(1.5);
+        @include relative-font-size(1.25);
         transition: color 0.2s ease;
         margin: 0;
         justify-self: start;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .article-date {
@@ -127,7 +129,6 @@
         .article-title {
             grid-column-start: 2;
             grid-row-start: 1;
-            @include relative-font-size(1.25);
         }
 
         .article-date {

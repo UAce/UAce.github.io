@@ -21,7 +21,7 @@ permalink: /articles/
             {% if post.image %}
             {% include article-image.html image=post.image alt=post.image-alt %}
             {% endif %}
-            <h3 class="article-title">
+            <h3 class="article-title" title="{{ post.title | escape }}">
                 {{ post.title | escape }}
             </h3>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
