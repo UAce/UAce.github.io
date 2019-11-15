@@ -144,9 +144,12 @@
   }
 
   .post {
-    padding-top: 2rem;
+    padding-top: 10rem;
+
+    @media #{$small} {
+      padding-top: 6rem;
+    }
   }
-  
   .post-list-heading {
     @include relative-font-size(1.75);
   }
