@@ -137,21 +137,34 @@ permalink: /resume/
                 <h1 class="resume_title" id="projects">Personal Projects</h1>
             </div>
             <div class="column w2-3">
-                <div class="description">
+                <div class="project_container">
+                    <h2 class="resume_subtitle">YouTubeStopwatch</h2>
+                    <p class="description">
+                        A chrome extension that is used to help users plan, monitor, control their YouTube usage. This
+                        was done as part of a school project (Human-Computer Interaction). The chrome extension is
+                        available <a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
+                            target="_blank">here</a>.
+                    </p>
+                    <div class="demo-2-1">
+                        {% image ytsw_modal.png alt="Time Modal" class="demo" %}
+                        {% image ytsw_settings.png alt="Settings Page" class="demo" %}
+                    </div>
+                </div>
+                <div class="project_container">
                     <h2 class="resume_subtitle">MobSlayer</h2>
-                    <p>
+                    <p class="description">
                         Native android mobile game where the player's only task is to eliminate monsters from
                         MapleStory. Players can acquire skills, unlock new maps and encounter new mobs as they level
                         up.
                     </p>
-                    <div class="demo_wrapper">
+                    <div class="demo-4-1">
                         {% image menu.png alt="Game Menu" class="demo" %}
                         {% image sharp_eyes.png alt="Sharp Eyes Skill" class="demo" %}
                         {% image levelup.png alt="Level up" class="demo" %}
                         {% image slime_dmg.png alt="Attack Monster" class="demo" %}
                     </div>
                 </div>
-                <div>
+                <div class="project_container">
                     <h2 class="resume_subtitle">gggolfclient</h2>
                     <p class="description">
                         A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time
@@ -173,6 +186,6 @@ permalink: /resume/
     </div>
     <div class="more">
         <p class="add-margin">Feel free to reach out and start a conversation!</p>
-        <!-- <a target="_blank" class="button capitalize styled_title">Contact me</a target="_blank"> -->
+        <!-- <a target="_blank" class="button-styled capitalize styled_title">Contact me</a target="_blank"> -->
     </div>
 </div>

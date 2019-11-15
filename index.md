@@ -4,3 +4,7 @@
 
 layout: home
 ---
+
+<div class="construction capitalize a_center add-padding-top">
+Under Construction...
+</div>

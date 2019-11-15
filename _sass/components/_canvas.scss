@@ -31,6 +31,13 @@
         font-size: 76px;
       }
     }
+
+    a {
+      margin-left: 5rem;
+      @media #{$small} {
+        margin-left: 0;
+      }
+    }
   }
 
   .header-links {

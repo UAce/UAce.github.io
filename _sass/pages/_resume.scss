@@ -6,7 +6,7 @@
 
     .resume_wrapper {
         padding: $big-spacing-unit 0;
-        background-color: lighten($grey-color-light, 3%);
+        background-color: lighten($page-content-color, 3%);
 
     }
 
@@ -41,17 +41,51 @@
     }
 
     .description {
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
         text-align: justify;
     }
 
+    .project_container {
+        padding-bottom: 5rem;
+    }
+
     .demo {
-        height: 350px;
+        max-height: 350px;
+        height: auto;
+        justify-self: center;
     }
 
     .demo_wrapper {
         text-align: left;
-        padding-bottom: 3rem;
+        padding: 0 2rem 3rem;
+    }
+
+    // @media screen and (max-width: 480px) {
+    //     .demo {
+    //         height: 250px;
+    //     }
+    // }
+
+    .demo-2-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 5px;
+        max-width: 100%;
+    }
+
+    .demo-3-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 5px;
+        max-width: 100%;
+    }
+
+    
+    .demo-4-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 5px;
+        max-width: 100%;
     }
 
     .title {

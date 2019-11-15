@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Test 2"
+date:   2019-09-13 00:09:33 -0400
+categories: test
+image: guide-book.png
+tag: new
+tag-content: New!
+---
+This is a dummy post...

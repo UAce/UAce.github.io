@@ -3,19 +3,22 @@
 {%- include head.html -%}
 
 <body>
-    <div class="nav-wrapper">
+    <div id="nav" class="nav-wrapper">
         <nav class="nav-bar">
             {% include header.html %}
 
             <ul class="header">
                 <li>
-                    <a href="/" title="Blog">Blog</a>
+                    <a href="/articles" title="Articles">Articles</a>
                 </li>
                 <li>
                     <a href="/resume" title="Resume">Resume</a>
                 </li>
                 <li>
                     <a href="/about" title="About me">About</a>
+                </li>
+                <li>
+                    <a id="toggle-dark-theme"><i id="theme-icon" class="icon fa fa-moon-o fa-lg"></i></a>
                 </li>
             </ul>
         </nav>
@@ -30,8 +33,7 @@
     {% if title %}
     {% include canvas.html %}
     {{ content }}
-    {% else %}
-    <div class="filler"></div>
+    {% else%}
     <div class="page-content" aria-label="Content" id="page-content">
         <div class="wrapper">
             {{ content }}

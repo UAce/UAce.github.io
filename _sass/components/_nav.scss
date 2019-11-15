@@ -11,6 +11,7 @@ nav {
   header {
     font-weight: 700;
     text-align: center;
+    padding-left: 2rem;
     margin-bottom: $small-gap;
 
     @media #{$small} {
@@ -28,6 +29,7 @@ nav {
 
     @media #{$small} {
       float: right;
+      padding-top: 5px;
       padding-right: 3rem;
     }
 
@@ -41,6 +43,7 @@ nav {
       }
 
       a {
+        font-weight: 400;
         position: relative;
         padding: $tiny-gap;
         color: $grey-color-light;
@@ -55,9 +58,38 @@ nav {
   height: 100%;
   // max-width: $page-max-width;
   margin: 0 auto;
-  padding: $huge-gap $small-gap $medium-gap;
-
+  padding: $huge-gap 0 $medium-gap;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   @media #{$small} {
-    padding: $medium-gap $medium-gap $huge-gap;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
   }
+}
+
+
+.nav-wrapper {
+  position: absolute;
+  z-index: 1000000000;
+  background-color: $transparent-dark-background-color;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5px 0;
+  max-height: 150px;
+  transition: all 0.5s ease;
+
+ @media screen and (min-width: $on-large) {
+     position: fixed;
+     height: 60px;
+
+     &.opaque {
+      background-color: $dark-background-color;
+      box-shadow: 1px 2px 18px rgba(0,0,0,0.4);
+      padding: 0;
+      height: 50px;
+    }
+ }
 }

@@ -7,7 +7,7 @@ $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $big-font-size:    $base-font-size * 1.8 !default;
 $medium-font-size: $base-font-size * 1.4 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size:  $base-font-size * 0.75 !default;
 $h1-font-size:     rem-calc(30);
 $base-line-height: 1.5 !default;
 
@@ -25,7 +25,7 @@ $tiny-gap:       rem-calc(5);
 
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1000px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
@@ -69,5 +69,6 @@ $small: 'screen and (min-width: #{$on-palm})';
   "components/footer",
   "pages/about",
   "pages/resume",
+  "pages/articles",
   "pages/home"
 ;

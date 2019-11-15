@@ -87,14 +87,20 @@
   /**
   * Buttons
   */
-  .button {
+  button {
+    color: $text-color;
+    font-family: sans-serif;
     background: transparent;
+    font-weight: 400;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+  .button-styled {
     border: 1px solid $accent-color;
     border-radius: 2px;
-    color: $text-color;
-    font-weight: 400;
     padding: 1.25rem;
-    font-family: sans-serif;
 
     &:hover {
       background-color: $accent-color;
@@ -109,10 +115,25 @@
       }
     }
 
-    &:focus {
-      outline: 0;
+
+  }
+
+  .button-normal {
+    padding: 0.5rem;
+    border-radius: 3px;
+    color: $grey-color-light;
+    border: 1px solid;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      color: $text-color;
+      cursor: pointer;
     }
 
+    &.active {
+      color: $text-color;
+      background-color: $grey-color-light;
+    }
   }
 
  /**
@@ -126,16 +147,10 @@
    &.header {
      li {
        &:before {
-         @include dot;
+         @include bar-separator;
 
          margin: 0 0.5em;
        }
-     }
-   }
-
-   &.post-list {
-     li {
-       //  background-color: darken($grey-color-light, 4%);
      }
    }
  }
@@ -161,7 +176,7 @@
   * Links
   */
  a {
-   @include transition;
+   @include color-transition;
 
    text-decoration: none;
 
@@ -214,7 +229,8 @@
    @include relative-font-size(0.9375);
    border: 1px solid $grey-color-light;
    border-radius: 3px;
-   background-color: #eef;
+   color: white;
+   background-color: $codeblock-background;
  }
 
  code {
@@ -305,7 +321,9 @@
  .add-padding-top {
   padding-top: 2rem;
  }
-
+ .add-padding-bottom{
+  padding-bottom: 2rem;
+ }
  .a_center {
    text-align: center;
  }
@@ -329,6 +347,14 @@
 
 .w1-5 {
   width: 20%;
+}
+
+.cboth {
+  clear: both;
+}
+
+.no-border {
+  border: none;
 }
 
 .dot {
