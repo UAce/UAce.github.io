@@ -1,0 +1,128 @@
+#particles-js {
+  background-color: var(--main-background-color);
+  display: flex;
+  vertical-align: bottom;
+  height: calc(100vh - 90px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .header {
+    width: 350px;
+    height: 150px;
+    font-family: "Playfair Display";
+    z-index: 1;
+    color: var(--main-text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -50px;
+
+    .site-title {
+      font-size: 50px;
+      display: block;
+      line-height: 1;
+      color: var(--main-text-color);
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .header-links {
+    margin: 10px;
+
+    .link {
+      color: var(--main-text-color);
+      text-decoration: none;
+      font-size: 15px;
+      margin: 10px;
+
+      // @media #{$small} {
+      //   font-size: 20px;
+      // }
+    }
+  }
+
+  .header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    a {
+      // no borders
+      outline: 0 !important;
+      border: none !important;
+      outline-style: none !important;
+      -moz-outline-style: none !important;
+
+      padding: none;
+      margin: none;
+    }
+
+    .icon {
+      text-align: center;
+      color: var(--main-text-color);
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $gray-700;
+        background: #fff;
+      }
+
+      &:active {
+        color: $gray-700;
+        background: #fff;
+      }
+
+      // @media #{$small} {
+      //   width: 30px;
+      //   height: 30px;
+      //   font-size: 30px;
+      // }
+    }
+  }
+
+  .down {
+    color: var(--main-text-color);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    // no borders
+    outline: 0 !important;
+    border: none !important;
+    outline-style: none !important;
+    -moz-outline-style: none !important;
+
+    .icon {
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 50px;
+      color: var(--main-text-color);
+      -webkit-animation: chevron-pulse 1.3s infinite;
+      animation: chevron-pulse 1.3s infinite;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.social-links {
+  display: block;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+
+  i {
+    font-size: 20px;
+    height: 20px;
+    width: 0.8 * 20px;
+  }
+
+  a {
+    padding: 0 1rem;
+    color: var(--main-text-color);
+
+    &:before {
+      font-size: 20px;
+    }
+
+    &:hover,
+    &:active {
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+}

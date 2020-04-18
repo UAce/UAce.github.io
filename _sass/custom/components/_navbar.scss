@@ -1,0 +1,67 @@
+#navbar {
+  height: $navbar-expanded-height;
+  background-color: transparent;
+  color: var(--main-text-color);
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+
+  &.shrink {
+    box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.5);
+    height: $navbar-shrunk-height;
+    background-color: var(--navbar-background-color);
+
+    #navbarNavAltMarkup {
+      background-color: var(--navbar-background-color);
+      border-radius: 5px;
+    }
+  }
+
+  .nav-item.nav-link {
+    transition: none;
+    margin: 0 5px;
+    &.active,
+    &:focus,
+    &:hover {
+      color: $hightlight-color;
+      font-weight: 400;
+      border-radius: 5px;
+      background-color: var(--navbar-background-hover-color);
+    }
+  }
+
+  a {
+    transition: color 0.2s ease;
+    color: var(--main-text-color);
+
+    &.active,
+    &:focus,
+    &:hover {
+      color: $hightlight-color;
+    }
+  }
+}
+
+.padder {
+  height: $navbar-expanded-height;
+}
+
+.padder-small {
+  height: $navbar-shrunk-height;
+}
+
+#theme-icon {
+  color: rgb(255, 208, 0);
+}
+
+#theme-icon-wrapper {
+  transition: none;
+  padding: 0.5rem;
+  vertical-align: -webkit-baseline-middle;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:active {
+    transform: scale(0.9);
+    align-self: flex-end;
+  }
+}

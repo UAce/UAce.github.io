@@ -1,0 +1,49 @@
+#resume {
+  @include relative-font-size(1);
+  line-height: 26px;
+
+  .title {
+    @include relative-font-size(1.4);
+    vertical-align: top;
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 2rem;
+  }
+
+  .subtitle {
+    @include relative-font-size(0.9);
+    letter-spacing: 0.1em;
+    line-height: 1.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.2rem 0 0.75rem;
+  }
+
+  .company-logo {
+    display: inline-block;
+    max-width: 200px;
+    border-radius: 2px;
+  }
+
+  .company {
+    font-weight: 600;
+
+    a {
+      transition: color 0.3s ease;
+      border-bottom: 1px solid $visited-accent-color;
+      color: $accent-color;
+      font-weight: 700;
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: $visited-accent-color;
+        border-bottom: 1px solid $visited-accent-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .description {
+    text-align: justify;
+  }
+}

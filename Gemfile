@@ -1,15 +1,22 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 3.8.6"
-gem "jekyll-seo-tag"
 gem "json"
 gem "hash-joiner"
-gem 'html-proofer'
-gem 'jemoji'
+gem "html-proofer"
+gem "jemoji"
 gem "mini_magick"
+gem "bootstrap", "~> 4.4.1"
+gem "concurrent-ruby", "~> 1.1.6"
 
 group :jekyll_plugins do
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+  gem "jekyll-autoprefixer"
   gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-compose"
+  gem "jekyll-minifier"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

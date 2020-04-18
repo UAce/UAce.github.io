@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Test 1"
-date:   2019-08-13 00:09:33 -0400
-categories: test
-image: guide-book.png
----
-This is a dummy post...

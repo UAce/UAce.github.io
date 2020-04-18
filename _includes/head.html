@@ -1,18 +1,18 @@
 <head>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    {%- seo -%}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
-    {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-    {%- endif -%}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-    <script src="{{ base.url | prepend: site.url }}/assets/js/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{{ "/assets/js/common.js"  | relative_url }}"></script>
+    <script src="{{ "/assets/js/check-dark-theme.js"  | relative_url }}"></script>
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    {%- seo -%}
 </head>

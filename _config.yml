@@ -3,7 +3,6 @@ permalink: pretty
 description: My personal website - Just a summer project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://uace.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username: UAce
 
 # Build settings
@@ -12,16 +11,25 @@ highlighter: rouge
 kramdown:
   input: GFM
 
-gems:
-  - jekyll-seo-tag
 plugins_dir: ./_plugins
+plugins:
+  - jemoji
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-autoprefixer
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-minifier
 jekyll_get:
   - data: github
     json: "https://api.github.com/users/UAce/repos"
     cache: false
-plugins:
-  - jemoji
-  - jekyll-feed
+jekyll_compose:
+  auto_open: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Config for image tag
 image:
@@ -46,6 +54,7 @@ social_links:
 
 # canvas titles
 canvas:
+  home: Welcome.
   resume: Find Out More.
   about: My Passions & Interests.
 

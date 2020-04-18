@@ -1,0 +1,181 @@
+html,
+body {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  box-sizing: unset; // Is this necessary?
+}
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--main-text-color);
+}
+
+/*
+ * Buttons
+ */
+button {
+  outline: none !important;
+  color: var(--main-text-color);
+  font-family: sans-serif;
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+  }
+}
+a.chrome-ext-btn {
+  background-color: #1a73e8;
+  padding: 0.7rem 1.3rem;
+  margin: 4px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #4692f7;
+    cursor: pointer;
+  }
+
+  text-decoration: none;
+  color: #fff;
+  font: 500 14px "Google Sans", Arial, sans-serif;
+  height: 36px;
+  letter-spacing: 0.25px;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.button-styled-transparent {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid $accent-color;
+  border-radius: 4px;
+  padding: 1.25rem;
+  background-color: transparent;
+  color: var(--main-text-color);
+
+  &:hover {
+    background-color: $accent-color;
+    color: var(--invert-text-color);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--navbar-background-hover-color);
+  color: var(--main-text-color);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 15px;
+  -webkit-animation: pulse 1.3s infinite;
+  animation: pulse 1.3s infinite;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#scroll-to-top:hover {
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
+}
+
+// .button-normal {
+//   padding: 0.5rem;
+//   border-radius: 3px;
+//   color: $grey-color-light;
+//   border: 1px solid;
+//   transition: color 0.3s ease, background-color 0.3s ease;
+
+//   &:hover {
+//     color: $text-color;
+//     cursor: pointer;
+//   }
+
+//   &.active {
+//     color: $text-color;
+//     background-color: $grey-color-light;
+//   }
+// }
+
+/*
+ * Paddings, margins
+ */
+$directions: ("top", "bottom", "left", "right");
+$rem-size: ("small", 0.5), ("normal", 1), ("medium", 2), ("large", 3), ("huge", 4);
+@each $size, $value in $rem-size {
+  .add-padding-#{$size} {
+    padding: #{$value}rem;
+  }
+  @each $direction in $directions {
+    .add-padding-#{$direction}-#{$size} {
+      padding-#{$direction}: #{$value}rem;
+    }
+  }
+}
+@each $size, $value in $rem-size {
+  .add-margin-#{$size} {
+    margin: #{$value}rem;
+  }
+  @each $direction in $directions {
+    .add-margin-#{$direction}-#{$size} {
+      margin-#{$direction}: #{$value}rem;
+    }
+  }
+}
+
+/*
+ * Alignments
+ */
+.a_center {
+  text-align: center;
+}
+
+/*
+ * Text modifiers
+*/
+.error {
+  color: red;
+}
+
+.warning {
+  color: rgb(255, 217, 0);
+}
+
+.success {
+  color: rgb(12, 211, 38);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.styled-title {
+  font-size: relative-font-size(0.75);
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+  font-weight: 550;
+  text-transform: uppercase;
+}

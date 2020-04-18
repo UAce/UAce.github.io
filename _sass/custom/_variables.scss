@@ -1,0 +1,30 @@
+// Font
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size: 15px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+
+// Colors
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$primary: lightgrey;
+$text-color: #111 !default;
+$light-text-color: #fff !default;
+$header-color: rgb(0, 0, 0) !default;
+$link-color: #1a75eb !default;
+$accent-color: #d4385a !default;
+$hightlight-color: #387cd4 !default;
+$visited-accent-color: #f0d9de !default;
+$main-background-color: white !default;
+
+// Navbar
+$navbar-expanded-height: 90px;
+$navbar-shrunk-height: 60px;

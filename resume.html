@@ -1,191 +1,89 @@
 ---
-layout: page
+layout: default
 title: Resume
-permalink: /resume/
+permalink: /resume
 ---
-<div class="resume" id="resume">
-    <div class="resume_wrapper">
-        <div class="row">
-            <div class="title w1-3">
-                <h1 class="resume_title" id="technologies">Technologies</h1>
-            </div>
-            <div class=" column w1-3">
-                <h2 class="resume_subtitle">Comfortable with</h2>
-                <ul>
-                    <li>
-                        Java
-                    </li>
-                    <li>
-                        Python
-                    </li>
-                    <li>
-                        JavaScript
-                    </li>
-                    <li>
-                        HTML5 / CSS3
-                    </li>
-                    <li>
-                        GIT Version Control
-                    </li>
-                    <li>
-                        Windows / Linux / UNIX operating systems
-                    </li>
-                </ul>
-            </div>
-            <div class="column w1-3">
-                <h2 class="resume_subtitle">Experience with</h2>
-                <ul>
-                    <li>
-                        C / C++
-                    </li>
-                    <li>
-                        Bash / Groovy
-                    </li>
-                    <li>
-                        SQL
-                    </li>
-                    <li>
-                        Full Stack (AngularJS / Flask / Jinja2, ReactJS / NodeJS)
-                    </li>
-                    <li>
-                        Native Android Development
-                    </li>
-                    <li>
-                        Infrastructure as Code (Ansible, Chef)
-                    </li>
-                    <li>
-                        Continuous Integration (Jenkins, TravisCI)
-                    </li>
-                    <li>
-                        Amazon Web Services
-                    </li>
-                    <li>
-                        OpenStack
-                    </li>
-                </ul>
-            </div>
+{% assign title = site.canvas.resume %}
+{% assign tag = 'resume' %}
+{% include canvas.html %}
+<div id="resume" class="container-fluid add-margin-top-huge">
+    <div class="row justify-content-start">
+        <div class="col-md-4">
+            <h1 class="title" id="technologies">Technologies</h1>
         </div>
-        <div class="row">
-            <div class="title w1-3">
-                <h1 class="resume_title" id="descriptionerience">Work Experience</h1>
-            </div>
-            <div class="column w2-3">
-                <div>
-                    <h2 class="resume_subtitle">Full Stack Developer Intern</h2>
-                    <span class="resume_company">
-                        <a href="https://ormuco.com/" target="_blank">
-                            Ormuco Inc.
-                        </a>
-                        , Montreal, CA, February 2019 – Present
-                    </span>
-                    <p class="description">
-                        Worked in a fast-paced environment with passionate developers to develop and maintain
-                        Ormuco's IaaS platform. Enhanced my JavaScript skills and learned AngularJS through this
-                        experience. Worked to improve the Ormuco Iaas platform UI, to improve existing features and
-                        to add new features to the platform such as Workflow as a Service (OpenStack Mistral).
-                        Worked largely with OpenStack products and performed QA/UAT testing.
-                    </p>
-                </div>
-                <div>
-                    <h2 class="resume_subtitle">System Administrator DevOps Intern</h2>
-                    <span class="resume_company">
-                        <a href="https://broadsign.com/" target="_blank">
-                            Broadsign
-                        </a>
-                        , Montreal, CA, September 2018 – April 2019
-                    </span>
-                    <p class="description">
-                        Researched and created a proof of concept for centralized logging management solutions
-                        using AWS CloudWatch. Implemented functionality to dynamically create CloudWatch agent
-                        configuration files per internal team using ERB templates into existing Chef cookbooks.
-                        Wrote Terraform and Cloudformation scripts to provision AWS resources.
-                    </p>
-                </div>
-                <div>
-                    <h2 class=" resume_subtitle">DevOps Intern</h2>
-                    <span class="resume_company">
-                        <a href="https://www.ericsson.ca/en" target="_blank">
-                            Ericsson Canada Inc.
-                        </a>
-                        , Montreal, CA, January 2018 – April 2018
-                    </span>
-                    <p class="description">
-                        Provisioned virtual machines for testing purposes with Ansible. Created and set up Docker
-                        containers for functional testings. Wrote Jenkins 2 declarative pipeline scripts (groovy)
-                        to automate the build, integration and deployment. Wrote bash scripts to automate the
-                        generation of daily reports for the overnight load tests.
-                    </p>
-                </div>
-                <div>
-                    <h2 class=" resume_subtitle">Software Engineering Intern</h2>
-                    <span class="resume_company">
-                        <a href="https://www.bombardier.com/en/transportation.html" target="_blank">
-                            Bombardier Transportation
-                        </a>
-                        , Montreal, CA, May 2017 – August 2017</span>
-                    <p class="description">
-                        Worked with a group of interns using Scrum methodology to develop a CLI tool in Python to
-                        automate the deployment of train softwares and operating systems in AZUR metros. Created a
-                        Grafana dashboard showing metrics for team productivity using data stored in MariaDB and
-                        fetched from JIRA using REST API.
-                    </p>
-                </div>
-            </div>
+        {% for item in site.data.technologies %}
+        <div class="col-md-4">
+            <h2 class="subtitle">{{ item.name }}</h2>
+            <ul>
+                {% for subItem in item.list %}
+                <li>
+                    {{ subItem }}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-        <div class="row">
-            <div class="title w1-3">
-                <h1 class="resume_title" id="projects">Personal Projects</h1>
-            </div>
-            <div class="column w2-3">
-                <div class="project_container">
-                    <h2 class="resume_subtitle">YouTubeStopwatch</h2>
-                    <p class="description">
-                        A chrome extension that is used to help users plan, monitor, control their YouTube usage. This
-                        was done as part of a school project (Human-Computer Interaction). The chrome extension is
-                        available <a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
-                            target="_blank">here</a>.
-                    </p>
-                    <div class="demo-2-1">
-                        {% image ytsw_modal.png alt="Time Modal" class="demo" %}
-                        {% image ytsw_settings.png alt="Settings Page" class="demo" %}
-                    </div>
-                </div>
-                <div class="project_container">
-                    <h2 class="resume_subtitle">MobSlayer</h2>
-                    <p class="description">
-                        Native android mobile game where the player's only task is to eliminate monsters from
-                        MapleStory. Players can acquire skills, unlock new maps and encounter new mobs as they level
-                        up.
-                    </p>
-                    <div class="demo-4-1">
-                        {% image menu.png alt="Game Menu" class="demo" %}
-                        {% image sharp_eyes.png alt="Sharp Eyes Skill" class="demo" %}
-                        {% image levelup.png alt="Level up" class="demo" %}
-                        {% image slime_dmg.png alt="Attack Monster" class="demo" %}
-                    </div>
-                </div>
-                <div class="project_container">
-                    <h2 class="resume_subtitle">gggolfclient</h2>
-                    <p class="description">
-                        A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time
-                        slots and make golf course reservations for wanted time slots. <u>Tools used</u>: Python,
-                        Docopt, Requests HTTP Library, Beautiful Soup Library.
-                    </p>
-                </div>
-            </div>
+        {% endfor %}
+    </div>
+
+    <div class="row justify-content-start add-margin-top-huge">
+        <div class="col-md-4">
+            <h1 class="title" id="work">Work Experiences</h1>
         </div>
-        <div class="row">
-            <div class="title w1-3">
-                <h1 class="resume_title" id="education">Education</h1>
+        <div class="col-md-7 add-margin-left-small">
+            {% for item in site.data.work_experiences %}
+            <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
+                {% image {{ item.image }} alt={{ item.company }} class="company-logo" %}
+                <h2 class="subtitle">{{ item.title }}</h2>
+                <span class="company">
+                    <a href="{{ item.url }}" target="_blank">
+                        {{ item.company }}
+                    </a>
+                    , {{ item.location }}, {{ item.period }}
+                </span>
+                <p class="description">
+                    {{ item.description }}
+                </p>
             </div>
-            <div class="column w2-3">
-                <h2 class="resume_subtitle">Bachelor of Software Engineering</h2>
-                <span>McGill University, Montreal, CA, September 2015 – Present</span>
-            </div>
+            {% endfor %}
         </div>
     </div>
-    <div class="more">
-        <p class="add-margin">Feel free to reach out and start a conversation!</p>
-        <!-- <a target="_blank" class="button-styled capitalize styled_title">Contact me</a target="_blank"> -->
+
+    <div class="row justify-content-start add-margin-top-huge">
+        <div class="col-md-4">
+            <h1 class="title" id="projects">Personal Projects</h1>
+        </div>
+        <div class="col-md-7 add-margin-left-small">
+            {% for item in site.data.personal_projects %}
+            <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
+                <h2 class="subtitle">{{ item.name }}</h2>
+                <p class="description">
+                    {{ item.description }}
+                </p>
+                <div class="d-flex flex-wrap flex-row">
+                    {% for image in item.images %}
+                    {% assign width = 1.0 | divided_by: forloop.length | times: 100 | round %}
+                    {% image {{ image.path }} alt={{ image.alt }} class="p-2 w-{{ width }}" %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row justify-content-start add-margin-top-huge">
+        <div class="col-md-4">
+            <h1 class="title" id="education">Education</h1>
+        </div>
+        <div class="col-md-7 add-margin-left-small">
+            {% for item in site.data.education %}
+            <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
+                <h2 class="subtitle">{{ item.title }}</h2>
+                <span>{{ item.school }}, {{ item.location }}, {{ item.period }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row shade padder align-items-center add-margin-top-huge">
+        <span class="col-md-12 text-center">Feel free to reach out and start a conversation!</span>
     </div>
 </div>

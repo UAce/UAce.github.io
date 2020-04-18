@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 Gemfile.lock
 run.sh
+old_content

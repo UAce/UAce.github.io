@@ -1,0 +1,21 @@
+- name: Comfortable with
+  list:
+    - JavaScript
+    - Python
+    - Java
+    - HTML5 / CSS3
+    - GIT Version Control
+    - Windows / Linux
+- name: Experience with
+  list:
+    - TypeScript
+    - C / C++
+    - Bash
+    - SQL
+    - Full Stack Development (AngularJS / Flask / Jinja2, ReactJS / NodeJS)
+    - Native Android Development
+    - CI/CD (Jenkins, TravisCI, Gitlab)
+    - Docker
+    - Kubernetes
+    - OpenStack
+    - Infrastructure as Code (Ansible, Chef)

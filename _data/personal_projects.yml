@@ -1,0 +1,40 @@
+- name: YoutubeStopwatch
+  description: |
+    A chrome extension that is used to help users plan, monitor, control their YouTube usage.
+    Essentially, it prompts the user for an estimated time they want to spend on Youtube and sends a 
+    notification when the time is up. The user can choose to leave or continue watching videos but there 
+    will be a gradual blur applied to all videos. This was done as part of a school project (Human-Computer Interaction). 
+    The chrome extension is available here:<br>
+    <div class="add-margin-top-small add-margin-bottom-small">
+    <a class="chrome-ext-btn"
+        href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
+        target="_blank">Download Extension</a>
+    </div>
+    <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+  images:
+    - path: demo/ytsw_modal.png
+      alt: Time Modal
+    - path: demo/ytsw_settings.png
+      alt: Settings Page
+
+- name: MobSlayer
+  description: |
+    Native android mobile game where the player's only task is to eliminate monsters (shamelessly stolen) from MapleStory. 
+    As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
+    they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
+    <br><u>Tools used</u>: Android Studio, Java, GSON
+  images:
+    - path: demo/menu.png
+      alt: Game Menu
+    - path: demo/sharp_eyes.png
+      alt: Sharp Eyes Skill
+    - path: demo/levelup.png
+      alt: Level up
+    - path: demo/slime_dmg.png
+      alt: Attack Monster
+- name: GGGolfclient
+  description: |
+    A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
+    and make golf course reservations for wanted time slots. This was a summer project.
+    <br><u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+  images:

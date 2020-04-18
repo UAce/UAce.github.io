@@ -1,0 +1,35 @@
+html,
+html[data-theme="light"] {
+  --main-text-color: hsl(0, 0%, 0%);
+  --invert-text-color: hsl(0, 15%, 92%);
+  --main-background-color: hsl(0, 7%, 97%);
+  --main-background-hover-color: darken(hsl(0, 7%, 97%), 2%);
+  --navbar-background-color: hsl(0, 5%, 100%);
+  --navbar-background-hover-color: hsl(0, 0%, 92%);
+  background-color: var(--main-background-color);
+  $main-background-color: var(--main-background-color);
+
+  .shade {
+    background-color: darken(hsl(0, 7%, 97%), 2%);
+  }
+}
+
+html[data-theme="dark"] {
+  --main-text-color: hsl(0, 10%, 80%);
+  --invert-text-color: hsl(0, 0%, 0%);
+  --main-background-color: hsl(0, 0%, 13%);
+  --main-background-hover-color: lighten(hsl(0, 0%, 13%), 2%);
+  --navbar-background-color: hsl(0, 0%, 5%);
+  --navbar-background-hover-color: hsl(0, 0%, 0%);
+  background-color: var(--main-background-color);
+
+  .shade {
+    background-color: lighten(hsl(0, 0%, 13%), 2%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
+}

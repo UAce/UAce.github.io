@@ -1,46 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-{%- include head.html -%}
+<html lang="{{ site.lang | default: "en-US" }}">
+
+{% include head.html %}
 
 <body>
-    <div id="nav" class="nav-wrapper">
-        <nav class="nav-bar">
-            {% include header.html %}
-
-            <ul class="header">
-                <li>
-                    <a href="/articles" title="Articles">Articles</a>
-                </li>
-                <li>
-                    <a href="/resume" title="Resume">Resume</a>
-                </li>
-                <li>
-                    <a href="/about" title="About me">About</a>
-                </li>
-                <li>
-                    <a id="toggle-dark-theme"><i id="theme-icon" class="icon fa fa-moon-o fa-lg"></i></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    {% if page.name == 'resume.html' %}
-    {% assign title = site.canvas.resume %}
-    {% assign tag = 'resume' %}
-    {% elsif page.name == 'about.html' %}
-    {% assign title = site.canvas.about %}
-    {% assign tag = 'about' %}
-    {%- endif -%}
-    {% if title %}
-    {% include canvas.html %}
-    {{ content }}
-    {% else%}
-    <div class="page-content" aria-label="Content" id="page-content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
-    </div>
-    {%- endif -%}
-    {%- include footer.html -%}
+    <button id="scroll-to-top" title="Scroll to top">Top</button>
+    {% include navbar.html %}
+    {{ content}}
+    {% include footer.html %}
 </body>
 
 </html>
