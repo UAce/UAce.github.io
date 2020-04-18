@@ -32,7 +32,7 @@ permalink: /resume
         <div class="col-md-7 add-margin-left-small">
             {% for item in site.data.work_experiences %}
             <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
-                {% image {{ item.image }} alt={{ item.company }} class="company-logo" %}
+                {% image {{ item.image }} alt="{{ item.company }}" class="company-logo" %}
                 <h2 class="subtitle">{{ item.title }}</h2>
                 <span class="company">
                     <a href="{{ item.url }}" target="_blank">
@@ -62,7 +62,7 @@ permalink: /resume
                 <div class="d-flex flex-wrap flex-row">
                     {% for image in item.images %}
                     {% assign width = 1.0 | divided_by: forloop.length | times: 100 | round %}
-                    {% image {{ image.path }} alt={{ image.alt }} class="p-2 w-{{ width }}" %}
+                    {% image {{ image.path }} alt="{{ image.alt }}" class="p-2 w-{{ width }}" %}
                     {% endfor %}
                 </div>
             </div>

@@ -2,7 +2,7 @@ title: Yu-Yueh Liu
 permalink: pretty
 description: My personal website - Just a summer project.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://uace.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
+url: https://uace.github.io/
 github_username: UAce
 
 # Build settings

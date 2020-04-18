@@ -3,4 +3,4 @@ set -e # halt script on error
 JEKYLL_ENV=production
 bundle exec jekyll build --destination site
 [ ! -f ./site/.nojekyll ] && touch ./site/.nojekyll
-bundle exec htmlproofer ./site --disable-external
+bundle exec htmlproofer --check-html --assume-extension --disable-external ./site
