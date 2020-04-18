@@ -1,5 +1,6 @@
 var tag = document.currentScript.getAttribute('tag');
 var node_color, line_color = "";
+
 switch (tag) {
     case "resume":
         node_color = "#ff8282";
@@ -112,4 +113,18 @@ const particlesJSON = {
     "retina_detect": true
 };
 particlesJS("particles-js", particlesJSON);
-const scroller = new SweetScroll();
+const scroller = new SweetScroll({ easing: 'easeOutQuart' });
+
+// set hover color for chevron
+$(function () {
+    var style = document.createElement('style');
+    style.innerHTML = `
+        #chevron:hover {
+            color: ${node_color} !important;
+        }
+        #chevron:active {
+            color: ${line_color} !important;
+        }
+    `;
+    document.head.appendChild(style);
+});

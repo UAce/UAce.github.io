@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en-US">
+
+<head>
+    <title>Home | Yu-Yueh Liu</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Yu-Yueh Liu | My personal website - Just a summer project.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/check-dark-theme.js"></script>
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Home | Yu-Yueh Liu</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Yu-Yueh Liu" />
+<meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="My personal website - Just a summer project." />
 <meta property="og:description" content="My personal website - Just a summer project." />
@@ -14,77 +27,69 @@
 <meta property="og:url" content="https://uace.github.io//" />
 <meta property="og:site_name" content="Yu-Yueh Liu" />
 <script type="application/ld+json">
-{"name":"Yu-Yueh Liu","description":"My personal website - Just a summer project.","@type":"WebSite","url":"https://uace.github.io//","headline":"Yu-Yueh Liu","@context":"https://schema.org"}</script>
+{"name":"Yu-Yueh Liu","description":"My personal website - Just a summer project.","@type":"WebSite","url":"https://uace.github.io//","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"><link type="application/atom+xml" rel="alternate" href="https://uace.github.io//feed.xml" title="Yu-Yueh Liu" /><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-    <script src="https://uace.github.io//assets/js/common.js"></script>
-</head><body>
-    <div id="nav" class="nav-wrapper">
-        <nav class="nav-bar">
-            <header>
-    <a href="/" title="Yu-Yueh Liu" class="title">
-        Yu-Yueh Liu
+</head>
+
+<body>
+    <button id="scroll-to-top" title="Scroll to top">Top</button>
+    <!-- Navbar theme is set in theme-switcher.js -->
+<nav id="navbar" class="navbar fixed-top navbar-expand-sm justify-content-between">
+    <a class="navbar-brand mb-0 h1" href="/">
+        <img src="/assets/favicon.png" width="30" height="30" class="d-inline-block align-top"
+            alt="Y">
+        <span class="home-title">Yu-Yueh Liu</span>
     </a>
-</header>
-
-            <ul class="header">
-                <li>
-                    <a href="/articles" title="Articles">Articles</a>
-                </li>
-                <li>
-                    <a href="/resume" title="Resume">Resume</a>
-                </li>
-                <li>
-                    <a href="/about" title="About me">About</a>
-                </li>
-                <li>
-                    <a id="toggle-dark-theme"><i id="theme-icon" class="icon fa fa-moon-o fa-lg"></i></a>
-                </li>
-            </ul>
-        </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+        onclick="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav nav nav-pills ml-auto text-right">
+            
+            <a class="nav-item nav-link " id="tab-Articles"
+                href="/articles">Articles</a>
+            
+            <a class="nav-item nav-link " id="tab-Resume"
+                href="/resume">Resume</a>
+            
+            <a class="nav-item nav-link " id="tab-About"
+                href="/about">About</a>
+            
+            <a id="theme-icon-wrapper" onclick="modeSwitcher()"><i id="theme-icon" class="icon fas fa-lg"></i></a>
+        </div>
     </div>
+</nav>
+<div class="padder"></div>
     
-    <div class="page-content" aria-label="Content" id="page-content">
-        <div class="wrapper">
-            <div class="page">
 
-    <div class="page-content">
-        <div class="home"><div class="construction capitalize a_center add-padding-top">
-Under Construction...
-</div>
-
-
-    <p class="feed-subscribe">
-        <!-- <a href="/feed.xml">
-            <svg class="svg-icon orange">
-                <use xlink:href="/assets/social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-        </a> -->
-    </p>
-
-</div>
-    </div>
-
-</div>
+<div id="particles-js" class="container-fluid">
+    <div class="header d-flex flex-column align-items-center">
+        <h1 class="site-title">Welcome.</h1>
         </div>
-    </div><footer>
-    <div class="footer">
-
-        <div class="wrapper">
-            <span>My personal website - Just a summer project.</span>
-            
-            
-            
-            <div class="copyright">&copy; 2019 Yu-Yueh Liu 🐢</div><div class="social-links"><ul class="social-media-list"><li><a aria-label="My Facebook" target="_blank" href="https://www.facebook.com/YuYuehLiu"><i
-                class="svg-icon icon fa fa-facebook" aria-hidden="true"></i></a></li><li><a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/yu-yueh-liu-667696121/"><i
-                class="svg-icon icon fa fa-linkedin" aria-hidden="true"></i></a></li><li><a aria-label="My Github" target="_blank" href="https://github.com/UAce"><i class="svg-icon icon fa fa-github-alt"
-                aria-hidden="true"></i></a></li><li><a aria-label="Send email" href="mailto:yu-yueh@hotmail.com"><i class="svg-icon svg-icon icon fa fa-envelope"></i></a></li></ul></div>
-        </div>
-
-    </div>
-</footer></body>
+    <a class="down" href="#page-start" data-scroll><i id="chevron" class="icon fa fa-chevron-down"
+            aria-hidden="true"></i></a>
+</div>
+<script src="/assets/js/app.js" tag="home"></script>
+<div class="padder-small shade" id="page-start"></div>
+<div class="container a_center add-padding-top">
+    <h1 class="error capitalize">Under Construction...</h1>
+</div>
+<div class="padder shade"></div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/theme-switcher.js"></script>
+</body>
 
 </html>
