@@ -1,6 +1,6 @@
 <div id="particles-js" class="container-fluid">
     <div class="header d-flex flex-column align-items-center">
-        <h1 class="site-title">{{ title }}</h1>
+        <h1 class="site-title fadeInDown">{{ title }}</h1>
         {% if tag == 'resume' %}
         <a href="{{ "/assets/pdf/Yueh_Liu_Resume.pdf" | relative_url }}" class="button-styled-transparent styled-title"
             download>
@@ -8,8 +8,8 @@
             Download Resume</a>
         {%- endif -%}
     </div>
-    <a class="down" href="#page-start" data-scroll><i id="chevron" class="icon fa fa-chevron-down"
+    <a class="down" href="#{{tag}}" data-scroll><i id="chevron" class="icon fa fa-chevron-down"
             aria-hidden="true"></i></a>
 </div>
 <script src="{{ "/assets/js/app.js" | relative_url }}" tag="{{tag}}"></script>
-<div class="padder-small shade" id="page-start"></div>
+<div class="padder-small shade" id="{{tag}}"></div>

@@ -4,6 +4,10 @@
 {% include head.html %}
 
 <body>
+    <link rel="icon" id="light-favicon" href="{{ "/assets/images/UA_favicon_light.svg" | relative_url }}"
+        type="image/svg" />
+    <link rel="icon" id="dark-favicon" href="{{ "/assets/images/UA_favicon_dark.svg" | relative_url }}"
+        type="image/svg" />
     <button id="scroll-to-top" title="Scroll to top">Top</button>
     {% include navbar.html %}
     {{ content}}

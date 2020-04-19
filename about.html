@@ -4,15 +4,27 @@ title: About
 permalink: /about
 ---
 {% assign title = site.canvas.about %}
-{% assign tag = 'about' %}
+{% assign tag = 'me' %}
 {% include canvas.html %}
-<div class="about container" id="about">
-    {% image yueh.png alt="My picture" class="avatar" %}
-    {% include socials.html %}
-    <div class="wrapper">
-        <div class="about_section">
-            <p>🐢</p>
+<div class="about">
+    <div class="intro row hidden add-margin-huge add-padding-normal">
+        <div class="col-md-4">
+            {% image yueh.png alt="My picture" class="avatar img-fluid img-thumbnail" %}
+        </div>
+        <div class="col-md-8 align-self-center intro-text text_left">
+            <h1>Hi, I'm Yueh 🐢</h1>
+            I'm a junior full stack developer and I have a life.
+            <p>
+                {% include socials.html %}
+            </p>
         </div>
     </div>
+    <div class="row shade add-padding-normal">
+        <div class="col-md-8">
 
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
 </div>

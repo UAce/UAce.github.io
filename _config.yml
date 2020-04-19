@@ -1,6 +1,6 @@
 title: Yu-Yueh Liu
 permalink: pretty
-description: My personal website - Just a summer project.
+description: Yueh's personal website created with Jekyll and hosted on GitHub. It uses HTML5, SASS, Bootstrap 4, JavaScript and JQuery.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://uace.github.io/
 github_username: UAce
@@ -54,9 +54,9 @@ social_links:
 
 # canvas titles
 canvas:
-  home: Welcome.
-  resume: Find Out More.
-  about: My Passions & Interests.
+  home: Welcome
+  resume: Find Out More
+  about: My Passions & Interests
 
 # Exclude from processing
 exclude:

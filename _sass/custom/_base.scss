@@ -56,16 +56,22 @@ a.chrome-ext-btn {
 }
 
 .button-styled-transparent {
-  transition: color 0.3s ease, background-color 0.3s ease;
-  border: 1px solid $accent-color;
+  transition: border 0.3s ease, background-color 0.3s ease, background-size 0.2s ease;
+  border: 1px solid var(--highlight-hover-color); //
   border-radius: 4px;
   padding: 1.25rem;
   background-color: transparent;
   color: var(--main-text-color);
+  background-image: linear-gradient(var(--highlight-hover-transparent-color), var(--highlight-hover-transparent-color));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
 
   &:hover {
-    background-color: $accent-color;
-    color: var(--invert-text-color);
+    text-decoration: none;
+    background-size: 100% 100%;
+    color: var(--main-text-color);
+    border: 1px solid var(--highlight-color);
     cursor: pointer;
   }
 
@@ -94,31 +100,14 @@ a.chrome-ext-btn {
   -webkit-animation: pulse 1.3s infinite;
   animation: pulse 1.3s infinite;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    -webkit-animation: none;
+    animation: none;
+    opacity: 1;
+    color: var(--highlight-color);
+  }
 }
-
-#scroll-to-top:hover {
-  -webkit-animation: none;
-  animation: none;
-  opacity: 1;
-}
-
-// .button-normal {
-//   padding: 0.5rem;
-//   border-radius: 3px;
-//   color: $grey-color-light;
-//   border: 1px solid;
-//   transition: color 0.3s ease, background-color 0.3s ease;
-
-//   &:hover {
-//     color: $text-color;
-//     cursor: pointer;
-//   }
-
-//   &.active {
-//     color: $text-color;
-//     background-color: $grey-color-light;
-//   }
-// }
 
 /*
  * Paddings, margins
@@ -147,13 +136,6 @@ $rem-size: ("small", 0.5), ("normal", 1), ("medium", 2), ("large", 3), ("huge", 
 }
 
 /*
- * Alignments
- */
-.a_center {
-  text-align: center;
-}
-
-/*
  * Text modifiers
 */
 .error {
@@ -173,9 +155,32 @@ $rem-size: ("small", 0.5), ("normal", 1), ("medium", 2), ("large", 3), ("huge", 
 }
 
 .styled-title {
-  font-size: relative-font-size(0.75);
+  @include relative-font-size(0.75);
   letter-spacing: 0.1em;
   line-height: 1.6em;
   font-weight: 550;
+  text-transform: uppercase;
+}
+
+/*
+ * Transitions
+ */
+.fadeInDown {
+  animation: fadeInDown 1.3s;
+  animation-iteration-count: 1;
+}
+
+.fadeIn {
+  animation: fadeIn 1.3s;
+  animation-iteration-count: 1;
+}
+
+/*
+ * Other
+ */
+.under_construction {
+  line-height: 200px;
+  color: red;
+  margin: 2rem auto;
   text-transform: uppercase;
 }

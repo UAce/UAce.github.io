@@ -10,7 +10,7 @@
         href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
         target="_blank">Download Extension</a>
     </div>
-    <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+     <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
   images:
     - path: demo/ytsw_modal.png
       alt: Time Modal
@@ -22,7 +22,7 @@
     Native android mobile game where the player's only task is to eliminate monsters (shamelessly stolen) from MapleStory. 
     As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
     they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
-    <br><u>Tools used</u>: Android Studio, Java, GSON
+    <br> <u>Tools used</u>: Android Studio, Java, GSON
   images:
     - path: demo/menu.png
       alt: Game Menu
@@ -36,5 +36,5 @@
   description: |
     A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
     and make golf course reservations for wanted time slots. This was a summer project.
-    <br><u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+    <br> <u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
   images:

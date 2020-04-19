@@ -1,13 +1,13 @@
 // All custom scss
 @import "variables";
+@import "utils/animations";
+@import "utils/mixins";
 @import "themes";
 @import "base";
 @import "components/navbar";
 @import "components/canvas";
-@import "utils/animations";
-@import "utils/mixins";
+@import "components/footer";
 @import "pages/about";
 @import "pages/articles";
 @import "pages/home";
 @import "pages/resume";
-// @import "layouts/";

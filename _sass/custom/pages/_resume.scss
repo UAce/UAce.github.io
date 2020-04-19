@@ -30,14 +30,14 @@
 
     a {
       transition: color 0.3s ease;
-      border-bottom: 1px solid $visited-accent-color;
-      color: $accent-color;
+      border-bottom: 1px dotted var(--highlight-hover-color); //
+      color: var(--highlight-color); //
       font-weight: 700;
       &:hover,
       &:active {
         text-decoration: none;
-        color: $visited-accent-color;
-        border-bottom: 1px solid $visited-accent-color;
+        color: var(--highlight-hover-color); //
+        border-bottom: 1px solid var(--highlight-hover-color); //
         cursor: pointer;
       }
     }

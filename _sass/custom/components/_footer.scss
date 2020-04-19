@@ -1,0 +1,18 @@
+footer {
+  display: block;
+  position: relative;
+  bottom: 0;
+  background-color: $gray-900;
+  color: $footer-text-color;
+  padding: 2rem 0;
+
+  a {
+    transition: color 0.3 ease;
+    color: $footer-text-color;
+
+    &:hover {
+      color: var(--highlight-color);
+      text-decoration: none;
+    }
+  }
+}

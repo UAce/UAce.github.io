@@ -12,7 +12,7 @@ permalink: /resume
             <h1 class="title" id="technologies">Technologies</h1>
         </div>
         {% for item in site.data.technologies %}
-        <div class="col-md-4">
+        <div class="col-md-4 add-padding-left-small">
             <h2 class="subtitle">{{ item.name }}</h2>
             <ul>
                 {% for subItem in item.list %}
@@ -32,7 +32,6 @@ permalink: /resume
         <div class="col-md-7 add-margin-left-small">
             {% for item in site.data.work_experiences %}
             <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
-                {% image {{ item.image }} alt="{{ item.company }}" class="company-logo" %}
                 <h2 class="subtitle">{{ item.title }}</h2>
                 <span class="company">
                     <a href="{{ item.url }}" target="_blank">
@@ -83,7 +82,15 @@ permalink: /resume
             {% endfor %}
         </div>
     </div>
-    <div class="row shade padder align-items-center add-margin-top-huge">
-        <span class="col-md-12 text-center">Feel free to reach out and start a conversation!</span>
+</div>
+<div class="shade d-flex flex-column add-margin-top-huge add-padding-bottom-large">
+    <span class="p-2 text-center add-margin-top-normal add-margin-bottom-normal">Feel free to reach out and start a
+        conversation!</span>
+    <div class="p-2 text-center">
+        <a href="/about#me"
+            class="button-styled-transparent styled-title add-margin-top-normal add-margin-bottom-normal">
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+            Contact Me
+        </a>
     </div>
 </div>

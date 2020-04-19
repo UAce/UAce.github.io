@@ -10,6 +10,7 @@ function handleScroll() {
             $('#navbar').addClass('shrink');
         }
         $('#scroll-to-top').css("display", "block");
+        handleHidden();
     } else {
         $('#navbar').removeClass('shrink');
         $('#scroll-to-top').css("display", "none");
@@ -35,8 +36,33 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+function handleHidden() {
+    var hiddenElements = document.getElementsByClassName('hidden');
+    for (var i = 0; i < hiddenElements.length; i++) {
+        if (hiddenElements[i].getBoundingClientRect().top < $(window).scrollTop()) {
+            hiddenElements[i].classList.remove('hidden');
+        }
+    }
+}
+
 $(document).ready(function () {
     handleScroll();
+    handleHidden();
     /* Every time the window is scrolled ... */
     $(window).scroll(handleScroll);
     $(window).click(handlePageClick);
