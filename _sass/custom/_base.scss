@@ -113,7 +113,7 @@ a.chrome-ext-btn {
  * Paddings, margins
  */
 $directions: ("top", "bottom", "left", "right");
-$rem-size: ("small", 0.5), ("normal", 1), ("medium", 2), ("large", 3), ("huge", 4);
+$rem-size: ("small", 0.5), ("normal", 1), ("medium", 1.5), ("large", 2.5), ("huge", 4);
 @each $size, $value in $rem-size {
   .add-padding-#{$size} {
     padding: #{$value}rem;
@@ -179,8 +179,8 @@ $rem-size: ("small", 0.5), ("normal", 1), ("medium", 2), ("large", 3), ("huge", 
  * Other
  */
 .under_construction {
-  line-height: 200px;
   color: red;
-  margin: 2rem auto;
   text-transform: uppercase;
+  height: 50vh;
+  margin-top: 4rem;
 }
