@@ -2,42 +2,52 @@
 <html lang="en-US">
 
 <head>
-    <title>Resume | Yu-Yueh Liu</title>
+    <title>Resume - Yu-Yueh Liu</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
+    <link rel="shortcut icon" class="favicon" type="image/svg"
+        href="/assets/images/UA_favicon_dark.svg">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+        crossorigin="anonymous"></script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/check-dark-theme.js"></script>
-    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script><!-- Begin Jekyll SEO tag v2.6.1 -->
+    <script src="https://unpkg.com/sweet-scroll@4.0.0/sweet-scroll.min.js"
+        integrity="sha384-YeNQy+x5Gp48/m1w+zup7sXeNzVPCC14WVR6+jevxGxvRw/1grCNT4QBzGg8b+ov"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+        integrity="sha384-3u0U01MLvyGLlqCxH5vNw55TTJ2zWaZDnxbCYz81kDzq3RYYXMVSDPLxPJu+jcCg"
+        crossorigin="anonymous"></script><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Resume | Yu-Yueh Liu</title>
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Resume" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="My personal website - Just a summer project." />
-<meta property="og:description" content="My personal website - Just a summer project." />
+<meta name="description" content="Yueh’s personal website created with Jekyll and hosted on GitHub. It uses HTML5, SASS, Bootstrap 4, JavaScript and JQuery." />
+<meta property="og:description" content="Yueh’s personal website created with Jekyll and hosted on GitHub. It uses HTML5, SASS, Bootstrap 4, JavaScript and JQuery." />
 <link rel="canonical" href="https://uace.github.io//resume" />
 <meta property="og:url" content="https://uace.github.io//resume" />
 <meta property="og:site_name" content="Yu-Yueh Liu" />
 <script type="application/ld+json">
-{"description":"My personal website - Just a summer project.","@type":"WebPage","url":"https://uace.github.io//resume","headline":"Resume","@context":"https://schema.org"}</script>
+{"description":"Yueh’s personal website created with Jekyll and hosted on GitHub. It uses HTML5, SASS, Bootstrap 4, JavaScript and JQuery.","@type":"WebPage","url":"https://uace.github.io//resume","headline":"Resume","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 
 <body>
+    <link rel="icon" id="light-favicon" href="/assets/images/UA_favicon_light.svg"
+        type="image/svg" />
+    <link rel="icon" id="dark-favicon" href="/assets/images/UA_favicon_dark.svg"
+        type="image/svg" />
     <button id="scroll-to-top" title="Scroll to top">Top</button>
     <!-- Navbar theme is set in theme-switcher.js -->
 <nav id="navbar" class="navbar fixed-top navbar-expand-sm justify-content-between">
-    <a class="navbar-brand mb-0 h1" href="/">
-        <img src="/assets/favicon.png" width="30" height="30" class="d-inline-block align-top"
-            alt="Y">
+    <a class="navbar-brand mb-0 h1 add-margin-left-normal add-padding-bottom-small" href="/">
+        <img src="/assets/images/UA_favicon_dark.svg" width="30" height="30"
+            class="d-inline-block home-logo favicon" alt="Y">
         <span class="home-title">Yu-Yueh Liu</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -54,8 +64,8 @@
             <a class="nav-item nav-link active" id="tab-Resume"
                 href="/resume">Resume</a>
             
-            <a class="nav-item nav-link " id="tab-About"
-                href="/about">About</a>
+            <a class="nav-item nav-link " id="tab-About me"
+                href="/about">About me</a>
             
             <a id="theme-icon-wrapper" onclick="modeSwitcher()"><i id="theme-icon" class="icon fas fa-lg"></i></a>
         </div>
@@ -66,24 +76,24 @@
 
 <div id="particles-js" class="container-fluid">
     <div class="header d-flex flex-column align-items-center">
-        <h1 class="site-title">Find Out More.</h1>
+        <h1 class="site-title fadeInDown">Find Out More</h1>
         
         <a href="/assets/pdf/Yueh_Liu_Resume.pdf" class="button-styled-transparent styled-title"
             download>
             <i class="fas fa-download"></i>
             Download Resume</a></div>
-    <a class="down" href="#page-start" data-scroll><i id="chevron" class="icon fa fa-chevron-down"
+    <a class="down" href="#resume" data-scroll><i id="chevron" class="icon fa fa-chevron-down"
             aria-hidden="true"></i></a>
 </div>
 <script src="/assets/js/app.js" tag="resume"></script>
-<div class="padder-small shade" id="page-start"></div>
+<div class="padder-small shade" id="resume"></div>
 <div id="resume" class="container-fluid add-margin-top-huge">
     <div class="row justify-content-start">
         <div class="col-md-4">
             <h1 class="title" id="technologies">Technologies</h1>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4 add-padding-left-small">
             <h2 class="subtitle">Comfortable with</h2>
             <ul>
                 
@@ -114,7 +124,7 @@
             </ul>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4 add-padding-left-small">
             <h2 class="subtitle">Experience with</h2>
             <ul>
                 
@@ -174,7 +184,6 @@
         <div class="col-md-7 add-margin-left-small">
             
             <div class=" add-margin-bottom-large ">
-                <img src="/generated/company/ormuco-logo-1478x382-d95e39.png" alt="Ormuco Inc." class="company-logo" >
                 <h2 class="subtitle">Full Stack Junior Developer</h2>
                 <span class="company">
                     <a href="https://ormuco.com/" target="_blank">
@@ -188,7 +197,6 @@
             </div>
             
             <div class=" add-margin-bottom-large ">
-                <img src="/generated/company/ormuco-logo-1478x382-d95e39.png" alt="Ormuco Inc." class="company-logo" >
                 <h2 class="subtitle">Full Stack Developer Intern</h2>
                 <span class="company">
                     <a href="https://ormuco.com/" target="_blank">
@@ -202,7 +210,6 @@
             </div>
             
             <div class=" add-margin-bottom-large ">
-                <img src="/generated/company/broadsign-logo-900x229-a67380.png" alt="Broadsign" class="company-logo" >
                 <h2 class="subtitle">System Administrator DevOps Intern</h2>
                 <span class="company">
                     <a href="https://broadsign.com/" target="_blank">
@@ -216,7 +223,6 @@
             </div>
             
             <div class=" add-margin-bottom-large ">
-                <img src="/generated/company/ericsson-logo-286x66-e02577.png" alt="Ericsson Canada Inc." class="company-logo" >
                 <h2 class="subtitle">Software Developer DevOps Intern</h2>
                 <span class="company">
                     <a href="https://www.ericsson.ca/en" target="_blank">
@@ -230,7 +236,6 @@
             </div>
             
             <div class="">
-                <img src="/generated/company/bombardier-transportation-logo-900x287-bd9465.png" alt="Bombardier Transportation" class="company-logo" >
                 <h2 class="subtitle">Software Engineering Intern</h2>
                 <span class="company">
                     <a href="https://www.bombardier.com/en/transportation.html" target="_blank">
@@ -265,7 +270,7 @@ The chrome extension is available here:<br>
     href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
     target="_blank">Download Extension</a>
 </div>
-<u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+ <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
 
                 </p>
                 <div class="d-flex flex-wrap flex-row">
@@ -285,7 +290,7 @@ The chrome extension is available here:<br>
                     Native android mobile game where the player's only task is to eliminate monsters (shamelessly stolen) from MapleStory. 
 As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
 they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
-<br><u>Tools used</u>: Android Studio, Java, GSON
+<br> <u>Tools used</u>: Android Studio, Java, GSON
 
                 </p>
                 <div class="d-flex flex-wrap flex-row">
@@ -310,7 +315,7 @@ they will encounter a boss. This was initially made as a joke but it turned out 
                 <p class="description">
                     A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
 and make golf course reservations for wanted time slots. This was a summer project.
-<br><u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+<br> <u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
 
                 </p>
                 <div class="d-flex flex-wrap flex-row">
@@ -334,23 +339,40 @@ and make golf course reservations for wanted time slots. This was a summer proje
             
         </div>
     </div>
-    <div class="row shade padder align-items-center add-margin-top-huge">
-        <span class="col-md-12 text-center">Feel free to reach out and start a conversation!</span>
+</div>
+<div class="shade d-flex flex-column add-margin-top-huge add-padding-bottom-large">
+    <span class="p-2 text-center add-margin-top-normal add-margin-bottom-normal">Feel free to reach out and start a
+        conversation!</span>
+    <div class="p-2 text-center">
+        <a href="/about#me"
+            class="button-styled-transparent styled-title add-margin-top-normal add-margin-bottom-normal">
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+            Contact Me
+        </a>
     </div>
 </div>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
-    integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="/assets/js/theme-switcher.js"></script>
+    <footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/theme-switcher.js"></script>
+    <div class="row align-items-center">
+        <span class="col-md-12 text-center">
+            
+            Yu-Yueh Liu © 2020 　｜　
+            
+            <a href="https://www.youtube.com/watch?v=XvR-kTUad6U" target="_blank">Plus Ultra</a> 　｜　
+            
+            <a href="feed.xml">RSS <i class="fas fa-rss"></i></a> 　｜　
+            
+            <a href="sitemap.xml">Sitemap</a> 
+            
+        </span>
+    </div>
+</footer>
 </body>
 
 </html>
