@@ -12,4 +12,11 @@
             aria-hidden="true"></i></a>
 </div>
 <script src="{{ "/assets/js/app.js" | relative_url }}" tag="{{tag}}"></script>
-<div class="padder-small shade" id="{{tag}}"></div>
+<div class="shade d-flex align-items-center">
+    {% assign min = 0 %}
+    {% assign diff = site.data.quotes.size | minus: min %}
+    {% assign randomNumber = "now" | date: "%s" | times: id | modulo: diff | plus: min %}
+    <span class="p-4 hidden-left quote text-center">“{{ site.data.quotes[randomNumber].quote }}” –
+        {{ site.data.quotes[randomNumber].author }}</span>
+</div>
+<div class="padder-tiny" id="{{tag}}"></div>

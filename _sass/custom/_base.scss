@@ -135,6 +135,41 @@ $rem-size: ("small", 0.5), ("normal", 1), ("medium", 1.5), ("large", 2.5), ("hug
   }
 }
 
+$padder-size: ("tiny", 15), ("normal", 40), ("large", 70);
+@each $size, $value in $padder-size {
+  .padder-#{$size} {
+    height: #{$value}px;
+  }
+}
+
+.padder {
+  height: $navbar-expanded-height;
+}
+
+.padder-small {
+  height: $navbar-shrunk-height;
+}
+
+$hidden-direction: ("left", 30), ("right", -30);
+@each $direction, $x in $hidden-direction {
+  .hidden-#{$direction} {
+    transform: translateX(#{$x}px) !important;
+    opacity: 0;
+  }
+}
+
+$hidden-direction: ("down", -30), ("up", 30);
+@each $direction, $y in $hidden-direction {
+  .hidden-#{$direction} {
+    transform: translateY(#{$y}px) !important;
+    opacity: 0;
+  }
+}
+// .hidden {
+//   transform: translateX(-30px) !important;
+//   opacity: 0;
+// }
+
 /*
  * Text modifiers
 */
@@ -160,6 +195,14 @@ $rem-size: ("small", 0.5), ("normal", 1), ("medium", 1.5), ("large", 2.5), ("hug
   line-height: 1.6em;
   font-weight: 550;
   text-transform: uppercase;
+}
+
+.quote {
+  transition: all 1.3s ease;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: italic;
+  margin: 0 auto;
+  transform: translate(0, 0);
 }
 
 /*

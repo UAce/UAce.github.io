@@ -6,16 +6,11 @@
     transition: all 1.3s ease;
     border: 1px solid var(--main-text-color);
     border-radius: 5px;
-    transform: translateX(0px);
+    transform: translate(0, 0);
 
     .intro-text {
       padding: 0 2rem;
     }
-  }
-
-  .hidden {
-    transform: translateX(-30px);
-    opacity: 0;
   }
 
   .avatar {
