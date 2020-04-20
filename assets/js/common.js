@@ -1,3 +1,7 @@
+// Constants
+const scrollTopThreshold = 100;
+
+// Functions
 function handleScroll() {
     const scroll = $(window).scrollTop();
     const width = $(window).width();
@@ -52,10 +56,10 @@ function debounce(func, wait, immediate) {
 };
 
 function handleHidden() {
-    var hiddenElements = document.getElementsByClassName('hidden');
+    var hiddenElements = document.querySelectorAll(`[class*="hidden-"]`);
     for (var i = 0; i < hiddenElements.length; i++) {
-        if (hiddenElements[i].getBoundingClientRect().top < $(window).scrollTop()) {
-            hiddenElements[i].classList.remove('hidden');
+        if (hiddenElements[i].getBoundingClientRect().top - scrollTopThreshold < $(window).scrollTop()) {
+            hiddenElements[i].className = hiddenElements[i].className.replace(/(^|\s)hidden-\S+/g, '');
         }
     }
 }
