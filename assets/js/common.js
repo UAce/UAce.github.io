@@ -1,5 +1,5 @@
 // Constants
-const scrollTopThreshold = 100;
+const scrollTopThreshold = 0;
 
 // Functions
 function handleScroll() {
