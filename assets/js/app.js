@@ -6,7 +6,7 @@ switch (tag) {
         node_color = "#ff8282";
         line_color = "#e60707";
         break;
-    case "about":
+    case "me":
         node_color = "#34e09e";
         line_color = "#00cc7e";
         break;
