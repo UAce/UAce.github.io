@@ -16,7 +16,7 @@
     {% assign min = 0 %}
     {% assign diff = site.data.quotes.size | minus: min %}
     {% assign randomNumber = "now" | date: "%s" | times: id | modulo: diff | plus: min %}
-    <span class="p-4 hidden-left quote text-center">“{{ site.data.quotes[randomNumber].quote }}” –
+    <span class="p-4 hidden-left quote text-center">“{{ site.data.quotes[randomNumber].quote | strip }}” –
         {{ site.data.quotes[randomNumber].author }}</span>
 </div>
 <div class="padder-tiny" id="{{tag}}"></div>

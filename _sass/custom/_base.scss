@@ -165,10 +165,6 @@ $hidden-direction: ("down", -30), ("up", 30);
     opacity: 0;
   }
 }
-// .hidden {
-//   transform: translateX(-30px) !important;
-//   opacity: 0;
-// }
 
 /*
  * Text modifiers
@@ -216,6 +212,10 @@ $hidden-direction: ("down", -30), ("up", 30);
 .fadeIn {
   animation: fadeIn 1.3s;
   animation-iteration-count: 1;
+}
+
+.transition {
+  transition: opacity 1s ease, transform 1.3s ease;
 }
 
 /*

@@ -12,9 +12,9 @@
     </div>
      <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
   images:
-    - path: demo/ytsw_modal.png
+    - path: assets/images/demo/ytsw_modal.png
       alt: Time Modal
-    - path: demo/ytsw_settings.png
+    - path: assets/images/demo/ytsw_settings.png
       alt: Settings Page
 
 - name: MobSlayer
@@ -24,13 +24,13 @@
     they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
     <br> <u>Tools used</u>: Android Studio, Java, GSON
   images:
-    - path: demo/menu.png
+    - path: assets/images/demo/menu.png
       alt: Game Menu
-    - path: demo/sharp_eyes.png
+    - path: assets/images/demo/sharp_eyes.png
       alt: Sharp Eyes Skill
-    - path: demo/levelup.png
+    - path: assets/images/demo/levelup.png
       alt: Level up
-    - path: demo/slime_dmg.png
+    - path: assets/images/demo/slime_dmg.png
       alt: Attack Monster
 - name: GGGolfclient
   description: |

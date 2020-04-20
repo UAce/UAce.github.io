@@ -1,15 +1,29 @@
 .about {
   @include relative-font-size(1.1);
-  transition: opacity 0.4s ease;
 
   .intro {
-    transition: all 1.3s ease;
-    border: 1px solid var(--main-text-color);
-    border-radius: 5px;
+    // border: 1px solid var(--main-text-color);
+    // border-radius: 5px;
     transform: translate(0, 0);
+    padding: 10vh 0;
 
     .intro-text {
       padding: 0 2rem;
+    }
+  }
+
+  .about-section {
+    transform: translate(0, 0);
+    padding: 10vh 0;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li:before {
+        @include dot;
+        color: var(--main-text-color);
+      }
     }
   }
 
@@ -18,12 +32,12 @@
     background-color: transparent;
     border: none;
     border-radius: 50%;
+    width: 100%;
   }
 
   .social-links {
     display: block;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
 
     i {
       font-size: 20px;
