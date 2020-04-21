@@ -1,4 +1,45 @@
-.post_wrapper {
-  padding: 10vh 25vh;
-  @include relative-font-size(1.2);
+.post-container {
+  @include relative-font-size(1.1);
+  padding: $navbar-expanded-height 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .post-header {
+    @include relative-font-size(0.8);
+    margin-bottom: 3rem;
+
+    .post-meta {
+      color: var(--main-text-light-color);
+    }
+  }
+
+  .icon-avatar {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
+
+  .post-datetime {
+    padding-left: 4px;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--main-text-light-color);
+    background-color: var(--tag-background-color);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: var(--main-text-color);
+      background-color: var(--tag-background-hover-color);
+    }
+  }
 }

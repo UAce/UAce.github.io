@@ -20,6 +20,17 @@ h4 {
   color: var(--main-text-color);
 }
 
+a {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-body {
+  margin-top: $navbar-expanded-height;
+}
+
 /*
  * Buttons
  */
@@ -226,4 +237,11 @@ $hidden-direction: ("down", -30), ("up", 30);
   text-transform: uppercase;
   height: 50vh;
   margin-top: 4rem;
+}
+
+.bullet-before {
+  &::before {
+    padding: 0 2px;
+    content: "\2022";
+  }
 }

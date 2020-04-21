@@ -1,17 +1,28 @@
 html,
 html[data-theme="light"] {
+  // main text
   --main-text-color: hsl(0, 0%, 0%);
+  --main-text-light-color: hsl(0, 4%, 27%);
   --invert-text-color: hsl(0, 15%, 92%);
+
+  // highlight
   --highlight-color: #db486dd7;
   --highlight-hover-color: #f59bb1;
   --highlight-hover-transparent-color: #db486d11; //#4888db;
+
+  // background
   --main-background-color: hsl(0, 7%, 95%);
   --main-background-hover-color: darken(hsl(0, 7%, 97%), 2%);
+
+  // navbar
   --navbar-background-color: hsl(0, 5%, 100%);
-  --navbar-background-hover-color: hsl(0, 0%, 92%);
+  --navbar-background-hover-color: hsl(0, 0%, 88%);
+
+  // tag
+  --tag-background-color: hsl(0, 0%, 85%);
+  --tag-background-hover-color: hsl(0, 0%, 80%);
 
   background-color: var(--main-background-color);
-  $main-background-color: var(--main-background-color);
 
   .shade {
     background-color: lighten(hsl(0, 7%, 95%), 3%);
@@ -19,15 +30,27 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --main-text-color: hsl(48, 10%, 80%);
+  // main text
+  --main-text-color: hsl(47, 15%, 88%);
+  --main-text-light-color: hsl(44, 9%, 76%);
   --invert-text-color: hsl(0, 0%, 0%);
+
+  // highlight
   --highlight-color: #ffae00d7; //#4888db;
   --highlight-hover-color: #fada96e3; //#4888db;
   --highlight-hover-transparent-color: #ffae0015; //#4888db;
+
+  // background
   --main-background-color: hsl(0, 0%, 13%);
   --main-background-hover-color: lighten(hsl(0, 0%, 13%), 2%);
-  --navbar-background-color: hsl(0, 0%, 5%);
-  --navbar-background-hover-color: hsl(0, 0%, 0%);
+
+  // navbar
+  --navbar-background-color: hsl(0, 0%, 6%);
+  --navbar-background-hover-color: hsl(0, 0%, 3%);
+
+  // tag
+  --tag-background-color: hsl(0, 0%, 8%);
+  --tag-background-hover-color: hsl(0, 0%, 0%);
 
   background-color: var(--main-background-color);
 

@@ -1,8 +1,32 @@
 ---
 layout: default
 ---
-<div class="container m-4">
-    <div class="post_wrapper">
+<article class="container post-container">
+    <header class="post-header">
+        <h1 class="">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <a href="/about#me">
+                <img src="{{ "/assets/images/yueh.png" | relative_url }}" width="48" height="48"
+                    class="icon-avatar img-fluid img-thumbnail" alt="Me">
+            </a>
+            <!-- {%- if page.author -%}<span class="post-author">{{ page.author | escape }}</span>{%- endif -%} -->
+            <time class="post-datetime" datetime="{{ page.date | date_to_xmlschema }}">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {% include reading_time.html text=content %}
+        </p>
+        <span class="article-tags">
+            {% for tag in page.tags %}
+            <a href="/tags/{{tag}}" class="tag">
+                <span>{{ tag }}</span>
+            </a>
+            {% endfor %}
+        </span>
+    </header>
+
+    <div class="post-body">
         {{ content }}
     </div>
-</div>
+    <!-- <a class="u-url" href="{{ page.url | relative_url }}" hidden></a> -->
+</article>

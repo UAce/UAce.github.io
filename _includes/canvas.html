@@ -12,6 +12,7 @@
             aria-hidden="true"></i></a>
 </div>
 <script src="{{ "/assets/js/app.js" | relative_url }}" tag="{{tag}}"></script>
+<div id="{{tag}}"></div>
 <div class="shade d-flex align-items-center">
     {% assign min = 0 %}
     {% assign diff = site.data.quotes.size | minus: min %}
@@ -19,4 +20,3 @@
     <span class="p-4 hidden-left quote text-center">“{{ site.data.quotes[randomNumber].quote | strip }}” –
         {{ site.data.quotes[randomNumber].author }}</span>
 </div>
-<div class="padder-tiny" id="{{tag}}"></div>
