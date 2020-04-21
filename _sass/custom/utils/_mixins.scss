@@ -1,5 +1,5 @@
 @mixin relative-font-size($ratio) {
-  @include responsive-font-size($base-font-size * $ratio);
+  @include responsive-font-size(16 * $ratio);
 }
 
 @mixin dot {
