@@ -1,7 +1,7 @@
 #navbar {
   height: $navbar-expanded-height;
   background-color: transparent;
-  color: var(--main-text-color);
+  color: var(--main-text-light-color);
   -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
 
@@ -33,7 +33,7 @@
 
   a {
     transition: color 0.2s ease;
-    color: var(--main-text-color);
+    color: var(--main-text-light-color);
 
     &.active,
     &:hover,
@@ -43,6 +43,7 @@
   }
 
   &:hover,
+  .navbar-brand,
   .navbar-brand:hover {
     color: var(--main-text-color);
   }

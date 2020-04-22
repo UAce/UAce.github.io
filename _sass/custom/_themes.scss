@@ -2,8 +2,8 @@ html,
 html[data-theme="light"] {
   // main text
   --main-text-color: hsl(0, 0%, 0%);
-  --main-text-light-color: hsl(0, 4%, 27%);
-  --invert-text-color: hsl(0, 15%, 92%);
+  --main-text-light-color: hsl(0, 3%, 35%);
+  --invert-text-color: hsl(0, 9%, 86%);
 
   // highlight
   --highlight-color: #db486dd7;
@@ -19,8 +19,8 @@ html[data-theme="light"] {
   --navbar-background-hover-color: hsl(0, 0%, 88%);
 
   // tag
-  --tag-background-color: hsl(0, 0%, 85%);
-  --tag-background-hover-color: hsl(0, 0%, 80%);
+  --tag-background-color: hsl(0, 2%, 88%);
+  --tag-background-hover-color: hsl(0, 5%, 85%);
 
   background-color: var(--main-background-color);
 
@@ -32,8 +32,8 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   // main text
   --main-text-color: hsl(47, 15%, 88%);
-  --main-text-light-color: hsl(44, 9%, 76%);
-  --invert-text-color: hsl(0, 0%, 0%);
+  --main-text-light-color: hsl(47, 6%, 71%);
+  --invert-text-color: hsl(0, 2%, 20%);
 
   // highlight
   --highlight-color: #ffae00d7; //#4888db;

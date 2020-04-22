@@ -1,5 +1,8 @@
 .post-container {
-  @include relative-font-size(1.1);
+  font-family: $post-font-family;
+  font: $post-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   padding: $navbar-expanded-height 2rem;
   max-width: 800px;
   margin-left: auto;
@@ -41,5 +44,29 @@
       color: var(--main-text-color);
       background-color: var(--tag-background-hover-color);
     }
+  }
+
+  h2 {
+    margin: 4.5rem 0 2rem;
+  }
+
+  h3,
+  h4,
+  .post-title {
+    font-weight: 700;
+    margin: 3.5rem 0 1.5rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid var(--invert-text-color);
+  }
+
+  h3,
+  h4 {
+    color: var(--main-text-light-color);
+  }
+
+  .post-body {
+    @include relative-font-size(1.2);
   }
 }
