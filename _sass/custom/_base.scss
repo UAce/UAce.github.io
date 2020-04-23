@@ -212,12 +212,26 @@ $hidden-direction: ("down", -30), ("up", 30);
   transform: translate(0, 0);
 }
 
+.inline-code,
 code {
   border-radius: 5px;
   padding: 3px 5px;
   background-color: var(--tag-background-color);
 }
 
+pre code {
+  @include relative-font-size(0.9);
+  display: block;
+  padding: 1.5rem;
+  overflow: auto;
+  border: 0;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.highlight {
+  border-radius: 5px;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.35);
+}
 /*
  * Transitions
  */

@@ -17,8 +17,17 @@ Chrome extensions are programs that add functionalities to Chrome and enhance yo
 
 <h2>Manifest</h2>
 <p>
-The `manifest.json` file is the most important component and it provides Chrome all the information about your extension such as the name of your extension, the version, the permissions needed, etc.
+The <code class="inline-code">manifest.json</code> file is the most important component and it provides Chrome all the information about your extension such as the name of your extension and the permissions needed but we'll get into that a bit later.
 </p>
+
+```json
+{
+  "manifest_version": 2,
+  "name": "My Extension",
+  "description": "This is an example.",
+  "version": "0.1"
+}
+```
 
 
 <!-- <h4>Prerequisites</h4>

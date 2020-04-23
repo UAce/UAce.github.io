@@ -22,6 +22,9 @@ html[data-theme="light"] {
   --tag-background-color: hsl(0, 2%, 88%);
   --tag-background-hover-color: hsl(0, 5%, 85%);
 
+  // code-blocks
+  --code-block-background-color: hsl(0, 0%, 89%);
+
   background-color: var(--main-background-color);
 
   .shade {
@@ -51,6 +54,9 @@ html[data-theme="dark"] {
   // tag
   --tag-background-color: hsl(0, 0%, 8%);
   --tag-background-hover-color: hsl(0, 0%, 0%);
+
+  // code-blocks
+  --code-block-background-color: hsl(0, 0%, 22.7%);
 
   background-color: var(--main-background-color);
 
