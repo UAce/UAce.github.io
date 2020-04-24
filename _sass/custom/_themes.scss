@@ -11,8 +11,8 @@ html[data-theme="light"] {
   --highlight-hover-transparent-color: #db486d11; //#4888db;
 
   // background
-  --main-background-color: hsl(0, 7%, 95%);
-  --main-background-hover-color: darken(hsl(0, 7%, 97%), 2%);
+  --main-background-color: #fcfeff;
+  --main-background-hover-color: darken(#fcfeff);
 
   // navbar
   --navbar-background-color: hsl(0, 5%, 100%);
@@ -22,8 +22,8 @@ html[data-theme="light"] {
   --tag-background-color: hsl(0, 2%, 88%);
   --tag-background-hover-color: hsl(0, 5%, 85%);
 
-  // code-blocks
-  --code-block-background-color: hsl(0, 0%, 89%);
+  // card
+  --card-background-color: hsl(0, 0%, 98%);
 
   background-color: var(--main-background-color);
 
@@ -55,8 +55,8 @@ html[data-theme="dark"] {
   --tag-background-color: hsl(0, 0%, 8%);
   --tag-background-hover-color: hsl(0, 0%, 0%);
 
-  // code-blocks
-  --code-block-background-color: hsl(0, 0%, 22.7%);
+  // card
+  --card-background-color: hsl(0, 0%, 22.7%);
 
   background-color: var(--main-background-color);
 

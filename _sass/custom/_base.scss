@@ -206,7 +206,7 @@ $hidden-direction: ("down", -30), ("up", 30);
 
 .quote {
   transition: all 1.3s ease;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  // font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: italic;
   margin: 0 auto;
   transform: translate(0, 0);
@@ -232,13 +232,26 @@ pre code {
   border-radius: 5px;
   box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.35);
 }
+
+.section-title {
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--invert-text-color);
+}
+
 /*
  * Transitions
  */
-.fadeInDown {
-  animation: fadeInDown 1.3s;
-  animation-iteration-count: 1;
+$fadeIn-direction: ("Down", "Up", "Left", "Right");
+@each $direction in $fadeIn-direction {
+  .fadeIn#{$direction} {
+    animation: fadeIn#{$direction} 1.3s;
+    animation-iteration-count: 1;
+  }
 }
+// .fadeInDown {
+//   animation: fadeInDown 1.3s;
+//   animation-iteration-count: 1;
+// }
 
 .fadeIn {
   animation: fadeIn 1.3s;

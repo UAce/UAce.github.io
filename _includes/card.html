@@ -1,0 +1,7 @@
+<div class="card shadow">
+    <div class="card-body">
+        <h5 class="card-title">{{ include.post.title }}</h5>
+        <p class="card-text">{{ include.post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+        <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
+    </div>
+</div>

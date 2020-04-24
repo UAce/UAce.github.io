@@ -3,14 +3,17 @@ layout: default
 title: Articles
 permalink: /articles
 ---
-<div class="container text-center add-padding-top">
-    <h1 class="under_construction">Under Construction...</h1>
-    <ul>
+{% assign title = site.canvas.articles %}
+{% assign tag = 'articles' %}
+{% assign id = 7 %}
+{% include canvas.html %}
+<div class="container text-center add-margin-top-large add-margin-bottom-large">
+    <div class="d-flex flex-wrap row">
         {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            {{ post.excerpt }}
-        </li>
+        <div class="col-md-4 py-3 d-flex align-items-stretch">
+            {% include card.html post=post %}
+        </div>
         {% endfor %}
-    </ul>
+    </div>
+    <h1 class="under_construction">Under Construction...</h1>
 </div>

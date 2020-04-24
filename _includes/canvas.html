@@ -1,6 +1,8 @@
 <div id="particles-js" class="container-fluid">
     <div class="header d-flex flex-column align-items-center">
-        <h1 class="site-title fadeInDown">{{ title }}</h1>
+        {% assign diff = site.data.fadeIn.size %}
+        {% assign randomNumber = "now" | date: "%s" | modulo: diff %}
+        <h1 class="site-title {{ site.data.fadeIn[randomNumber] }}">{{ title }}</h1>
         {% if tag == 'resume' %}
         <a href="{{ "/assets/pdf/Yueh_Liu_Resume.pdf" | relative_url }}" class="button-styled-transparent styled-title"
             download>
@@ -13,10 +15,11 @@
 </div>
 <script src="{{ "/assets/js/app.js" | relative_url }}" tag="{{tag}}"></script>
 <div id="{{tag}}"></div>
-<div class="shade d-flex align-items-center">
-    {% assign min = 0 %}
-    {% assign diff = site.data.quotes.size | minus: min %}
-    {% assign randomNumber = "now" | date: "%s" | times: id | modulo: diff | plus: min %}
-    <span class="p-4 hidden-left quote text-center">“{{ site.data.quotes[randomNumber].quote | strip }}” –
-        {{ site.data.quotes[randomNumber].author }}</span>
+<div class="shade align-items-center">
+    {% assign diff = site.data.quotes.size %}
+    {% assign randomNumber = "now" | date: "%s" | times: id | modulo: diff %}
+    <blockquote class="blockquote p-4 hidden-left quote text-center">
+        <span>“{{ site.data.quotes[randomNumber].quote | strip }}”</span>
+        <span class="blockquote-footer">{{ site.data.quotes[randomNumber].author }}</span>
+    </blockquote>
 </div>
