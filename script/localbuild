@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
-JEKYLL_ENV=dev
+JEKYLL_ENV=development
 bundle exec jekyll build --destination _site
 [ ! -f ./site/.nojekyll ] && touch ./_site/.nojekyll
 htmlproofer --check-html \
