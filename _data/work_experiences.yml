@@ -1,10 +1,10 @@
-- title: Full Stack Junior Developer
+- title: Full Stack Developer
   company: Ormuco Inc.
   image: company/ormuco-logo.png
   url: https://ormuco.com/
   location: Montreal, CA
   period: January 2020 – Present
-  description: Working on a different project where I learned ReactJS and TypeScript. Setup CI/CD pipeline in GitLab with Kubernetes deployment integration.
+  description: Worked on two additional projects where I learned ReactJS, NodeJS and TypeScript. Setup CI/CD pipeline in GitLab with Kubernetes deployment integration.
 - title: Full Stack Developer Intern
   company: Ormuco Inc.
   image: company/ormuco-logo.png
