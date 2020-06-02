@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding Chrome Extensions
+title: Understanding Chrome Extensions (WIP)
 author: Yu-Yueh Liu
 tags:
 - JavaScript    
@@ -11,7 +11,7 @@ tags:
 Chrome extensions are programs that add functionalities to Chrome and enhance your browsing experience. They are very popular and chances are you're using one right now! In fact, you can find extensions for pretty much anything such as helping you become more productive, protecting your privacy and more. (Making your own Chrome extension is quite simple and it could turn out to be a fun personal project.)?
 
 <h4>Goal</h4>
-<p>This article is a documentation of what I learned when making my own Chrome extension. If you're looking for a tutorial for starters, please check out their <a href="https://developer.chrome.com/extensions/getstarted" target="_blank">Getting Started Tutorial</a>.</p>
+<p>This article is a documentation of what I learned when making my own Chrome extension. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank">Getting Started Tutorial</a>.</p>
 
 <p>In this article, you will familiarize yourself with the main components needed to create an extension, learn about message passing and learn how to use external libraries.</p>
 

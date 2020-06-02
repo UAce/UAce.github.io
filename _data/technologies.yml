@@ -11,10 +11,11 @@
     - C / C++
     - Bash
     - SQL
-    - Full Stack Development (AngularJS / Flask / Jinja2, ReactJS / NodeJS)
+    - "Full Stack Development: AngularJS, Flask, Jinja2 / ReactJS, NodeJS"
     - Native Android Development
-    - CI/CD (Jenkins, TravisCI, GitLab)
-    - Docker
+    - "CI/CD: Jenkins, GitLab, TravisCI"
     - Kubernetes
+    - Docker
     - OpenStack
-    - Infrastructure as Code (Ansible, Chef)
+    - "Infrastructure as Code: Ansible, Chef, Terraform"
+    - "Cloud Platform: AWS"
