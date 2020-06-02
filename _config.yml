@@ -27,6 +27,7 @@ jekyll_get:
 jekyll_compose:
   auto_open: true
 jekyll-minifier:
+  compress_css: false
   uglifier_args:
     harmony: true
 
