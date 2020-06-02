@@ -26,6 +26,9 @@ jekyll_get:
     cache: false
 jekyll_compose:
   auto_open: true
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 
 sass:
   sass_dir: _sass

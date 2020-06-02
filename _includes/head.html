@@ -28,9 +28,9 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="{{ "/assets/js/common.js"  | relative_url }}"></script>
     <script src="{{ "/assets/js/check-dark-theme.js"  | relative_url }}"></script>
-
     {% if jekyll.environment == 'production' %}
-    {% include google-analytics.html %}
+    {% include analytics.html %}
     {% endif %}
+
     {%- seo -%}
 </head>
