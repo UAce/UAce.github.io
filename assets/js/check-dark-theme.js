@@ -1,4 +1,1 @@
-const theme = localStorage.getItem('theme');
-if (theme === "dark") {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
+const theme=localStorage.getItem("theme");"dark"===theme&&document.documentElement.setAttribute("data-theme","dark");
