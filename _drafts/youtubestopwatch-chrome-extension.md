@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About YouTubeStopwatch Chrome Extension
+title: YouTubeStopwatch Chrome Extension
 author: Yu-Yueh Liu
 tags:
 - JavaScript    
@@ -128,23 +128,22 @@ function removeYoutubeTab(tabId) {
 }
 ```
 <p>
-In summary, when the script starts, an event listener is initialized. When an event is received, if the sender is <i>youtube</i>, then we save the tabId to keep track of active youtube tabs. Furthermore, depending on the event message, it will trigger different actions. For example, the message <b>START_COUNTDOWN</b> will start the countdown.
+In summary, when the script starts, an event listener is initialized. When an event is received, if the sender is <i>youtube</i>, then we save the tabId to keep track of active youtube tabs. Furthermore, depending on the event message, it will trigger different actions. For example, the event <b>START_COUNTDOWN</b> will start the countdown.
 </p>
 
 <h2>Content Script</h2>
 <p>
-</p>
-
-<h2>Events</h2>
-<p>
+...
 </p>
 
 <h2>Popup (view and script)</h2>
 <p>
+...
 </p>
 
 <h2>Constants</h2>
 <p>
+...
 </p>
 
 <!-- <h4>Prerequisites</h4>
