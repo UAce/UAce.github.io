@@ -238,6 +238,15 @@ pre code {
   border-bottom: 1px solid var(--invert-text-color);
 }
 
+.accent {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 /*
  * Transitions
  */
