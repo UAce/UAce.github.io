@@ -45,16 +45,16 @@ The <code class="inline-code">manifest.json</code> file is the first thing you n
 
 {% highlight json %}
 {
-  "manifest_version": 2,
-  "version": "0.1",
-  "name": "My Extension",
-  "description": "This is my extension",
+    "manifest_version": 2,
+    "version": "0.1",
+    "name": "My Extension",
+    "description": "This is my extension"
 }
 {% endhighlight %}
 
 <h2>Background Scripts</h2>
 <p>
-Background scripts are scripts that run in the background of your browser when you open Google Chrome. You can make the scripts persistent or not depending on your use case. In my case, I chose to use a persistent script. As long as Google Chrome is open, the script will be running. To do that, I added a <strong>background</strong> section to the <b>manifest</b> file. 
+Background scripts are scripts that run in the background of your browser when you open Google Chrome. You can make the scripts persistent or not depending on your use case. I chose to use a persistent script. As long as Google Chrome is open, the script will be running. To define background scripts, I added a <strong>background</strong> section to the <b>manifest</b> file. 
 </p>
 
 <!-- TODO: Add Line highlighter -->
@@ -75,10 +75,10 @@ Background scripts are scripts that run in the background of your browser when y
 {% endhighlight %} -->
 
 <pre class="highlight"><code>{
-  "manifest_version": 2,
-  "version": "0.1",
-  "name": "My Extension",
-  "description": "This is my extension",
+    "manifest_version": 2,
+    "version": "0.1",
+    "name": "My Extension",
+    "description": "This is my extension",
 <span class="hl-line">  "background": {</span>
 <span class="hl-line">      "scripts": [</span>
 <span class="hl-line">          "js/background.js"</span>
@@ -152,27 +152,54 @@ To add more than one background scripts, you have to add the script names to the
 </p>
 
 <pre class="highlight"><code>{
-  "manifest_version": 2,
-  "version": "0.1",
-  "name": "My Extension",
-  "description": "This is my extension",
-  "background": {
-      "scripts": [
-          "js/background.js"
+    "manifest_version": 2,
+    "version": "0.1",
+    "name": "My Extension",
+    "description": "This is my extension",
+    "background": {
+        "scripts": [
+            "js/background.js"
 <span class="hl-line">          "js/jquery-3.4.1.min.js"</span>
-      ],
-      "persistent": true
-  }
+        ],
+        "persistent": true
+    }
 }</code></pre>
 
 
 <h2>Content Script</h2>
 <p>
-Content Scripts are run
+Content Scripts are run on specific web pages and can interact with a website's DOM. To define a content script, I added a <b>content_scripts</b> section to the <b>manifest</b> file.
+</p>
+<pre class="highlight"><code>{
+    "manifest_version": 2,
+    "version": "0.1",
+    "name": "My Extension",
+    "description": "This is my extension",
+    "background": {
+        "scripts": [
+            "js/background.js"
+            "js/jquery-3.4.1.min.js"
+        ],
+        "persistent": true
+    },
+    <span class="hl-line">"content_scripts": [</span>
+    <span class="hl-line">    {</span>
+    <span class="hl-line">        "matches": [</span>
+    <span class="hl-line">            "*://*.youtube.com/*"</span>
+    <span class="hl-line">        ],</span>
+    <span class="hl-line">        "js": [</span>
+    <span class="hl-line">            "js/jquery-3.4.1.min.js",</span>
+    <span class="hl-line">            "js/content.js"</span>
+    <span class="hl-line">        ],</span>
+    <span class="hl-line">        "run_at": "document_end"</span>
+    <span class="hl-line">    }</span>
+    <span class="hl-line">]</span>
+}</code></pre>
+<p>
+The <code class="inline-code">"matches": [ "*://*.youtube.com/*" ]</code> section tells Chrome to run the content scripts when the URL of the website matches the values specified. The <code class="inline-code">"run_at": "document_end"</code> section ensures that the content scripts are run after the page is loaded.
 </p>
 
-
-<h2>Events</h2>
+<h2>Web Resources</h2>
 <p>
 </p>
 
