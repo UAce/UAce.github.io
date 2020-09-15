@@ -1,3 +1,13 @@
+- name: WebsiteWatcher (WIP)
+  description: |
+    WebsiteWatcher is a Python Command line tool that watches a website and notifies
+    the user via email or sms when the watcher condition is met. It's useful for tracking
+    lists or values on the internet, e.g. New items, Price changes, etc.
+
+    <br> <u>Tools used</u>: Python3, Selenium WebDriver, Beautiful Soup 4, Twilio Email/SMS API, Tox
+    <br> <u><a class="text" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View GitHub Repository</a></u>
+  image:
+
 - name: YoutubeStopwatch
   description: |
     A chrome extension that is used to help users plan, monitor, control their YouTube usage.
@@ -11,6 +21,7 @@
         target="_blank">Download Extension</a>
     </div>
      <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+     <br> <u><a class="text" href="https://github.com/UAce/YouTubeStopwatch" target="_blank">View GitHub Repository</a></u>
   images:
     - path: assets/images/demo/ytsw_modal.png
       alt: Time Modal
@@ -23,6 +34,7 @@
     As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
     they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
     <br> <u>Tools used</u>: Android Studio, Java, GSON
+    <br> <u><a class="text" href="https://github.com/UAce/MobSlayer" target="_blank">View GitHub Repository</a></u>
   images:
     - path: assets/images/demo/menu.png
       alt: Game Menu
@@ -32,9 +44,10 @@
       alt: Level up
     - path: assets/images/demo/slime_dmg.png
       alt: Attack Monster
-- name: GGGolfclient
-  description: |
-    A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
-    and make golf course reservations for wanted time slots. This was a summer project.
-    <br> <u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
-  images:
+# - name: GGGolfclient
+#   description: |
+#     A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
+#     and make golf course reservations for wanted time slots. This was a summer project.
+#     <br> <u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+#     <br> <u><a class="text" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View GitHub Repository</a></u>
+#   images:

@@ -79,12 +79,12 @@ Background scripts are scripts that run in the background of your browser when y
     "version": "0.1",
     "name": "My Extension",
     "description": "This is my extension",
-<span class="hl-line">  "background": {</span>
-<span class="hl-line">      "scripts": [</span>
-<span class="hl-line">          "js/background.js"</span>
-<span class="hl-line">      ],</span>
-<span class="hl-line">      "persistent": true</span>
-<span class="hl-line">  }</span>
+<span class="hl-line">    "background": {</span>
+<span class="hl-line">        "scripts": [</span>
+<span class="hl-line">            "js/background.js"</span>
+<span class="hl-line">        ],</span>
+<span class="hl-line">        "persistent": true</span>
+<span class="hl-line">    }</span>
 }</code></pre>
 
 <p><i><b>Note</b> that it is now recommended to use non-persistent background scripts with <a href="https://developer.chrome.com/extensions/background_migration">Event Driven Background Scripts</a>.</i></p>
@@ -166,7 +166,7 @@ To add more than one background scripts, you have to add the script names to the
 }</code></pre>
 
 
-<h2>Content Script</h2>
+<h2>Content Scripts</h2>
 <p>
 Content Scripts are run on specific web pages and can interact with a website's DOM. To define a content script, I added a <b>content_scripts</b> section to the <b>manifest</b> file.
 </p>
@@ -199,23 +199,17 @@ Content Scripts are run on specific web pages and can interact with a website's 
 The <code class="inline-code">"matches": [ "*://*.youtube.com/*" ]</code> section tells Chrome to run the content scripts when the URL of the website matches the values specified. The <code class="inline-code">"run_at": "document_end"</code> section ensures that the content scripts are run after the page is loaded.
 </p>
 
-<h2>Web Resources</h2>
+<h2>Popup</h2>
 <p>
 </p>
 
-<h2>Popup (view and script)</h2>
+<h2>Web Resources</h2>
 <p>
 </p>
 
 <h2>Constants</h2>
 <p>
 </p>
-
-<!-- <h4>Prerequisites</h4>
-<ul>
-<li></li>
-<li></li>
-</ul> -->
 
 <!-- <img src="{{ "/assets/images/post/productive.png" | relative_url }}" class="img-fluid add-margin-top-normal add-margin-bottom-normal"> -->
 
