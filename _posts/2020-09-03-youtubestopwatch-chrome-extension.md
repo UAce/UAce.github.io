@@ -144,11 +144,11 @@ function removeYoutubeTab(tabId) {
 }
 ```
 <p>
-When the script starts, a callback function is added with <code class="inline-code">onMessage.addListener()</code> to handle events. When an event is received, if the sender is <i>youtube</i>, then we save the tabId in a list to keep track of active youtube tabs and, depending on the event, a different action will be triggered. For example, the <span class="accent">START_COUNTDOWN</span> event will start the countdown in the background script.
+When the script starts, a callback function is added with <code class="inline-code">onMessage.addListener()</code> to handle events. Depending on the event received, a different action will be triggered. For example, the <span class="accent">START_COUNTDOWN</span> event will start the countdown in the background script. The tabId is stored in a list to keep track of active youtube tabs if the sender is youtube. This is done using the Chrome Tabs API and we need to give permissions to our application in the manifest file.
 </p>
 
 <p>
-To add more than one background scripts, you have to add the script names to the background section in the manifest file. For example, I needed to use JQuery in the background script so I downloaded the <i>jquery-3.4.1.min.js</i> file and saved it in the <b>js</b> directory, then added the following:
+I needed to use JQuery in the background script so I downloaded the <i>jquery-3.4.1.min.js</i> file, saved it in the <b>js</b> directory and specified the file as a background script. Here are the new changes to the manifest file:
 </p>
 
 <pre class="highlight"><code>{
@@ -156,10 +156,13 @@ To add more than one background scripts, you have to add the script names to the
     "version": "0.1",
     "name": "My Extension",
     "description": "This is my extension",
+<span class="hl-line">    "permissions": [</span>
+<span class="hl-line">        "tabs"</span>
+<span class="hl-line">    ],</span>
     "background": {
         "scripts": [
             "js/background.js"
-<span class="hl-line">          "js/jquery-3.4.1.min.js"</span>
+<span class="hl-line">            "js/jquery-3.4.1.min.js"</span>
         ],
         "persistent": true
     }
@@ -175,6 +178,9 @@ Content Scripts are run on specific web pages and can interact with a website's 
     "version": "0.1",
     "name": "My Extension",
     "description": "This is my extension",
+    "permissions": [
+        "tabs"
+    ],
     "background": {
         "scripts": [
             "js/background.js"
@@ -182,18 +188,18 @@ Content Scripts are run on specific web pages and can interact with a website's 
         ],
         "persistent": true
     },
-    <span class="hl-line">"content_scripts": [</span>
-    <span class="hl-line">    {</span>
-    <span class="hl-line">        "matches": [</span>
-    <span class="hl-line">            "*://*.youtube.com/*"</span>
-    <span class="hl-line">        ],</span>
-    <span class="hl-line">        "js": [</span>
-    <span class="hl-line">            "js/jquery-3.4.1.min.js",</span>
-    <span class="hl-line">            "js/content.js"</span>
-    <span class="hl-line">        ],</span>
-    <span class="hl-line">        "run_at": "document_end"</span>
-    <span class="hl-line">    }</span>
-    <span class="hl-line">]</span>
+<span class="hl-line">    "content_scripts": [</span>
+<span class="hl-line">        {</span>
+<span class="hl-line">            "matches": [</span>
+<span class="hl-line">                "*://*.youtube.com/*"</span>
+<span class="hl-line">            ],</span>
+<span class="hl-line">            "js": [</span>
+<span class="hl-line">                "js/jquery-3.4.1.min.js",</span>
+<span class="hl-line">                "js/content.js"</span>
+<span class="hl-line">            ],</span>
+<span class="hl-line">            "run_at": "document_end"</span>
+<span class="hl-line">        }</span>
+<span class="hl-line">    ]</span>
 }</code></pre>
 <p>
 The <code class="inline-code">"matches": [ "*://*.youtube.com/*" ]</code> section tells Chrome to run the content scripts when the URL of the website matches the values specified. The <code class="inline-code">"run_at": "document_end"</code> section ensures that the content scripts are run after the page is loaded.
