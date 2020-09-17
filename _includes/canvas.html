@@ -1,8 +1,6 @@
 <div id="particles-js" class="container-fluid">
     <div class="header d-flex flex-column align-items-center">
-        {% assign diff = site.data.fadeIn.size %}
-        {% assign randomNumber = "now" | date: "%s" | modulo: diff %}
-        <h1 class="site-title {{ site.data.fadeIn[randomNumber] }}">{{ title }}</h1>
+        <h1 class="site-title {{ site.data.fadeIn | sample }}">{{ title }}</h1>
         {% if tag == 'resume' %}
         <a href="{{ "/assets/pdf/Yueh_Liu_Resume.pdf" | relative_url }}" class="button-styled-transparent styled-title"
             download>
@@ -16,10 +14,9 @@
 <script src="{{ "/assets/js/app.js" | relative_url }}" tag="{{tag}}"></script>
 <div id="{{tag}}"></div>
 <div class="shade align-items-center">
-    {% assign diff = site.data.quotes.size %}
-    {% assign randomNumber = "now" | date: "%s" | times: id | modulo: diff %}
+    {% assign randomQuote = site.data.quotes | sample %}
     <blockquote class="blockquote p-4 hidden-left quote text-center">
-        <span>“{{ site.data.quotes[randomNumber].quote | strip }}”</span>
-        <span class="blockquote-footer">{{ site.data.quotes[randomNumber].author }}</span>
+        <span>“{{ randomQuote.quote | strip }}”</span>
+        <span class="blockquote-footer">{{ randomQuote.author }}</span>
     </blockquote>
 </div>
