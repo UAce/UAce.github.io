@@ -71,7 +71,7 @@ a.chrome-ext-btn {
   border: 1px solid var(--highlight-hover-color); //
   border-radius: 4px;
   padding: 1.25rem;
-  background-color: transparent;
+  background-color: var(--highlight-transparent-color);
   color: var(--main-text-color);
   background-image: linear-gradient(var(--highlight-hover-transparent-color), var(--highlight-hover-transparent-color));
   background-position: center;
@@ -296,5 +296,5 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 3px solid var(--horizontal-line-color);
 }

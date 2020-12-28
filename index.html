@@ -4,16 +4,45 @@ title: Home
 ---
 {% assign title = site.canvas.home %}
 {% assign tag = 'home' %}
-{% assign id = 1 %}
-{% include canvas.html %}
-<div class="container  add-margin-top-large add-margin-bottom-large">
-    <h3 class="section-title">Recent Articles</h3>
-    <div class="d-flex flex-wrap row">
-        {% for post in site.posts %}
-        <div class="col-md-4 py-3 d-flex align-items-stretch">
-            {% include card.html post=post %}
+<div class="home">
+    <div class="shade row mx-auto add-padding-top-large add-padding-bottom-large">
+        <div class="col-4 offset-3 align-self-center intro-text text_right">
+            <h1>Hi, I'm Yueh 🐢</h1>
+            <p>
+                I'm a junior full stack developer and this website was my 2020 Summer project.
+            </p>
         </div>
-        {% endfor %}
+        <div class="col-3 align-self-center">
+            {% image yueh.png alt="Me" class="avatar img-fluid img-thumbnail" %}
+        </div>
     </div>
-    <!-- <h1 class="under_construction text-center">Under Construction...</h1> -->
+    <div class="container add-padding-top-large add-padding-bottom-large">
+        <div class="home-section">
+            <h1 class="add-padding-normal">Recent Activities</h1>
+            <hr>
+            <p>
+                I've been learning about Kubernetes for work. I have to create several Kubernetes clusters using
+                Openstack Magnum with prometheus monitoring, autoscaling and autohealing features enabled.
+            </p>
+        </div>
+        <div class="home-section">
+            <h1 class="add-padding-normal">Recent Articles</h1>
+            <hr>
+            <div class="row m-auto">
+                <div class="container add-margin-top-normal add-margin-bottom-large">
+                    <div class="list-group">
+                        {% for post in site.posts %}
+                        <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action">
+                            <span class="article-date col-2">
+                                {{ post.date | date: "%b %d" }}
+                            </span>
+                            <span class="article-title col-8">{{ post.title }}</span>
+                            <span class="article-label {{ post.label }} col-1">{{ post.label | capitalize }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

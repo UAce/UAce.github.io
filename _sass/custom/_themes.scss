@@ -8,7 +8,8 @@ html[data-theme="light"] {
   // highlight
   --highlight-color: #db486dd7;
   --highlight-hover-color: #f59bb1;
-  --highlight-hover-transparent-color: #db486d11; //#4888db;
+  --highlight-transparent-color: #db486d1f; //#4888db;
+  --highlight-hover-transparent-color: #db486d31; //#4888db;
 
   // background
   --main-background-color: #fcfeff;
@@ -25,10 +26,13 @@ html[data-theme="light"] {
   // card
   --card-background-color: hsl(0, 0%, 98%);
 
+  // horizontal line
+  --horizontal-line-color: rgba(0, 0, 0, 0.1);
+
   background-color: var(--main-background-color);
 
   .shade {
-    background-color: lighten(hsl(0, 7%, 95%), 3%);
+    background-color: lighten(hsl(0, 0%, 93%), 3%);
   }
 }
 
@@ -41,7 +45,8 @@ html[data-theme="dark"] {
   // highlight
   --highlight-color: #ffae00d7; //#4888db;
   --highlight-hover-color: #fada96e3; //#4888db;
-  --highlight-hover-transparent-color: #ffae0015; //#4888db;
+  --highlight-transparent-color: #ffae0015; //#4888db;
+  --highlight-hover-transparent-color: #ffae003a; //#4888db;
 
   // background
   --main-background-color: hsl(0, 0%, 13%);
@@ -57,6 +62,9 @@ html[data-theme="dark"] {
 
   // card
   --card-background-color: hsl(0, 0%, 22.7%);
+
+  // horizontal line
+  --horizontal-line-color: rgba(255, 255, 255, 0.1);
 
   background-color: var(--main-background-color);
 

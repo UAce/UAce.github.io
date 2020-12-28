@@ -11,8 +11,8 @@ switch (tag) {
         line_color = "#00cc7e";
         break;
     default:
-        node_color = "#008ecc";
-        line_color = "#007ecc";
+        node_color = "#0890ff";
+        line_color = "#009eff";
         break;
 }
 const particlesJSON = {

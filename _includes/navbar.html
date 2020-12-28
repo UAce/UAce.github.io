@@ -1,22 +1,24 @@
 <!-- Navbar theme is set in theme-switcher.js -->
 <nav id="navbar" class="navbar fixed-top navbar-expand-sm justify-content-between">
-    <a class="navbar-brand mb-0 h1 add-margin-left-normal add-padding-bottom-small" href="/">
-        <img src="{{ "/assets/images/UA_favicon_dark.svg" | relative_url }}" width="40" height="30"
-            class="d-inline-block home-logo favicon" alt="UA">
-        <span class="home-title">Yu-Yueh Liu</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-        onclick="toggleNavbar()">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav nav nav-pills ml-auto text-right">
-            {% for item in site.data.navbar %}
-            <a class="nav-item nav-link {% if page.url == item.link %}active{% endif %}" id="tab-{{item.name}}"
-                href="{{item.link}}">{{ item.name }}</a>
-            {% endfor %}
-            <a id="theme-icon-wrapper" onclick="modeSwitcher()"><i id="theme-icon" class="icon fas fa-lg"></i></a>
+    <div class="container">
+        <a class="navbar-brand mb-0 h1 add-margin-left-normal add-padding-bottom-small" href="/">
+            <img src="{{ "/assets/images/UA_favicon_dark.svg" | relative_url }}" width="40" height="30"
+                class="d-inline-block home-logo favicon" alt="UA">
+            <span class="home-title">Yu-Yueh Liu</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+            onclick="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav nav-pills ml-auto text-right">
+                {% for item in site.data.navbar %}
+                <a class="nav-item nav-link {% if page.url == item.link %}active{% endif %}" id="tab-{{item.name}}"
+                    href="{{item.link}}">{{ item.name }}</a>
+                {% endfor %}
+                <a id="theme-icon-wrapper" onclick="modeSwitcher()"><i id="theme-icon" class="icon fas fa-lg"></i></a>
+            </div>
         </div>
     </div>
 </nav>

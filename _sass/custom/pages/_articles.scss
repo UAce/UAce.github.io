@@ -1,29 +1,28 @@
 .article-item {
+  @include relative-font-size(1);
   display: flex;
   color: var(--main-text-color);
   background-color: var(--card-background-color);
   &.active,
   &:hover,
   &:focus {
+    color: var(--highlight-color);
     background-color: var(--navbar-background-hover-color);
   }
 
   .article-date {
     color: var(--main-text-light-color);
     padding-right: 1rem;
+    @include relative-font-size(0.9);
   }
 
   .article-title {
     font-weight: bold;
-    &.active,
-    &:hover,
-    &:focus {
-      color: var(--highlight-color);
-    }
   }
 
   .article-label {
     max-width: 100%;
+    color: var(--main-text-color);
   }
 }
 
@@ -36,7 +35,7 @@
 .latest {
   border-radius: 5px;
   font-weight: 500;
-  background-color: rgba(240, 170, 137, 0.918);
+  background-color: rgb(221, 106, 53);
 }
 
 // .blog {
