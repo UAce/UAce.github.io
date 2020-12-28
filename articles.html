@@ -7,13 +7,22 @@ permalink: /articles
 {% assign tag = 'articles' %}
 {% assign id = 7 %}
 {% include canvas.html %}
-<div class="container add-margin-top-large add-margin-bottom-large">
-    <div class="d-flex flex-wrap row">
-        {% for post in site.posts %}
-        <div class="col-md-4 py-3 d-flex align-items-stretch">
-            {% include card.html post=post %}
+<div class="articles container add-padding-top-normal">
+    <h1 class="add-padding-normal">Articles</h1>
+    <hr>
+    <div class="row m-auto">
+        <div class="container add-margin-top-normal add-margin-bottom-large">
+            <div class="list-group">
+                {% for post in site.posts %}
+                <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action">
+                    <span class="article-date col-2">
+                        {{ post.date | date: "%b %d" }}
+                    </span>
+                    <span class="article-title col-8">{{ post.title }}</span>
+                    <span class="article-label {{ post.label }} col-1">{{ post.label | capitalize }}</span>
+                </a>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
     </div>
-    <!-- <h1 class="under_construction text-center">Under Construction...</h1> -->
 </div>

@@ -2,6 +2,7 @@
 layout: post
 title: YouTubeStopwatch Chrome Extension
 author: Yu-Yueh Liu
+label: latest
 tags:
 - JavaScript
 - HTML5

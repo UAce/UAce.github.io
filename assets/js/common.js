@@ -1,5 +1,5 @@
 // Constants
-const scrollTopThreshold = 0;
+const scrollTopThreshold = 500;
 
 // Functions
 function handleScroll() {
@@ -58,8 +58,15 @@ function debounce(func, wait, immediate) {
 function handleHidden() {
     var hiddenElements = document.querySelectorAll(`[class*="hidden-"]`);
     for (var i = 0; i < hiddenElements.length; i++) {
-        if (hiddenElements[i].getBoundingClientRect().top - scrollTopThreshold < $(window).scrollTop()) {
-            hiddenElements[i].className = hiddenElements[i].className.replace(/(^|\s)hidden-\S+/g, '');
+        if (hiddenElements[i].dataset.threshold) {
+            if (hiddenElements[i].getBoundingClientRect().top - hiddenElements[i].dataset.threshold < $(window).scrollTop()) {
+                hiddenElements[i].className = hiddenElements[i].className.replace(/(^|\s)hidden-\S+/g, '');
+            }
+        }
+        if (hiddenElements[i].dataset.scroll) {
+            if ($(window).scrollTop() > hiddenElements[i].dataset.scroll) {
+                hiddenElements[i].className = hiddenElements[i].className.replace(/(^|\s)hidden-\S+/g, '');
+            }
         }
     }
 }

@@ -15,7 +15,7 @@
 <div id="{{tag}}"></div>
 <div class="shade align-items-center">
     {% assign randomQuote = site.data.quotes | sample %}
-    <blockquote class="blockquote p-4 hidden-left quote text-center">
+    <blockquote class="blockquote p-4 hidden-left quote text-center" data-scroll="150">
         <span>“{{ randomQuote.quote | strip }}”</span>
         <span class="blockquote-footer">{{ randomQuote.author }}</span>
     </blockquote>
