@@ -6,10 +6,11 @@ html[data-theme="light"] {
   --invert-text-color: hsl(0, 9%, 86%);
 
   // highlight
-  --highlight-color: #db486dd7;
+  --highlight-color: #e83e8c; //#db486dd7
   --highlight-hover-color: #f59bb1;
   --highlight-transparent-color: #db486d1f; //#4888db;
   --highlight-hover-transparent-color: #db486d31; //#4888db;
+  --highlight-background-color: #f9f2f4;
 
   // background
   --main-background-color: #fcfeff;
@@ -20,8 +21,10 @@ html[data-theme="light"] {
   --navbar-background-hover-color: hsl(0, 0%, 92%);
 
   // tag
-  --tag-background-color: hsl(0, 2%, 88%);
-  --tag-background-hover-color: hsl(0, 5%, 85%);
+  --tag-background-color: #d8e8f5;
+  --tag-background-hover-color: #b8daf5;
+  // --tag-background-color: hsl(0, 2%, 92%);
+  // --tag-background-hover-color: hsl(0, 5%, 87%);
 
   // card
   --card-background-color: hsl(0, 0%, 98%);
@@ -39,7 +42,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   // main text
   --main-text-color: hsl(47, 15%, 88%);
-  --main-text-light-color: hsl(47, 6%, 71%);
+  --main-text-light-color: hsl(53, 5%, 68%);
   --invert-text-color: hsl(0, 2%, 20%);
 
   // highlight
@@ -47,6 +50,7 @@ html[data-theme="dark"] {
   --highlight-hover-color: #fada96e3; //#4888db;
   --highlight-transparent-color: #ffae0015; //#4888db;
   --highlight-hover-transparent-color: #ffae003a; //#4888db;
+  --highlight-background-color: #0a121b;
 
   // background
   --main-background-color: hsl(0, 0%, 13%);
@@ -57,8 +61,10 @@ html[data-theme="dark"] {
   --navbar-background-hover-color: hsl(0, 0%, 3%);
 
   // tag
-  --tag-background-color: hsl(0, 0%, 8%);
-  --tag-background-hover-color: hsl(0, 0%, 0%);
+  --tag-background-color: #053a63;
+  --tag-background-hover-color: #064575;
+  // --tag-background-color: hsl(0, 0%, 5%);
+  // --tag-background-hover-color: hsl(0, 0%, 15%);
 
   // card
   --card-background-color: hsl(0, 0%, 22.7%);

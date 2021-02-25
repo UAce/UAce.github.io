@@ -12,10 +12,10 @@ date: 2020-09-03 03:27 -0400
 ---
 Chrome extensions are programs that add functionalities to Chrome and enhance your browsing experience. In fact, you can find a myriad of extensions for the purpose of improving your productivity, protecting your privacy, and more. Making your own Chrome extension is quite simple and it could turn out to be a fun personal project.
 
-<h4>Goal</h4>
+<h3>Goal</h3>
 <p>This article is a documentation of what I learned when making my own Chrome extension. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank" class="bold">Getting Started Tutorial</a>.</p>
 
-<h4>What is YouTubeStopwatch?</h4>
+<h3>What is YouTubeStopwatch?</h3>
 <p><a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag" target="_blank" class="bold">YouTubeStopwatch</a> was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.</p>
 
 <p>The idea was to prompt the user for the desired time they want to spend on YouTube and start a countdown. Once the time is up, the user is asked whether they want to stay on YouTube or leave. If they choose to keep watching videos, they will be subject to some gradual graphical deterioration and slowly worsening their viewing experience.</p>

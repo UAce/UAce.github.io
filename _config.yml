@@ -29,6 +29,11 @@ jekyll_get:
     cache: false
 jekyll_compose:
   auto_open: true
+  default_front_matter:
+    drafts:
+      tags:
+      label: new
+      author: Yu-Yueh Liu
 jekyll-minifier:
   compress_css: false
   uglifier_args:
