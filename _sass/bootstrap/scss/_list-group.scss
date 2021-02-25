@@ -11,7 +11,6 @@
   margin-bottom: 0;
 }
 
-
 // Interactive list items
 //
 // Use anchor or button elements instead of `li`s or `div`s to create interactive
@@ -36,7 +35,6 @@
   }
 }
 
-
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
@@ -46,8 +44,8 @@
   display: block;
   padding: $list-group-item-padding-y $list-group-item-padding-x;
   color: $list-group-color;
-  background-color: $list-group-bg;
-  border: $list-group-border-width solid $list-group-border-color;
+  // background-color: $list-group-bg;
+  // border: $list-group-border-width solid $list-group-border-color;
 
   &:first-child {
     @include border-top-radius($list-group-border-radius);
@@ -81,7 +79,6 @@
     }
   }
 }
-
 
 // Horizontal
 //
@@ -123,7 +120,6 @@
   }
 }
 
-
 // Flush list items
 //
 // Remove borders and border-radius to keep list group items edge-to-edge. Most
@@ -146,7 +142,6 @@
     }
   }
 }
-
 
 // Contextual variants
 //

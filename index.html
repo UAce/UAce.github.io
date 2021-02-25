@@ -4,12 +4,15 @@ title: Home
 ---
 {% assign title = site.canvas.home %}
 {% assign tag = 'home' %}
+{% assign id = 1 %}
+{% include canvas.html %}
 <div class="home">
-    <div class="shade row mx-auto add-padding-top-large add-padding-bottom-large">
+    <div class="row mx-auto add-padding-top-large add-padding-bottom-large">
         <div class="col-md-4 offset-md-3 align-self-center intro-text text_right">
-            <h1>Hi, I'm Yueh 🐢</h1>
+            <h1 class="add-padding-small">Hi, I'm Yueh 🐢</h1>
             <p>
-                I'm a full stack devops developer and this website was my 2020 Summer project.
+                I'm a Full Stack DevOps developer and this website was my 2020 Summer project. I plan to post articles
+                about things that I learn.
             </p>
         </div>
         <div class="col-md-3 align-self-center">
@@ -18,20 +21,20 @@ title: Home
     </div>
     <div class="container add-padding-top-large add-padding-bottom-large">
         <div class="home-section">
-            <h1 class="add-padding-normal">Recent Activities</h1>
+            <h1 class="add-padding-small">Recent Activities</h1>
             <hr>
             <p>
-                Lately, I have been working mostly on backend development in TypeScript and doing DevOps work. I'm
-                developing new microservices and maintaining production ready kubernetes clusters.
+                I have been maintaining backend microservices written in NodeJS with TypeScript and
+                managing Kubernetes clusters deployed with Openstack Magnum. I am interested in frontend development.
             </p>
         </div>
         <div class="home-section">
-            <h1 class="add-padding-normal">Recent Articles</h1>
+            <h1 class="add-padding-small">Recent Articles</h1>
             <hr>
             <div class="row m-auto">
                 <div class="container add-margin-top-normal add-margin-bottom-large">
                     <div class="list-group">
-                        {% for post in site.posts %}
+                        {% for post in site.posts limit: 2 %}
                         <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action">
                             <span class="article-date col-2">
                                 {{ post.date | date: "%b %d" }}

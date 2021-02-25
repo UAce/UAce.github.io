@@ -21,9 +21,14 @@ h4 {
 }
 
 a {
+  color: #09bddd;
   &:active,
   &:focus {
     outline: none;
+  }
+  &:hover {
+    color: #0aa3be;
+    text-decoration: none;
   }
 }
 

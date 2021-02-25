@@ -1,8 +1,7 @@
 ---
 layout: post
-title: YouTubeStopwatch Chrome Extension
+title: My First Chrome Extension
 author: Yu-Yueh Liu
-label: latest
 tags:
 - JavaScript
 - HTML5
@@ -13,7 +12,7 @@ date: 2020-09-03 03:27 -0400
 Chrome extensions are programs that add functionalities to Chrome and enhance your browsing experience. In fact, you can find a myriad of extensions for the purpose of improving your productivity, protecting your privacy, and more. Making your own Chrome extension is quite simple and it could turn out to be a fun personal project.
 
 <h3>Goal</h3>
-<p>This article is a documentation of what I learned when making my own Chrome extension. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank" class="bold">Getting Started Tutorial</a>.</p>
+<p>This article is a documentation of what I learned when making my first Chrome extension YouTubeStopwatch. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank" class="bold">Getting Started Tutorial</a>.</p>
 
 <h3>What is YouTubeStopwatch?</h3>
 <p><a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag" target="_blank" class="bold">YouTubeStopwatch</a> was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.</p>
@@ -218,6 +217,7 @@ The <code class="inline-code">"matches": [ "*://*.youtube.com/*" ]</code> sectio
 <p>
 </p>
 
-<!-- <img src="{{ "/assets/images/post/productive.png" | relative_url }}" class="img-fluid add-margin-top-normal add-margin-bottom-normal"> -->
-
-...
+<h2>Conclusion</h2>
+<p>
+Chrome Extensions have changed since I first created this project but it was still a valuable experience.
+</p>

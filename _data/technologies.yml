@@ -2,20 +2,20 @@
   list:
     - JavaScript / TypeScript
     - Python
-    - Java
-    - HTML5 / CSS3 / SASS
+    - Bash
+    - Kubernetes
+    - Docker
     - GIT Version Control
     - Windows / Linux
 - name: Experience with
   list:
-    - C / C++
-    - Bash
+    - C
+    - Java
     - SQL
+    - HTML5 / CSS3 / SASS
     - "Full Stack Development: AngularJS, Flask, Jinja2 / ReactJS, NodeJS"
     - Native Android Development
     - "CI/CD: Jenkins, GitLab, TravisCI"
-    - Kubernetes
-    - Docker
     - OpenStack
     - "Infrastructure as Code: Ansible, Chef, Terraform"
-    - "Cloud Platform: AWS"
+    - "Cloud Platform: AWS. Ormuco IaaS"

@@ -9,7 +9,7 @@ label: new
 author: Yu-Yueh Liu
 ---
 <p>
-    I have been working with Docker for over a year now but there are still a lot of things that I do not understand about, and things that I thought I knew but were wrong such as the difference between ENTRYPOINT and CMD instructions in a Dockerfile.
+    I have been working with Docker for over a year now but there are still a lot of things that I do not understand, and things that I thought I knew but were wrong such as the difference between ENTRYPOINT and CMD instructions in Dockerfiles.
 </p>
 
 <p>
@@ -28,7 +28,7 @@ An ENTRYPOINT is used to configure a container to run as an executable and it ha
 <p>
     The <i><b>shell</b></i> form:<br>
     <pre class="highlight"><code>ENTRYPOINT command param1 param2</code></pre>
-    This form prevents any command line arguments to be provided to the ENTRYPOINT and will start the executable as a subcommand of <code class="inline-code">/bin/sh -c</code>. The executable will not be the container's PID 1 which does not pass Unix signals.
+    This form prevents any command line arguments to be provided to the ENTRYPOINT and will start the executable as a subcommand of <code class="inline-code">/bin/sh -c</code>. The executable will not be the container's <code class="inline-code">PID 1</code> which does not pass Unix signals.
 </p>
 
 

@@ -13,8 +13,8 @@ html[data-theme="light"] {
   --highlight-background-color: #f9f2f4;
 
   // background
-  --main-background-color: #fcfeff;
-  --main-background-hover-color: darken(#fcfeff);
+  --main-background-color: #ffffff;
+  --main-background-hover-color: darken(#ffffff);
 
   // navbar
   --navbar-background-color: hsl(0, 5%, 100%);
@@ -23,6 +23,8 @@ html[data-theme="light"] {
   // tag
   --tag-background-color: #d8e8f5;
   --tag-background-hover-color: #b8daf5;
+  --tag-latest-background-color: #fe820b;
+  --tag-new-background-color: #08b6f0;
   // --tag-background-color: hsl(0, 2%, 92%);
   // --tag-background-hover-color: hsl(0, 5%, 87%);
 
@@ -35,7 +37,7 @@ html[data-theme="light"] {
   background-color: var(--main-background-color);
 
   .shade {
-    background-color: lighten(hsl(0, 0%, 93%), 3%);
+    background-color: darken(#ffffff, 2%);
   }
 }
 
@@ -61,8 +63,10 @@ html[data-theme="dark"] {
   --navbar-background-hover-color: hsl(0, 0%, 3%);
 
   // tag
-  --tag-background-color: #053a63;
-  --tag-background-hover-color: #064575;
+  --tag-background-color: #004478;
+  --tag-background-hover-color: #004e8a;
+  --tag-latest-background-color: #ef7a44;
+  --tag-new-background-color: #00a6df;
   // --tag-background-color: hsl(0, 0%, 5%);
   // --tag-background-hover-color: hsl(0, 0%, 15%);
 

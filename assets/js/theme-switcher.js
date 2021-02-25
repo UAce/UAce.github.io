@@ -1,11 +1,7 @@
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
-const navTheme = document.documentElement.getAttribute('data-theme');
-
-// Set theme
 function setDarkTheme(isDark) {
     const themeIcon = document.getElementById('theme-icon');
     const favicons = document.getElementsByClassName('favicon');
-    let currentTheme = isDark ? 'dark' : 'light;'
+    let currentTheme = isDark ? 'dark' : 'light'
     let faviconSource;
 
     if (isDark) {
@@ -31,7 +27,7 @@ function setDarkTheme(isDark) {
         // Favicon
         faviconSource = document.getElementById('dark-favicon');
     }
-    window.localStorage.setItem('theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (faviconSource) {
         for (var i = 0; i < favicons.length; i++) {
@@ -41,8 +37,11 @@ function setDarkTheme(isDark) {
 }
 
 function modeSwitcher() {
-    let currentMode = document.documentElement.getAttribute('data-theme');
-    setDarkTheme(currentMode !== "dark");
+    let currentMode = document.documentElement.getAttribute('data-theme') || 'dark';
+    setDarkTheme(currentMode !== 'dark');
 }
 
-setDarkTheme(theme === "dark" || userPrefers === "dark");
+// Set Theme
+const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content') || 'dark';
+const currentTheme = localStorage.getItem('theme') || userPrefers;
+setDarkTheme(currentTheme.indexOf('dark') > -1);

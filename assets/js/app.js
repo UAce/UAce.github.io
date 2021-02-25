@@ -7,12 +7,16 @@ switch (tag) {
         line_color = "#e60707";
         break;
     case "me":
-        node_color = "#34e09e";
-        line_color = "#00cc7e";
+        node_color = "#8A2BE2";
+        line_color = "#9370DB";
         break;
-    default:
+    case "home":
         node_color = "#0890ff";
         line_color = "#009eff";
+        break;
+    default:
+        node_color = "#34e09e";
+        line_color = "#00cc7e";
         break;
 }
 const particlesJSON = {
@@ -71,7 +75,7 @@ const particlesJSON = {
         },
         "move": {
             "enable": true,
-            "speed": 2,
+            "speed": 3,
             "direction": "none",
             "random": true,
             "straight": false,
