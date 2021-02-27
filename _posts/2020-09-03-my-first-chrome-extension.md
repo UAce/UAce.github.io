@@ -11,18 +11,18 @@ date: 2020-09-03 03:27 -0400
 ---
 Chrome extensions are programs that add functionalities to Chrome and enhance your browsing experience. In fact, you can find a myriad of extensions for the purpose of improving your productivity, protecting your privacy, and more. Making your own Chrome extension is quite simple and it could turn out to be a fun personal project.
 
-<h3>Goal</h3>
-<p>This article is a documentation of what I learned when making my first Chrome extension YouTubeStopwatch. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank" class="bold">Getting Started Tutorial</a>.</p>
+### Goal
+This article is a documentation of what I learned when making my first Chrome extension YouTubeStopwatch. If you're looking for a tutorial for starters, check out the official <a href="https://developer.chrome.com/extensions/getstarted" target="_blank" class="bold">Getting Started Tutorial</a>.
 
-<h3>What is YouTubeStopwatch?</h3>
-<p><a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag" target="_blank" class="bold">YouTubeStopwatch</a> was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.</p>
+### What is YouTubeStopwatch?
+<a href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag" target="_blank" class="bold">YouTubeStopwatch</a> was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.
 
-<p>The idea was to prompt the user for the desired time they want to spend on YouTube and start a countdown. Once the time is up, the user is asked whether they want to stay on YouTube or leave. If they choose to keep watching videos, they will be subject to some gradual graphical deterioration and slowly worsening their viewing experience.</p>
+The idea was to prompt the user for the desired time they want to spend on YouTube and start a countdown. Once the time is up, the user is asked whether they want to stay on YouTube or leave. If they choose to keep watching videos, they will be subject to some gradual graphical deterioration and slowly worsening their viewing experience.
 
-<p>So how did I get started? Well, the first thing I had to learn was how Chrome Extensions are structured.</p>
+So how did I get started? Well, the first thing I had to learn was how Chrome Extensions are structured.
 
 <!-- TODO: add ToC -->
-<h2>Project Structure</h2>
+## Project Structure
 <pre class="highlight"><code class="nohljsln markdown">src
 ├── manifest.json
 ├── popup.html
@@ -38,10 +38,10 @@ Chrome extensions are programs that add functionalities to Chrome and enhance yo
     └──  popup.css
 </code></pre>
 
-<h2>Manifest</h2>
-<p>
+## Manifest
+
 The <code class="inline-code">manifest.json</code> file is the first thing you need when creating an extension. It provides all the information about your extension to Google Chrome such as the name of your extension, the permissions needed, etc but we'll get into that a bit later. Here is a minimal example:
-</p>
+
 
 {% highlight json %}
 {
@@ -52,44 +52,27 @@ The <code class="inline-code">manifest.json</code> file is the first thing you n
 }
 {% endhighlight %}
 
-<h2>Background Scripts</h2>
-<p>
+## Background Scripts
+
 Background scripts are scripts that run in the background of your browser when you open Google Chrome. You can make the scripts persistent or not depending on your use case. I chose to use a persistent script. As long as Google Chrome is open, the script will be running. To define background scripts, I added a <strong>background</strong> section to the <b>manifest</b> file. 
-</p>
 
-<!-- TODO: Add Line highlighter -->
-<!-- waiting for https://github.com/rouge-ruby/rouge/pull/1426/commits/8275950801dd2637e2239cc16f69058760a6f157 -->
-<!-- {% highlight json %}
+{% code lang:JSON hlRange:'6-11' showLnNo:true %}
 {
-  "manifest_version": 2,
-  "version": "0.1",
-  "name": "My Extension",
-  "description": "This is my extension",
-  "background": {               // background section
-      "scripts": [              // 
-          "js/background.js"    // 
-      ],                        // 
-      "persistent": true        // 
-  }                             //
-}
-{% endhighlight %} -->
-
-<pre class="highlight"><code>{
     "manifest_version": 2,
     "version": "0.1",
     "name": "My Extension",
     "description": "This is my extension",
-<span class="hl-line">    "background": {</span>
-<span class="hl-line">        "scripts": [</span>
-<span class="hl-line">            "js/background.js"</span>
-<span class="hl-line">        ],</span>
-<span class="hl-line">        "persistent": true</span>
-<span class="hl-line">    }</span>
-}</code></pre>
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": true
+    }
+}
+{% endcode %}
+_**Note** that it is now recommended to use non-persistent background scripts with <a href="https://developer.chrome.com/extensions/background_migration">Event Driven Background Scripts</a>._
 
-<p><i><b>Note</b> that it is now recommended to use non-persistent background scripts with <a href="https://developer.chrome.com/extensions/background_migration">Event Driven Background Scripts</a>.</i></p>
-
-<p>Below is an example of what my background script looked like.</p>
+Below is an example of what my background script looked like.
 
 ```javascript
 // List to track all active YouTube tabs
@@ -143,13 +126,13 @@ function removeYoutubeTab(tabId) {
     active_youtube_tabs.splice(idx, 1);
 }
 ```
-<p>
-When the script starts, a callback function is added with <code class="inline-code">onMessage.addListener()</code> to handle events. Depending on the event received, a different action will be triggered. For example, the <span class="accent">START_COUNTDOWN</span> event will start the countdown in the background script. The tabId is stored in a list to keep track of active youtube tabs if the sender is youtube. This is done using the Chrome Tabs API and we need to give permissions to our application in the manifest file.
-</p>
 
-<p>
+When the script starts, a callback function is added with <code class="inline-code">onMessage.addListener()</code> to handle events. Depending on the event received, a different action will be triggered. For example, the <span class="accent">START_COUNTDOWN</span> event will start the countdown in the background script. The tabId is stored in a list to keep track of active youtube tabs if the sender is youtube. This is done using the Chrome Tabs API and we need to give permissions to our application in the manifest file.
+
+
+
 I needed to use JQuery in the background script so I downloaded the <i>jquery-3.4.1.min.js</i> file, saved it in the <b>js</b> directory and specified the file as a background script. Here are the new changes to the manifest file:
-</p>
+
 
 <pre class="highlight"><code>{
     "manifest_version": 2,
@@ -169,10 +152,10 @@ I needed to use JQuery in the background script so I downloaded the <i>jquery-3.
 }</code></pre>
 
 
-<h2>Content Scripts</h2>
-<p>
+## Content Scripts
+
 Content Scripts are run on specific web pages and can interact with a website's DOM. To define a content script, I added a <b>content_scripts</b> section to the <b>manifest</b> file.
-</p>
+
 <pre class="highlight"><code>{
     "manifest_version": 2,
     "version": "0.1",
@@ -201,23 +184,23 @@ Content Scripts are run on specific web pages and can interact with a website's 
 <span class="hl-line">        }</span>
 <span class="hl-line">    ]</span>
 }</code></pre>
-<p>
+
 The <code class="inline-code">"matches": [ "*://*.youtube.com/*" ]</code> section tells Chrome to run the content scripts when the URL of the website matches the values specified. The <code class="inline-code">"run_at": "document_end"</code> section ensures that the content scripts are run after the page is loaded.
-</p>
 
-<h2>Popup</h2>
-<p>
-</p>
 
-<h2>Web Resources</h2>
-<p>
-</p>
+## Popup
 
-<h2>Constants</h2>
-<p>
-</p>
 
-<h2>Conclusion</h2>
-<p>
+
+## Web Resources
+
+
+
+## Constants
+
+
+
+## Conclusion
+
 Chrome Extensions have changed since I first created this project but it was still a valuable experience.
-</p>
+
