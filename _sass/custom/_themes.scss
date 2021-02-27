@@ -25,8 +25,11 @@ html[data-theme="light"] {
   --tag-background-hover-color: #b8daf5;
   --tag-latest-background-color: #fe820b;
   --tag-new-background-color: #08b6f0;
-  // --tag-background-color: hsl(0, 2%, 92%);
-  // --tag-background-hover-color: hsl(0, 5%, 87%);
+
+  // blockquotes
+  --blockquotes-background-color: #f9f9f9;
+  --blockquotes-border-color: #bfc4c9;
+  --blockquotes-text-color: #8e9194;
 
   // card
   --card-background-color: hsl(0, 0%, 98%);
@@ -67,8 +70,11 @@ html[data-theme="dark"] {
   --tag-background-hover-color: #004e8a;
   --tag-latest-background-color: #ef7a44;
   --tag-new-background-color: #00a6df;
-  // --tag-background-color: hsl(0, 0%, 5%);
-  // --tag-background-hover-color: hsl(0, 0%, 15%);
+
+  // blockquotes
+  --blockquotes-background-color: #2c2b2b;
+  --blockquotes-border-color: #76787a;
+  --blockquotes-text-color: #8e9194;
 
   // card
   --card-background-color: hsl(0, 0%, 22.7%);

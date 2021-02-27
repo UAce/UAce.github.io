@@ -213,6 +213,14 @@ $hidden-direction: ("down", -30), ("up", 30);
   text-transform: uppercase;
 }
 
+blockquote {
+  border-left: 0.35em solid var(--blockquotes-border-color);
+  color: var(--blockquotes-text-color);
+  padding: 0 1em;
+  background-color: var(--blockquotes-background-color);
+  margin-left: 0.5em;
+}
+
 .quote {
   transition: all 1.3s ease;
   // font-family: Helvetica Neue, Helvetica, Arial, sans-serif;

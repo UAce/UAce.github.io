@@ -13,12 +13,11 @@ Chrome extensions are programs that add functionalities to Chrome and enhance yo
 
 ### Goal
 This article is a documentation of what I learned when making my first Chrome extension YouTubeStopwatch. If you're looking for a tutorial for starters, check out the official **[Getting Started Tutorial][getting-started]**.
-[getting-started]: https://developer.chrome.com/extensions/getstarted
+
 
 
 ### What is YouTubeStopwatch?
-**[YouTubeStopwatch][youtubestopwatch]** was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.
-[youtubestopwatch]: https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag
+**[YouTubeStopwatch][youtube-stop-watch]** was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.
 
 The idea was to prompt the user for the desired time they want to spend on YouTube and start a countdown. Once the time is up, the user is asked whether they want to stay on YouTube or leave. If they choose to keep watching videos, they will be subject to some gradual graphical deterioration and slowly worsening their viewing experience.
 
@@ -74,7 +73,8 @@ Background scripts are scripts that run in the background of your browser when y
     }
 }
 {% endcode %}
-_**Note** that it is now recommended to use non-persistent background scripts with <a href="https://developer.chrome.com/extensions/background_migration">Event Driven Background Scripts</a>._
+
+> _**Note**: It is now recommended to use non-persistent background scripts with [Event Driven Background Scripts][background-scripts]._
 
 Below is an example of what my background script looked like.
 
@@ -131,8 +131,7 @@ function removeYoutubeTab(tabId) {
 }
 ```
 
-When the script starts, a callback function is added with `onMessage.addListener()` to handle events. Depending on the event received, a different action will be triggered. For example, the <span class="accent">START_COUNTDOWN</span> event will start the countdown in the background script. The tabId is stored in a list to keep track of active youtube tabs if the sender is youtube. This is done using the Chrome Tabs API and we need to give permissions to our application in the manifest file.
-
+When the script starts, a callback function is added with `onMessage.addListener()` to handle events. Depending on the event received, a different action will be triggered. For example, the **`START_COUNTDOWN`** event will start the countdown in the background script. The tabId is stored in a list to keep track of active youtube tabs if the sender is youtube. This is done using the Chrome Tabs API and we need to give permissions to our application in the manifest file.
 
 
 I needed to use JQuery in the background script so I downloaded the *jquery-3.4.1.min.js* file, saved it in the **js** directory and specified the file as a background script. Here are the new changes to the manifest file:
@@ -210,3 +209,6 @@ The `"matches": [ "*://*.youtube.com/*" ]` section tells Chrome to run the conte
 
 Chrome Extensions have changed since I first created this project but it was still a valuable experience.
 
+[getting-started]: https://developer.chrome.com/extensions/getstarted
+[youtube-stop-watch]: https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag
+[background-scripts]: https://developer.chrome.com/extensions/background_migration
