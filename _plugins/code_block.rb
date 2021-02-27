@@ -32,36 +32,36 @@ module Jekyll
         @hlLinesArray = attributes["hlLines"] ? attributes["hlLines"].gsub(/['"]/,"").split(",") : []
         @hlRange = attributes["hlRange"]
         @hlRangeArray = attributes["hlRange"] ? attributes["hlRange"].gsub(/['"]/,"").split("-") : []
+        
+        # Appends language to class
         @class = ""
         if @language
           @class += " language-#{@language} "
         end
 
-        puts "@showLines #{@showLines}"
+        # Remove lines by default
         if @showLines.nil?
-          puts 'here'
           @class += " nohljsln "
         end
 
+        # Set css class
         if @class
           code_tag = "<code class\=\"#{@class}\">"
         else
           code_tag = "<code>"
         end
 
-        # Code content
+        # Format code content (highlighting)
         formatted_content = ""
         content = converter.convert(super(context)).gsub(/<\/?p[^>]*>/, "").gsub(/“/,"\"").gsub(/”/,"\"").strip
         content.each_line.with_index do |line, index|
           lnNo = "#{index+1}"
           new_line = line
           if (@hlLines && @hlLinesArray.include?(lnNo)) || (@hlRange && @hlRangeArray[0].to_i <= lnNo.to_i && @hlRangeArray[1].to_i >= lnNo.to_i)
-            puts "highlight line #{lnNo}"
             new_line = "<span class=\"hl-line\">#{line}</span>"
           end
           formatted_content += new_line
         end
-        puts  "<pre>#{code_tag}#{formatted_content}</code></pre>"
         code = "<pre>#{code_tag}#{formatted_content}</code></pre>"
       end
     end
