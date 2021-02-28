@@ -19,6 +19,7 @@ html[data-theme="light"] {
   // navbar
   --navbar-background-color: hsl(0, 5%, 100%);
   --navbar-background-hover-color: hsl(0, 0%, 92%);
+  --navbar-box-shadow-color: rgba(0, 0, 0, 0.5);
 
   // tag
   --tag-background-color: #d8e8f5;
@@ -57,12 +58,13 @@ html[data-theme="dark"] {
   --highlight-background-color: #0a121b;
 
   // background
-  --main-background-color: hsl(0, 0%, 13%);
+  --main-background-color: hsl(0, 0%, 13.5%);
   --main-background-hover-color: lighten(hsl(0, 0%, 13%), 2%);
 
   // navbar
-  --navbar-background-color: hsl(0, 0%, 6%);
-  --navbar-background-hover-color: hsl(0, 0%, 3%);
+  --navbar-background-color: hsl(0, 0%, 11%);
+  --navbar-background-hover-color: hsl(0, 0%, 0%);
+  --navbar-box-shadow-color: rgba(255, 255, 255, 0.05);
 
   // tag
   --tag-background-color: #004478;

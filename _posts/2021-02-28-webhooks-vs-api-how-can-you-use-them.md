@@ -249,7 +249,7 @@ server.serve_forever()
 {% capture ua-webhook %}{% asset_path ua-webhook.png %}{% endcapture %}<a href="{{ ua-webhook }}" data-fancybox="gallery" data-caption="Message from ua-webhook"><img src="{{ ua-webhook }}" alt="ua-webhook" class="img-fluid img-thumbnail"></a>
 
 ## Conclusion
-An API is a communication method used by applications to talk with other applications. Webhook is a POST request that is triggered automatically when an event happens.
+An API is a communication method used by applications to talk with other applications. Webhook is a POST request that is triggered automatically when an event happens. Basically, APIs are request-based while webhooks are event-based.
 
 
 ### References

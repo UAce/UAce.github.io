@@ -46,20 +46,20 @@ src
 
 The `manifest.json` file is the first thing you need when creating an extension. It provides all the information about your extension to Google Chrome such as the name of your extension, the permissions needed, etc but we'll get into that a bit later. Here is a minimal example:
 
-{% code lang:JSON showLnNo:true %}
+```JSON
 {
     "manifest_version": 2,
     "version": "0.1",
     "name": "My Extension",
     "description": "This is my extension"
 }
-{% endcode %}
+```
 
 ## Background Scripts
 
 Background scripts are scripts that run in the background of your browser when you open Google Chrome. You can make the scripts persistent or not depending on your use case. I chose to use a persistent script. As long as Google Chrome is open, the script will be running. To define background scripts, I added a **background** section to the **manifest** file. 
 
-{% code lang:JSON hlRange:'6-11' showLnNo:true %}
+```JSON
 {
     "manifest_version": 2,
     "version": "0.1",
@@ -72,7 +72,7 @@ Background scripts are scripts that run in the background of your browser when y
         "persistent": true
     }
 }
-{% endcode %}
+```
 
 > _**Note**: It is now recommended to use non-persistent background scripts with [Event Driven Background Scripts][background-scripts]._
 
@@ -137,7 +137,7 @@ When the script starts, a callback function is added with `onMessage.addListener
 I needed to use JQuery in the background script so I downloaded the *jquery-3.4.1.min.js* file, saved it in the **js** directory and specified the file as a background script. Here are the new changes to the manifest file:
 
 
-{% code lang:JSON hlRange:'6-8' hlLines:12 showLnNo:true %}
+```JSON
 {
     "manifest_version": 2,
     "version": "0.1",
@@ -154,14 +154,14 @@ I needed to use JQuery in the background script so I downloaded the *jquery-3.4.
         "persistent": true
     }
 }
-{% endcode %}
+```
 
 
 ## Content Scripts
 
 Content Scripts are run on specific web pages and can interact with a website's DOM. To define a content script, I added a **content_scripts** section to the **manifest** file.
 
-{% code lang:JSON hlRange:'16-27' showLnNo:true %}
+```JSON
 {
     "manifest_version": 2,
     "version": "0.1",
@@ -190,7 +190,7 @@ Content Scripts are run on specific web pages and can interact with a website's 
         }
     ]
 }
-{% endcode %}
+```
 
 The `"matches": [ "*://*.youtube.com/*" ]` section tells Chrome to run the content scripts when the URL of the website matches the values specified. The `"run_at": "document_end"` section ensures that the content scripts are run after the page is loaded.
 
@@ -212,5 +212,17 @@ Chrome Extensions have changed since I first created this project but it was sti
 [getting-started]: https://developer.chrome.com/extensions/getstarted
 [youtube-stop-watch]: https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag
 [background-scripts]: https://developer.chrome.com/extensions/background_migration
+
+
+<script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.5/highlightjs-highlight-lines.min.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+hljs.initHighlightLinesOnLoad([[], [],
+    [{start: 5, end: 10, color: 'rgba(255, 255, 255, 0.2)'}],
+    [],
+    [{start: 5, end: 7, color: 'rgba(255, 255, 255, 0.2)'}, {start: 11, end: 11, color: 'rgba(255, 255, 255, 0.2)'}],
+    [{start: 15, end: 26, color: 'rgba(255, 255, 255, 0.2)'}]
+]);
+</script>
 
 🐢

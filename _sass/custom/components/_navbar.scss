@@ -6,7 +6,7 @@
   transition: height 0.3s ease;
 
   &.shrink {
-    box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 2px 18px var(--navbar-box-shadow-color);
     height: $navbar-shrunk-height;
     background-color: var(--navbar-background-color);
 
