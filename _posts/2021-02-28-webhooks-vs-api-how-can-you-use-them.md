@@ -257,6 +257,8 @@ An API is a communication method used by applications to talk with other applica
 * **[Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC][soap-vs-rest-vs-graphql-vs-rpc]**
 * **[Slack Incoming Webhooks][slack-webhooks]**
 * **[Slack User Bots][slack-bots]**
+* **[Python Docs: HTTP servers][http-server]**
+* **[Simple Python 3 HTTP server for logging all GET and POST requests][http-server-example]**
 
 [webhook-vs-api]: https://sendgrid.com/blog/webhook-vs-api-whats-difference/
 [soap-vs-rest-vs-graphql-vs-rpc]: https://www.altexsoft.com/blog/soap-vs-rest-vs-graphql-vs-rpc/
@@ -267,6 +269,8 @@ An API is a communication method used by applications to talk with other applica
 [slack-bots]: https://api.slack.com/bot-users
 [google-map-api]: https://developers.google.com/maps/documentation
 [youtube-api]: https://developers.google.com/youtube/v3/getting-started
+[http-server]: https://docs.python.org/3/library/http.server.html
+[http-server-example]: https://gist.github.com/mdonkers/63e115cc0c79b4f6b8b3a6b797e485c7
 
 <script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.5/highlightjs-highlight-lines.min.js"></script>
 <script>
