@@ -48,6 +48,9 @@
 
   h2 {
     margin: 4.5rem 0 2rem;
+    border-bottom: 1px solid var(--invert-text-color);
+    font-size: 2.25rem;
+    font-weight: 600;
   }
 
   h3,
@@ -55,10 +58,6 @@
   .post-title {
     font-weight: 700;
     margin: 3.5rem 0 1.5rem;
-  }
-
-  h2 {
-    border-bottom: 1px solid var(--invert-text-color);
   }
 
   h3,

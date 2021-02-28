@@ -102,7 +102,7 @@ a.chrome-ext-btn {
 #scroll-to-top {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   z-index: 99;
   border: none;
@@ -222,11 +222,17 @@ blockquote {
 }
 
 .quote {
-  transition: all 1.3s ease;
+  border: none;
+  margin: 0 auto;
+  transition: transform 1.3s ease;
+  background-color: var(--shade-background-color);
   // font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: italic;
-  margin: 0 auto;
   transform: translate(0, 0);
+}
+
+.shade {
+  background-color: var(--shade-background-color);
 }
 
 .inline-code,

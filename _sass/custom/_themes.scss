@@ -39,9 +39,8 @@ html[data-theme="light"] {
 
   background-color: var(--main-background-color);
 
-  .shade {
-    background-color: darken(#ffffff, 2%);
-  }
+  // Shade
+  --shade-background-color: #fafafa;
 }
 
 html[data-theme="dark"] {
@@ -84,9 +83,8 @@ html[data-theme="dark"] {
 
   background-color: var(--main-background-color);
 
-  .shade {
-    background-color: lighten(hsl(0, 0%, 13%), 3%);
-  }
+  // Shade
+  --shade-background-color: #292929;
 }
 
 @media (prefers-color-scheme: dark) {
