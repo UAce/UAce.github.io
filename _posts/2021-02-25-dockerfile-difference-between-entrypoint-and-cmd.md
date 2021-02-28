@@ -5,7 +5,6 @@ date: 2021-02-24 23:05 -0500
 tags:
 - Docker
 - Dockerfile
-label: new
 author: Yu-Yueh Liu
 ---
 
@@ -54,7 +53,7 @@ The ***shell*** form:
 Similar to the exec form, command line arguments provided to `docker run <image>` will override the default CMD defined in the Dockerfile. However, the shell form will invoke a command shell and allow normal shell processing such as variable substitution.
 
 
-### Conclusion
+## Conclusion
 Both ENTRYPOINT and CMD instructions allow containers to run as executable but they are not mutually exclusive. If you need to override the default executable, then you might want to use CMD. If you would like your container to run the same executable every time, then you should consider using ENTRYPOINT with CMD.
 
 
