@@ -225,7 +225,7 @@ class CustomHandler(BaseHTTPRequestHandler):
 
             # Trigger the Webhook (make POST request) and we can ignore the response and failure
             try:
-                webhook_url = "https://hooks.slack.com/services/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"
+                webhook_url = "[Your Slack Webhook Url]"
                 headers = { 'Content-Type': 'application/json' }
                 payload = "{ \"text\": \"Your server received the following message:\n\n" + data['message'] + "\" }"
                 requests.request("POST", webhook_url, headers=headers, data=payload)
@@ -275,7 +275,8 @@ An API is a communication method used by applications to talk with other applica
 <script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.5/highlightjs-highlight-lines.min.js"></script>
 <script>
 hljs.initHighlightingOnLoad();
-hljs.initHighlightLinesOnLoad([[],
+hljs.initHighlightLinesOnLoad([
+    [{start: 8, end: 8, color: 'rgba(255, 255, 255, 0.2)'}],
     [{start: 28, end: 35, color: 'rgba(255, 255, 255, 0.2)'}],
     [],
     [{start: 2, end: 2, color: 'rgba(255, 255, 255, 0.2)'}, {start: 33, end: 40, color: 'rgba(255, 255, 255, 0.2)'}]
