@@ -103,3 +103,42 @@
   // background: #545b62;
   background: rgba(255, 255, 255, 0.2);
 }
+
+table {
+  font-family: open sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif,
+    apple color emoji, segoe ui emoji, segoe ui symbol;
+  margin: 25px auto;
+  border-collapse: collapse;
+  box-shadow: 3px 5px 20px var(--table-box-shadow-color);
+  border-right: none;
+  border-left: none;
+  th,
+  td {
+    padding: 8px 5px;
+    border-collapse: collapse;
+  }
+  td {
+    font-size: 13px;
+    color: var(--main-text-light-color);
+    &.last {
+      border-right: none;
+    }
+    &.first {
+      border-left: none;
+    }
+  }
+  th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: var(--table-header-background-color);
+    color: var(--main-text-color);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: var(--table-odd-row-background-color);
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-even-row-background-color);
+  }
+}

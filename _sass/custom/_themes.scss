@@ -42,6 +42,13 @@ html[data-theme="light"] {
 
   // Shade
   --shade-background-color: #fafafa;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+
+  // Table
+  --table-box-shadow-color: rgba(0, 0, 0, 0.2);
+  --table-header-background-color: #ffffff;
+  --table-odd-row-background-color: #f2f2f2;
+  --table-even-row-background-color: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -87,6 +94,13 @@ html[data-theme="dark"] {
 
   // Shade
   --shade-background-color: #292929;
+  --box-shadow-color: rgba(80, 80, 80, 0.5);
+
+  // Table
+  --table-box-shadow-color: rgba(97, 97, 97, 0.05);
+  --table-header-background-color: #0c0f18;
+  --table-even-row-background-color: #202639;
+  --table-odd-row-background-color: #353d4f;
 }
 
 @media (prefers-color-scheme: dark) {

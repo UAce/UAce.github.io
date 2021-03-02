@@ -61,15 +61,24 @@ Similar to the exec form, command line arguments provided to `docker run <image>
 ## Conclusion
 Both ENTRYPOINT and CMD instructions allow containers to run as executable but they are not mutually exclusive. If you need to override the default executable, then you might want to use CMD. If you would like your container to run the same executable every time, then you should consider using ENTRYPOINT with CMD.
 
+| dockerfile ENTRYPOINT | dockerfile CMD | docker run -\-entrypoint | docker run command | Actual command run
+|:--------------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:
+| [exec-1]             | [foo bar]      | \<not set\>              | \<not set\>        | [exec-1 foo bar]
+| [exec-1]             | [foo bar]      | [exec-2]                 | \<not set\>        | [exec-2]
+| [exec-1]             | [foo bar]      | \<not set\>              | [zoo boo]          | [exec-1 zoo boo]
+| [exec-1]             | [foo bar]      | [exec-2]                 | [zoo boo]          | [exec-2 zoo boo]
+
 
 ### References
 * **[ENTRYPOINT Dockerfile reference][entrypoint-ref]**
 * **[CMD Dockerfile reference][cmd-ref]**
 * **[Docker Entrypoint vs CMD: Solving the Dilemma][entrypoint-vs-cmd]**
+* **[Kubernetes Command and Arguments for a Container][k8s-cmd-args]**
 
 [entrypoint-ref]: https://docs.docker.com/engine/reference/builder/#entrypoint
 [cmd-ref]: https://docs.docker.com/engine/reference/builder/#cmd
 [entrypoint-vs-cmd]: https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
+[k8s-cmd-args]: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes
 
 
 🐢
