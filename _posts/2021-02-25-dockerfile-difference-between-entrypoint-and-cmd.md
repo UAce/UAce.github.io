@@ -61,6 +61,8 @@ Similar to the exec form, command line arguments provided to `docker run <image>
 ## Conclusion
 Both ENTRYPOINT and CMD instructions allow containers to run as executable but they are not mutually exclusive. If you need to override the default executable, then you might want to use CMD. If you would like your container to run the same executable every time, then you should consider using ENTRYPOINT with CMD.
 
+The table below describes the behaviour of ENTRYPOINT with CMD:
+
 | dockerfile ENTRYPOINT | dockerfile CMD | docker run -\-entrypoint | docker run command | Actual command run
 |:--------------------:|:--------------:|:------------------------:|:------------------:|:-----------------------:
 | [exec-1]             | [foo bar]      | \<not set\>              | \<not set\>        | [exec-1 foo bar]
