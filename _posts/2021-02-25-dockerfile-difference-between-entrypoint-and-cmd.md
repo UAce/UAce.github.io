@@ -72,6 +72,7 @@ The table below describes the behaviour of ENTRYPOINT with CMD:
 | [exec-1]             | [foo bar]      | \<not set\>              | [zoo boo]          | [exec-1 zoo boo]
 | [exec-1]             | [foo bar]      | [exec-2]                 | [zoo boo]          | [exec-2 zoo boo]
 
+🐢
 
 ## References
 * **[ENTRYPOINT Dockerfile reference][entrypoint-ref]**
@@ -83,6 +84,3 @@ The table below describes the behaviour of ENTRYPOINT with CMD:
 [cmd-ref]: https://docs.docker.com/engine/reference/builder/#cmd
 [entrypoint-vs-cmd]: https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
 [k8s-cmd-args]: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes
-
-
-🐢

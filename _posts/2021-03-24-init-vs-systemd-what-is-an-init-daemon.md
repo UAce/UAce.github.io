@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Init vs Systemd: What is an init daemon?'
-date: 2021-02-26 22:20 -0500
+date: 2021-03-23 22:20 -0500
 tags:
 - DevOps
 - Linux Services
@@ -41,15 +41,17 @@ The init daemon is the first process executed by the Linux Kernel and its proces
 Init (also known as System V init, or SysVinit) is an init daemon, created in the 1980s, that defines six run-levels (system states) and maps all system services to these run-levels. This allows all services (defined as scripts) to be started in a pre-defined sequence. The next script is executed only if the current script in the sequence is executed or timed out if it gets stucked. In addition to unexpected wait during execution timeouts, starting services serially makes the system initialization process inefficient and relatively slow.
 
 ## What is Systemd?
-Systemd (system daemon) is an init daemon used by modern systems and starts system services in parallel which remove unnecessary delays and speeds up the initialization process. What do I mean by parallel? Systemd uses Unit Dependencies to define whether a service wants/requires other services to run successfully, and Unit Order to define whether a service needs other services to be started before/after it.
+Systemd (system daemon) is an init daemon used by modern systems and starts system services in parallel which remove unnecessary delays and speeds up the initialization process. What do I mean by parallel? Systemd uses Unit Dependencies to define whether a service **wants/requires** other services to run successfully, and Unit Order to define whether a service needs other services to be started **before/after** it.
 
 ## Conclusion
 Init and Systemd are both init daemons but it is better to use the latter since it is commonly used in recent Linux Distros. My next topic will be about creating Systemd services.
 
+🐢
+
 ## References
 * **[Creating a Linux service with systemd][creating-linux-service]**
 * **[How to Use Systemctl to manage Systemd Services and Units][how-to-systemctl]**
-* **[The Story Behind ‘init’ and ‘systemd’: Why ‘init’ Needed to be Replaced with ‘systemd’ in Linux][story-init-vs-systemd]**
+* **[The Story Behind ‘init’ and ‘systemd’][story-init-vs-systemd]**
 * **[Understanding and Using Systemd][understanding-systemd]**
 * **[Init vs systemd][init-vs-systemd]**
 * **[Differences between SysVinit, Upstart and Systemd][sysvinit-upstart-systemd]**
@@ -60,5 +62,3 @@ Init and Systemd are both init daemons but it is better to use the latter since 
 [understanding-systemd]: https://www.linux.com/training-tutorials/understanding-and-using-systemd/
 [init-vs-systemd]: https://wiki.cdot.senecacollege.ca/wiki/Init_vs_systemd
 [sysvinit-upstart-systemd]: https://www.computernetworkingnotes.com/linux-tutorials/differences-between-sysvinit-upstart-and-systemd.html
-
-🐢

@@ -13,12 +13,12 @@ date: 2020-09-03 03:27 -0400
 ---
 Chrome extensions are programs that add functionalities to Chrome and enhance your browsing experience. In fact, you can find a myriad of extensions for the purpose of improving your productivity, protecting your privacy, and more. Making your own Chrome extension is quite simple and it could turn out to be a fun personal project.
 
-### Goal
+## Goal
 This article is a documentation of what I learned when making my first Chrome extension YouTubeStopwatch. If you're looking for a tutorial for starters, check out the official **[Getting Started Tutorial][getting-started]**.
 
 
 
-### What is YouTubeStopwatch?
+## What is YouTubeStopwatch?
 **[YouTubeStopwatch][youtube-stop-watch]** was created for a course on Human-Computer Interaction (HCI). The objective was to help users manage the amount of time they would like to spend on YouTube, and somehow incite them to quit YouTube without resorting to blocking the site.
 
 The idea was to prompt the user for the desired time they want to spend on YouTube and start a countdown. Once the time is up, the user is asked whether they want to stay on YouTube or leave. If they choose to keep watching videos, they will be subject to some gradual graphical deterioration and slowly worsening their viewing experience.
@@ -44,7 +44,7 @@ src
     └──  popup.css
 {% endcode %}
 
-## Manifest
+### Manifest
 
 The `manifest.json` file is the first thing you need when creating an extension. It provides all the information about your extension to Google Chrome such as the name of your extension, the permissions needed, etc but we'll get into that a bit later. Here is a minimal example:
 
@@ -57,7 +57,7 @@ The `manifest.json` file is the first thing you need when creating an extension.
 }
 ```
 
-## Background Scripts
+### Background Scripts
 
 Background scripts are scripts that run in the background of your browser when you open Google Chrome. You can make the scripts persistent or not depending on your use case. I chose to use a persistent script. As long as Google Chrome is open, the script will be running. To define background scripts, I added a **background** section to the **manifest** file. 
 
@@ -159,7 +159,7 @@ I needed to use JQuery in the background script so I downloaded the *jquery-3.4.
 ```
 
 
-## Content Scripts
+### Content Scripts
 
 Content Scripts are run on specific web pages and can interact with a website's DOM. To define a content script, I added a **content_scripts** section to the **manifest** file.
 
@@ -207,14 +207,15 @@ The `"matches": [ "*://*.youtube.com/*" ]` section tells Chrome to run the conte
 
 ## Constants -->
 
-## Conclusion
+### Conclusion
 
 Chrome Extensions have changed since I first created this project but it was still a valuable experience.
+
+🐢
 
 [getting-started]: https://developer.chrome.com/extensions/getstarted
 [youtube-stop-watch]: https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag
 [background-scripts]: https://developer.chrome.com/extensions/background_migration
-
 
 <script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.5/highlightjs-highlight-lines.min.js"></script>
 <script>
@@ -226,5 +227,3 @@ hljs.initHighlightLinesOnLoad([[], [],
     [{start: 15, end: 26, color: 'rgba(255, 255, 255, 0.2)'}]
 ]);
 </script>
-
-🐢

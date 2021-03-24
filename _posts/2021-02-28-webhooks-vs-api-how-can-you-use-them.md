@@ -251,6 +251,7 @@ server.serve_forever()
 ## Conclusion
 An API is a communication method used by applications to talk with other applications. Webhook is a POST request that is triggered automatically when an event happens. Basically, APIs are request-based while webhooks are event-based.
 
+🐢
 
 ## References
 * **[Webhook vs API][webhook-vs-api]**
@@ -282,6 +283,3 @@ An API is a communication method used by applications to talk with other applica
         [{start: 2, end: 2, color: 'rgba(255, 255, 255, 0.2)'}, {start: 33, end: 40, color: 'rgba(255, 255, 255, 0.2)'}]
     ]);
 </script>
-
-
-🐢
