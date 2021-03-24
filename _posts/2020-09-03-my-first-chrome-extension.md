@@ -1,7 +1,9 @@
 ---
 layout: post
-title: My First Chrome Extension
+title: Making my First Chrome Extension
 author: Yu-Yueh Liu
+categories:
+- Learning
 tags:
 - JavaScript
 - HTML5

@@ -2,10 +2,12 @@
 layout: post
 title: 'Webhook vs API: How can you use them?'
 date: 2021-02-26 22:17 -0500
+categories:
+- Tutorial
 tags:
 - Webhook
-- API
-- Slack
+- REST API
+- Python
 label: new
 author: Yu-Yueh Liu
 ---
@@ -272,15 +274,15 @@ An API is a communication method used by applications to talk with other applica
 [http-server]: https://docs.python.org/3/library/http.server.html
 [http-server-example]: https://gist.github.com/mdonkers/63e115cc0c79b4f6b8b3a6b797e485c7
 
-<script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.5/highlightjs-highlight-lines.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script>
-hljs.initHighlightingOnLoad();
-hljs.initHighlightLinesOnLoad([
-    [{start: 8, end: 8, color: 'rgba(255, 255, 255, 0.2)'}],
-    [{start: 28, end: 35, color: 'rgba(255, 255, 255, 0.2)'}],
-    [],
-    [{start: 2, end: 2, color: 'rgba(255, 255, 255, 0.2)'}, {start: 33, end: 40, color: 'rgba(255, 255, 255, 0.2)'}]
-]);
+    hljs.initLineNumbersOnLoad();
+    hljs.initHighlightLinesOnLoad([
+        [{start: 8, end: 8, color: 'rgba(255, 255, 255, 0.2)'}],
+        [{start: 28, end: 35, color: 'rgba(255, 255, 255, 0.2)'}],
+        [],
+        [{start: 2, end: 2, color: 'rgba(255, 255, 255, 0.2)'}, {start: 33, end: 40, color: 'rgba(255, 255, 255, 0.2)'}]
+    ]);
 </script>
 
 

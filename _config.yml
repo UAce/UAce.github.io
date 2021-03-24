@@ -1,5 +1,5 @@
 title: UAce
-permalink: pretty
+permalink: /:categories/:title
 description: Yueh's personal website created with Jekyll and hosted on GitHub. It uses HTML5, SASS, Bootstrap 4, JavaScript and JQuery.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://uace.github.io
@@ -70,6 +70,9 @@ canvas:
   articles: What's New?
   resume: My Experiences & Projects
   about: My Passions & Interests
+
+# Include
+include: ["_pages"]
 
 # Exclude from processing
 exclude:

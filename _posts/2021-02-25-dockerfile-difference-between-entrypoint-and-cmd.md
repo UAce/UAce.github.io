@@ -2,9 +2,11 @@
 layout: post
 title: 'Dockerfile: Difference between ENTRYPOINT and CMD'
 date: 2021-02-24 23:05 -0500
+categories:
+- Learning
 tags:
 - Docker
-- Dockerfile
+- DevOps
 author: Yu-Yueh Liu
 ---
 
@@ -27,7 +29,7 @@ The ***shell*** form:
 ENTRYPOINT command param1 param2
 ```
 
-This form prevents any command line arguments to be provided to the ENTRYPOINT and will start the executable as a subcommand of `/bin/sh -c`. The executable will not be the container's `PID 1` which does not pass Unix signals.
+This form prevents any command line arguments to be provided to the ENTRYPOINT and will start the executable as a subcommand of `/bin/sh -c`. The executable will not be run with process ID (PID) 1 and it will not pass Unix signals.
 
 
 ### Docker CMD
