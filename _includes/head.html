@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <link rel="shortcut icon" class="favicon" type="image/svg"
         href="{{ "/assets/images/UA_favicon_dark.svg" | relative_url }}">
-    {% include scripts.html %}
+    <script src="{{ "/assets/js/check-dark-theme.js"  | relative_url }}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+        integrity="sha384-Zm+UU4tdcfAm29vg+MTbfu//q5B/lInMbMCr4T8c9rQFyOv6PlfQYpB5wItcXWe7"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% endif %}
