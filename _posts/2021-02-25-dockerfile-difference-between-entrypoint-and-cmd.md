@@ -14,7 +14,7 @@ I have been working with Docker for over a year now but there are still a lot of
 
 I always thought the only difference was that CMD can be overriden and that they were mutually exclusive since Docker containers needed a starting process. In fact, they are not mutually exclusive and understanding the difference between them could be very useful when building Dockerfiles!
 
-### Docker ENTRYPOINT
+## Docker ENTRYPOINT
 An ENTRYPOINT is used to configure a container to run as an executable and it has two forms:   
 
 The ***exec*** form (preferred):   
@@ -32,7 +32,7 @@ ENTRYPOINT command param1 param2
 This form prevents any command line arguments to be provided to the ENTRYPOINT and will start the executable as a subcommand of `/bin/sh -c`. The executable will not be run with process ID (PID) 1 and it will not pass Unix signals.
 
 
-### Docker CMD
+## Docker CMD
 A CMD is used to provide defaults for an executing container. The defaults can be an executable, command and/or parameters. Unlike ENTRYPOINT, CMD has 3 forms:   
 
 
@@ -73,7 +73,7 @@ The table below describes the behaviour of ENTRYPOINT with CMD:
 | [exec-1]             | [foo bar]      | [exec-2]                 | [zoo boo]          | [exec-2 zoo boo]
 
 
-### References
+## References
 * **[ENTRYPOINT Dockerfile reference][entrypoint-ref]**
 * **[CMD Dockerfile reference][cmd-ref]**
 * **[Docker Entrypoint vs CMD: Solving the Dilemma][entrypoint-vs-cmd]**

@@ -7,27 +7,25 @@ categories:
 tags:
 - Webhook
 - REST API
-- Python
-label: new
 author: Yu-Yueh Liu
 ---
-Recently, I was asked what was the difference between Webhooks and APIs. This was a question I also had a few years ago when I started programming. In this article, I will briefly explain what they are and give an example of how you can use them.
+Recently, I was asked what was the difference between Webhooks and APIs. This was a question I also had a few years ago when I started programming. In this article, I will briefly explain what they are and give a simple tutorial on how you can use them.
 
-### What is an API?
+## What is an API?
 API stands for Application Programming Interface. APIs allow applications to talk with each other via a common communication method. There are a lot of different API architectural styles such as REST, SOAP, GraphQL and gRPC. With most APIs, there’s a request followed by a response.
 
 For example, a restaurant might have an application that would make an API request to their server and obtain a list of menu items in the response, then display it for their users. A lot applications out there provide public APIs that you can be use in your personal projects such as [YouTube Data API][youtube-api] and [Google Map API][google-map-api].
 
 
-### What is a Webhook?
+## What is a Webhook?
 Unlike APIs, Webhook is simply an HTTP POST request that is triggered automatically when an event occurs. Basically, webhooks are **"user-defined callbacks"**.
 
 For example, an application could provide a webhook that will get triggered by another application when new data is received (callback) instead of sending requests at fixed interval to fetch new data (polling).
 
 
-## Example
+## Tutorial
 
-### Using Slack API with Slack Bot
+### Send Message Using Slack API with Slack Bot
 Slack provides a complete list of [REST API methods][slack-api-list] available to bots. We are going to use the [users.list][users-list] method to list available users and [chat.postMessage][post-message] method to send a message to a user or channel.
 
 
@@ -120,7 +118,7 @@ response = requests.request("POST", f"{base_url}/chat.postMessage?{params}", hea
 print(response.text)
 ```
 
-### Using Slack Incoming Webhooks
+### Send Message Using Slack Incoming Webhooks
 > Incoming Webhooks are a simple way to post messages from external sources into Slack. They make use of normal HTTP requests with a JSON payload, which includes the message and a few other optional details described later.
 
 For this example, we are going to create a Web Server and integrate an Incoming Webhook. We will trigger the webhook automatically to send a message to a user on Slack whenever the server receives a message.
@@ -254,7 +252,7 @@ server.serve_forever()
 An API is a communication method used by applications to talk with other applications. Webhook is a POST request that is triggered automatically when an event happens. Basically, APIs are request-based while webhooks are event-based.
 
 
-### References
+## References
 * **[Webhook vs API][webhook-vs-api]**
 * **[Comparing API Architectural Styles: SOAP vs REST vs GraphQL vs RPC][soap-vs-rest-vs-graphql-vs-rpc]**
 * **[Slack Incoming Webhooks][slack-webhooks]**
