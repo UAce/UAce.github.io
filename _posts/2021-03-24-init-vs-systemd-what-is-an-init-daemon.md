@@ -42,7 +42,7 @@ The init daemon is the first process executed by the Linux Kernel and its proces
 ## What is Init?
 Init (also known as System V init, or SysVinit) is an init daemon, created in the 1980s, that defines six run-levels (system states) and maps all system services to these run-levels. This allows all services (defined as scripts) to be started in a pre-defined sequence. The next script is executed only if the current script in the sequence is executed or timed out if it gets stucked. In addition to unexpected wait during execution timeouts, starting services serially makes the system initialization process inefficient and relatively slow.
 
-To create a service, you will need to write a script and store it in `/etc/init.d` directory. You would write a script `/etc/init.d/myService` that looks something like this:
+To create a service, you will need to write a script and store it in `/etc/init.d` directory. You would write a service script `/etc/init.d/myService` that looks something like this:
 
 ```Bash
 #!/bin/bash
@@ -81,7 +81,7 @@ esac
 exit 0
 ```
 
-You can read about chkconfig in the [man page](https://linux.die.net/man/8/chkconfig). Essentially, it defines in which run-level your service should be run. Once you have the script, you can use the `service` command to start, stop, and restart your service.
+You can read about chkconfig in the [man page](https://linux.die.net/man/8/chkconfig). Essentially, it defines in which run-level your service should be run. Once you have your script, you can use the `service` command to start, stop, and restart your service.
 
 ## What is Systemd?
 Systemd (system daemon) is an init daemon used by modern systems and starts system services in parallel which remove unnecessary delays and speeds up the initialization process. What do I mean by parallel? Systemd uses Unit Dependencies to define whether a service **wants/requires** other services to run successfully, and Unit Order to define whether a service needs other services to be started **before/after** it.
@@ -102,10 +102,10 @@ ExecStop=/usr/sbin/<command-to-stop>
 WantedBy=multi-user.target
 ```
 
-I will discuss more about how to create a service with Systemd in another article. Once you have your service file, you can start, stop and restart your service by using the `systemctl` command.
+I will discuss more about how to create a service with Systemd in another article. Once you have your service file, you can start, stop and restart your service using the `systemctl` command.
 
 ## Conclusion
-Init and Systemd are both init daemons but it is better to use the latter since it is commonly used in recent Linux Distros. My next topic will be about creating Systemd services.
+Init and Systemd are both init daemons but it is better to use the latter since it is commonly used in recent Linux Distros. Init uses `service` whereas Systemd uses `systemctl` to manage Linux services.
 
 🐢
 
