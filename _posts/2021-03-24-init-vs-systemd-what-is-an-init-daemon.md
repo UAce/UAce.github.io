@@ -2,6 +2,8 @@
 layout: post
 title: 'Init vs Systemd: What is an init daemon?'
 date: 2021-03-23 22:20 -0500
+categories:
+- Learning
 tags:
 - DevOps
 - Linux Services
