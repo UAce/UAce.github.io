@@ -7,7 +7,8 @@ categories:
 tags:
 - DevOps
 - Linux Services
-label: new
+- Systemd
+- Init
 author: Yu-Yueh Liu
 ---
 As a developer, I mostly work on Linux/Unix-like operating systems such as Ubuntu. Having used such operating systems for a few years now, I feel comfortable enough to say that I am familiar with them, but there are still many things that I still don't understand. In this article, I would like to explore the difference between **Init** and **Systemd**.
