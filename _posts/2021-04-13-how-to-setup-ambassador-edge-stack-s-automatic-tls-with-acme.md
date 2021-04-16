@@ -37,17 +37,19 @@ Essentially, we can deploy Cert-Manager to manage certificates in Kubernetes for
 For tutorial, I will be using an arbitrary email <ins>my-email@gmail.com</ins> and **Let's Encrypt** to Issue a certificate for an arbitrary domain name <ins>dev.mydomain.com</ins>.
 
 #### Install the Cert-Manager tool with kubectl
-```Bash
-# Install Custom Resource Definition for Cert-Manager
-kubectl apply -f https://github.com/jetstack/cert-manager/releases/latest/download/cert-manager.crds.yaml
 
-# Install Cert-Manager
+Let's start by installing the Cert-Manager tool that will manage our certificates.
+
+```Bash
+# Install Custom Resource Definitions and Cert-Manager
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/latest/download/cert-manager.yaml
 ```   
 ***Note**: You can also install Cert-Manager with Helm (see [here](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm))*
-   
+
 #### Create a ClusterIssuer resource
 > An Issuer or ClusterIssuer identifies which Certificate Authority cert-manager will use to issue a certificate. Issuer is a namespaced resource allowing you to use different CAs in each namespace, a ClusterIssuer is used to issue certificates in any namespace. Configuration depends on which ACME challenge you are using.
+
+Once the Cert-manager deployments are completed, you can create a ClusterIssuer (global) or an Issuer (namespaced) resource. In this case, we are using **Let's Encrypt**.
 
 ```YAML
 ---
@@ -77,6 +79,8 @@ spec:
 #### Create a Certificate resource
 > A Certificate is a namespaced resource that specifies fields that are used to generated certificate signing requests which are then fulfilled by the issuer type you have referenced. Certificates specify which issuer they want to obtain the certificate from by specifying the certificate.spec.issuerRef field.
 
+Once the Issuer is ready, you can create a Certificate resource which will send a request to issue a new certificate.
+
 ```YAML
 ---
 apiVersion: cert-manager.io/v1alpha2
@@ -95,9 +99,26 @@ spec:
   dnsNames:
   - dev.mydomain.com
 ```
+    
+After applying this template, you should see the following events:
+```console
+$ kubectl get events -n default # The namespace in which you created your Certificate resource
+14m         Normal    cert-manager.io     certificaterequest/dev.mydomain.com-qrfxs               Certificate request has been approved by cert-manager.io
+14m         Normal    Issuing             certificate/dev.mydomain.com                            Issuing certificate as Secret does not exist
+14m         Normal    Generated           certificate/dev.mydomain.com                            Stored new private key in temporary Secret resource "dev.mydomain.com-lrdk6"
+14m         Normal    Requested           certificate/dev.mydomain.com                            Created new CertificateRequest resource "dev.mydomain.com-qrfxs"
+14m         Normal    Created             order/dev.mydomain.com-qrfxs-820390478                  Created Challenge resource "dev.mydomain.com-qrfxs-820390478-3681158932" for domain "dev.mydomain.com"
+<unknown>   Normal    Scheduled           pod/cm-acme-http-solver-fbhcs                           Successfully assigned default/cm-acme-http-solver-fbhcs to the-name-of-some-node-1
+14m         Normal    Presented           challenge/dev.mydomain.com-qrfxs-820390478-3681158932   Presented challenge using HTTP-01 challenge mechanism
+14m         Normal    Started             challenge/dev.mydomain.com-qrfxs-820390478-3681158932   Challenge scheduled for processing
+14m         Normal    Pulling             pod/cm-acme-http-solver-fbhcs                           Pulling image "quay.io/jetstack/cert-manager-acmesolver:v1.3.1"
+13m         Normal    Pulled              pod/cm-acme-http-solver-fbhcs                           Successfully pulled image "quay.io/jetstack/cert-manager-acmesolver:v1.3.1"
+13m         Normal    Started             pod/cm-acme-http-solver-fbhcs                           Started container acmesolver
+13m         Normal    Created             pod/cm-acme-http-solver-fbhcs                           Created container acmesolver
+```
 
 #### Create a Mapping and Service resource for HTTP challenge
-At this point, Cert-manager will have created a temporary pod named `cm-acme-http-solver-xxxx` but no certificate has been issued. You will need to create a Mapping resource to allow Ambassador to reach the http-01 challenge solver via `http://dev.mydomain.com/.well-known/acme-challenge/<some-token>`
+At this point, Cert-manager will have created a temporary pod named `cm-acme-http-solver-xxxx` but no certificate has been issued. You will need to create a Mapping resource to allow Ambassador to reach the http-01 challenge solver via `http://dev.mydomain.com/.well-known/acme-challenge/<some-token>`.
 
 ```YAML
 ---
@@ -121,16 +142,19 @@ spec:
   selector:
     acme.cert-manager.io/http01-solver: "true"
 ```
-After applying the template, you will need to wait a couple of minutes before cert-manager retries the challenge and issues a certificate.
 
-You should verify that the secret is created:
-```Bash
-kubectl get secrets dev.mydomain.com
+After applying the template, you will need to wait a several minutes (about 10 minutes) before cert-manager retries the challenge and issues a certificate. You should see the following events:
+```console
+$ kubectl get events -n default # The namespace in which you created your Certificate resource
+6m38s       Normal    Killing             pod/cm-acme-http-solver-fbhcs                           Stopping container acmesolver
+6m38s       Normal    DomainVerified      challenge/dev.mydomain.com-qrfxs-820390478-3681158932   Domain "dev.mydomain.com" verified with "HTTP-01" validation
+6m37s       Normal    Complete            order/dev.mydomain.com-qrfxs-820390478                  Order completed successfully
+6m37s       Normal    Issuing             certificate/dev.mydomain.com                            The certificate has been successfully issued
+6m37s       Normal    CertificateIssued   certificaterequest/dev.mydomain.com-qrfxs               Certificate fetched from issuer successfully
 ```
 
-
 #### Create a Host resource for your domain name
-This will register your ACME account, read the certificate from the **secretName** you defined in your Certificate resource and use that certificate to terminate TLS on your domain.
+After the certificate was successfully issued, there should be a TLS secret called `dev.mydomain.com`(name is defined by **secretName** in the Certificate resource). Then, you can create a Host resource. It will register your ACME account, read the certificate from the TLS secret and use that to terminate TLS on your domain.
 
 ```YAML
 ---
@@ -153,13 +177,23 @@ spec:
     name: dev.mydomain.com # The secretName defined in your Certificate resource
 ```
 
-You can monitor the events for to follow the certificate generation process:
-```Bash
-kubectl get events -n default # The namespace in which you created your Host resource
+You should see the following events:
+```console
+$ kubectl get events -n default # The namespace in which you created your Host resource
+10s      Normal    Pending        host/dev.mydomain.com        waiting for Host DefaultsFilled change to be reflected in snapshot
+8s       Normal    Pending        host/dev.mydomain.com        creating private key Secret
+8s       Normal    Pending        host/dev.mydomain.com        waiting for private key Secret creation to be reflected in snapshot
+6s       Normal    Pending        host/dev.mydomain.com        waiting for Host status change to be reflected in snapshot
+4s       Normal    Pending        host/dev.mydomain.com        registering ACME account
+3s       Normal    Pending        host/dev.mydomain.com        waiting for Host ACME account registration change to be reflected in snapshot
+3s       Normal    Pending        host/dev.mydomain.com        ACME account registered
+1s       Normal    Pending        host/dev.mydomain.com        waiting for TLS Secret update to be reflected in snapshot
+1s       Normal    Pending        host/dev.mydomain.com        updating TLS Secret
+0s       Normal    Ready          host/dev.mydomain.com        Host with ACME-provisioned TLS certificate marked Ready
 ```
 
 ## Conclusion
-Ambassador Edge Stack automatically enables TLS termination/HTTPs and you can configure it to completely manage TLS by requesting a certificate from a Certificate Authority(CA) or to read an existing certificate from a Kubernetes secret that is managed by yourself.
+Ambassador Edge Stack automatically enables TLS termination/HTTPs and you can easily configure it to completely manage TLS by requesting a certificate from a Certificate Authority(CA) instead of generating and managing certificates yourself!
 
 🐢
 
