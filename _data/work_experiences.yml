@@ -4,14 +4,14 @@
   url: https://ormuco.com/
   location: Montreal, CA
   period: January 2020 – Present
-  description: Designed and maintained backend microservices in NodeJS with TypeScript, and integrated them with ReactJS frontend client. Manage production-ready Kubernetes clusters to support creation of GUI applications in Docker containers and set up CI/CD in GitLab.
+  description: Designed and built backend microservices in NodeJS with TypeScript for a virtual operating system and integrated them with Cloud services. Developed frontend features in ReactJS and managed production-ready Kubernetes clusters. Created CI/CD pipelines in GitLab for all microservices.
 - title: Full Stack Developer Intern
   company: Ormuco Inc.
   image: company/ormuco-logo.png
   url: https://ormuco.com/
   location: Montreal, CA
   period: February 2019 – December 2019
-  description: Worked in a fast-paced environment with passionate developers to develop and maintain Ormuco's IaaS platform. Enhanced my JavaScript skills and learned AngularJS, Flask, Jinja2 and SASS through this experience. Worked to improve the Ormuco Iaas platform UI, to improve existing features and to add new features to the platform such as Workflow as a Service (OpenStack Mistral). Worked largely with OpenStack products and performed QA/UAT testing.
+  description: Worked in a fast-paced environment with passionate developers to develop and maintain Ormuco's IaaS (Infrastructure as a Service) platform. Enhanced my JavaScript skills and learned AngularJS, Flask, Jinja2 and SASS through this experience. Worked to improve the Ormuco IaaS platform UI, to improve existing features and to add new features to the platform such as Workflow as a Service (OpenStack Mistral). Worked largely with OpenStack products and performed QA/UAT testing.
 - title: System Administrator DevOps Intern
   company: Broadsign International Inc.
   image: company/broadsign-logo.png
