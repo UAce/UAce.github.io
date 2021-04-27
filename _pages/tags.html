@@ -1,0 +1,19 @@
+---
+layout: default
+title: Tags
+permalink: /tags
+---
+{% assign title = site.canvas.tags %}
+{% assign tag = 'tags' %}
+{% assign id = 14 %}
+{% include canvas.html %}
+<div class="container add-padding-top-normal">
+    {% for tag in site.tags %}
+    <h3 id="{{ tag[0] | downcase | replace: ' ', '-' }}">{{ tag[0] }}</h3>
+    <ul>
+        {% for post in tag[1] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>

@@ -4,7 +4,7 @@
   url: https://ormuco.com/
   location: Montreal, CA
   period: January 2020 – Present
-  description: Worked on implementing features on the frontend in ReactJS, designing and developping microservices in NodeJS with TypeScript. Set up CI/CD pipelines in GitLab with Kubernetes deployment integration. Designed Kubernetes infrastructure to support creation of GUI applications in Docker containers.
+  description: Designed and maintained backend microservices in NodeJS with TypeScript, and integrated them with ReactJS frontend client. Manage production-ready Kubernetes clusters to support creation of GUI applications in Docker containers and set up CI/CD in GitLab.
 - title: Full Stack Developer Intern
   company: Ormuco Inc.
   image: company/ormuco-logo.png
