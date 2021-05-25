@@ -1,4 +1,4 @@
-- name: WebsiteWatcher (WIP)
+- name: WebsiteWatcher
   description: |
     WebsiteWatcher is a Python Command line tool that watches a website and notifies
     the user via email or sms when the watcher condition is met. It's useful for tracking
