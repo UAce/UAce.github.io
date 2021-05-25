@@ -3,6 +3,8 @@ rvm:
   - 2.5.5
 
 before_script:
+  - gem install execjs -v 2.7.0
+  - gem install bundler -v 2.2.16
   - chmod +x ./script/cibuild
 
 script: ./script/cibuild
