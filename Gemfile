@@ -8,6 +8,8 @@ gem "jemoji"
 gem "mini_magick"
 gem "bootstrap", "~> 4.4.1"
 gem "concurrent-ruby", "~> 1.1.6"
+gem "execjs", "~> 2.7.0"
+gem "bundler", "~> 2.2.16"
 
 group :jekyll_plugins do
   gem "jekyll-sitemap"
