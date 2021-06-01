@@ -62,8 +62,16 @@ permalink: /resume
                 <div class="d-flex flex-wrap flex-row">
                     {% for image in item.images %}
                     {% assign width = 1.0 | divided_by: forloop.length | times: 100 | round %}
-                    <img src="{{ image.path }}" alt="{{ image.alt }}" class="p-1 w-{{ width }}">
+                    <!-- <img src="{{ image.path }}" alt="{{ image.alt }}" class="p-1 w-{{ width }}"> -->
+                    <div  class="p-1 w-{{ width }}">
+                        <a href="{{ image.path }}" data-fancybox="images"
+                            data-caption="{{ image.alt }}">
+                            <img src="{{ image.path }}" alt="{{ image.alt }}"
+                                class="img-fluid img-thumbnail no-bg no-border round" style="{{ image.style }}">
+                        </a>
+                    </div>
                     {% endfor %}
+
                 </div>
             </div>
             {% endfor %}

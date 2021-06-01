@@ -1,27 +1,37 @@
+- name: Komeet (WIP)
+  description: |
+    Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.<br>
+    You can access it via <a class="text accent" href="https://komeet.dev" target="_blank">komeet.dev</a>.
+    <br><br> <b>Tools used</b>: ReactJS, Ant Design, NodeJS, ExpressJS, TypeScript, MongoDB
+    <br> <b><a class="" href="https://github.com/UAce/Komeet-Frontend" target="_blank">View Frontend Project on GitHub</a></b>, <b><a class="" href="https://github.com/UAce/Komeet-Backend" target="_blank">View Backend Project on GitHub</a></b>
+  images:
+    - path: assets/images/demo/komeet_create_event.png
+      alt: Create Event
+      style: "width: 100%; max-width: 400px;"
+
 - name: WebsiteWatcher
   description: |
     WebsiteWatcher is a Python Command line tool that watches a website and notifies
     the user via email or sms when the watcher condition is met. It's useful for tracking
     lists or values on the internet, e.g. New items, Price changes, etc.
 
-    <br> <u>Tools used</u>: Python3, Selenium WebDriver, Beautiful Soup 4, Twilio Email/SMS API, Tox
-    <br> <u><a class="text" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View GitHub Repository</a></u>
-  image:
+    <br><br> <b>Tools used</b>: Python3, Selenium WebDriver, Beautiful Soup 4, Twilio Email/SMS API, Tox
+    <br> <b><a class="" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View Project on GitHub</a></b>
+  images:
 
 - name: YoutubeStopwatch
   description: |
     A chrome extension that is used to help users plan, monitor, control their YouTube usage.
     Essentially, it prompts the user for an estimated time they want to spend on Youtube and sends a 
     notification when the time is up. The user can choose to leave or continue watching videos but there 
-    will be a gradual blur applied to all videos. This was done as part of a school project (Human-Computer Interaction). 
-    The chrome extension is available here:<br>
-    <div class="add-margin-top-small add-margin-bottom-small">
+    will be a gradual blur applied to all videos. This was done as part of a school project (Human-Computer Interaction). <br>
+    The chrome extension is available here:<span class="add-margin-top-small add-margin-bottom-small" style="display: inline-block;">
     <a class="chrome-ext-btn"
         href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
         target="_blank">Download Extension</a>
-    </div>
-     <u>Tools used</u>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
-     <br> <u><a class="text" href="https://github.com/UAce/YouTubeStopwatch" target="_blank">View GitHub Repository</a></u>
+    </span><br>
+     <br><b>Tools used</b>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+     <br> <b><a class="" href="https://github.com/UAce/YouTubeStopwatch" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/ytsw_modal.png
       alt: Time Modal
@@ -33,8 +43,8 @@
     Native android mobile game where the player's only task is to eliminate monsters (shamelessly stolen) from MapleStory. 
     As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
     they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
-    <br> <u>Tools used</u>: Android Studio, Java, GSON
-    <br> <u><a class="text" href="https://github.com/UAce/MobSlayer" target="_blank">View GitHub Repository</a></u>
+    <br><br> <b>Tools used</b>: Android Studio, Java, GSON
+    <br> <b><a class="" href="https://github.com/UAce/MobSlayer" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/menu.png
       alt: Game Menu
@@ -48,6 +58,6 @@
 #   description: |
 #     A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
 #     and make golf course reservations for wanted time slots. This was a summer project.
-#     <br> <u>Tools used</u>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
-#     <br> <u><a class="text" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View GitHub Repository</a></u>
+#     <br><br> <b>Tools used</b>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+#     <br> <b><a class="" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View Project on GitHub</a></b>
 #   images:

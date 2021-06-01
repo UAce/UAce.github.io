@@ -316,3 +316,15 @@ hr {
   border: 0;
   border-top: 3px solid var(--horizontal-line-color);
 }
+
+.no-bg {
+  background: transparent;
+}
+
+.no-border {
+  border: none;
+}
+
+.round {
+  border-radius: 12px;
+}
