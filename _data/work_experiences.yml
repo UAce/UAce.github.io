@@ -3,7 +3,7 @@
   image: company/ormuco-logo.png
   url: https://ormuco.com/
   location: Montreal, CA
-  period: January 2020 – Present
+  period: January 2020 – July 2021
   description: Designed and built backend microservices in NodeJS with TypeScript for a virtual operating system and integrated them with Cloud services. Developed frontend features in ReactJS and managed production-ready Kubernetes clusters. Created CI/CD pipelines in GitLab for all microservices.
 - title: Full Stack Developer Intern
   company: Ormuco Inc.
