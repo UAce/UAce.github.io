@@ -1,9 +1,9 @@
-- name: Komeet (WIP)
+- name: Komeet (On-Hold)
   description: |
     Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.<br>
-    You can access it via <a class="text accent" href="https://komeet.dev" target="_blank">komeet.dev</a>.
     <br><br> <b>Tools used</b>: ReactJS, Ant Design, NodeJS, ExpressJS, TypeScript, MongoDB
     <br> <b><a class="" href="https://github.com/UAce/Komeet-Frontend" target="_blank">View Frontend Project on GitHub</a></b>, <b><a class="" href="https://github.com/UAce/Komeet-Backend" target="_blank">View Backend Project on GitHub</a></b>
+  # You can access it via <a class="text accent" href="https://komeet.dev" target="_blank">komeet.dev</a>.
   images:
     - path: assets/images/demo/komeet_create_event.png
       alt: Create Event

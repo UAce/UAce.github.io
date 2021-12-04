@@ -7,7 +7,6 @@ tags:
 - DevOps
 categories:
 - Tutorial
-label: new
 author: Yu-Yueh Liu
 date: 2021-04-13 00:14 -0400
 ---
