@@ -4,34 +4,79 @@ on:
   push:
     branches:
       - sources
+  workflow_dispatch: # Allows a run of this workflow to be triggerred manually from the Actions tab
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: |
+      - name: 📂 setup
+        uses: actions/checkout@v3
+        # include the lines below if you are using jekyll-last-modified-at
+        # or if you would otherwise need to fetch the full commit history
+        # however this may be very slow for large repositories!
+        # with:
+        # fetch-depth: '0'
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.0
+
+      - name: 🚧 Install and build
+        run: |
+          bundler
           chmod +x ./script/cibuild
           ./script/cibuild
 
-      # Use GitHub Actions' cache to cache dependencies on servers
-      - uses: actions/cache@v3
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
         with:
-          path: vendor/bundle
+          enable_cache: true
+          ### Enables caching. Similar to https://github.com/actions/cache.
+          #
+          format_output: true
+          ### Uses prettier https://prettier.io to format jekyll output HTML.
+          ### To disable, just leave this commented out, prettier is disabled by default. https://github.com/limjh16/jekyll-action-ts/issues/12
+          #
+          prettier_opts: '{ "useTabs": true }'
+          ### Sets prettier options (in JSON) to format output HTML. For example, output tabs over spaces.
+          ### Possible options are outlined in https://prettier.io/docs/en/options.html
+          #
+          # prettier_ignore: 'about/*'
+          ### Ignore paths for prettier to not format those html files.
+          ### Useful if the file is exceptionally large, so formatting it takes a while.
+          ### Also useful if HTML compression is enabled for that file / formatting messes it up.
+          #
+          # jekyll_src: sample_site
+          ### If the jekyll website source is not in root, specify the directory. (in this case, sample_site)
+          ### By default, this is not required as the action searches for a _config.yml automatically.
+          #
+          # jekyll_env: development
+          ### If you need to specify `JEKYLL_ENV` environment variable or `jekyll.environment` Liquid variable, specify it here.
+          #
+          # gem_src: sample_site
+          ### By default, this is not required as the action searches for a _config.yml automatically.
+          ### However, if there are multiple Gemfiles, the action may not be able to determine which to use.
+          ### In that case, specify the directory. (in this case, sample_site)
+          ###
+          ### If jekyll_src is set, the action would automatically choose the Gemfile in jekyll_src.
+          ### In that case this input may not be needed as well.
+          #
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          restore-keys: ${{ runner.os }}-gems-
+          ### In cases where you want to specify the cache key, enable the above 2 inputs
+          ### Follows the format here https://github.com/actions/cache
+          #
+          custom_opts: "--destination site"
+          ### If you need to specify any Jekyll build options, enable the above input
+          ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
 
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@v0.4.0
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          provider: "github"
-          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: "" # Default is current repository
-          branch: "sources" # Default is gh-pages for github provider
-          jekyll_src: "./site" # Default is root directory
-          jekyll_cfg: "_config.yml" # Default is _config.yml
-          jekyll_baseurl: "" # Default is according to _config.yml
-          bundler_ver: ">=0" # Default is latest bundler version
-          cname: "web.yueh.dev" # Default is to not use a cname
-          actor: "" # Default is the GITHUB_ACTOR
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          # if the repo you are deploying to is <username>.github.io, uncomment the line below.
+          # if you are including the line below, make sure your source files are NOT in the master branch:
+          publish_branch: sources
