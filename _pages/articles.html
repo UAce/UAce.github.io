@@ -16,7 +16,7 @@ permalink: /articles
                 {% for post in site.posts %}
                 <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action">
                     <span class="article-date col-2">
-                        {{ post.date | date: "%b %d" }}
+                        {{ post.date | date: "%b %d, %Y" }}
                     </span>
                     <span class="article-title col-8">{{ post.title }}</span>
                     <span class="article-label {{ post.label }} col-1">{{ post.label | capitalize }}</span>

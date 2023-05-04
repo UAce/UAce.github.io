@@ -45,7 +45,7 @@ $rfs-base-font-size-unit: unit($rfs-base-font-size);
 @if $rfs-base-font-size-unit == "px" {
   $rfs-base-font-size: $rfs-base-font-size;
 } @else if $rfs-base-font-size-unit == "rem" {
-  $rfs-base-font-size: calc($rfs-base-font-size / calc(1 / $rfs-rem-value));
+  $rfs-base-font-size: $rfs-base-font-size;
 }
 
 // Cache $rfs-breakpoint unit to prevent multiple calls
@@ -114,7 +114,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
       $variable-unit: null;
 
       // Calculate minimum font-size for given font-size
-      $fs-min: $rfs-base-font-size + (calc(($fs - 20) / $rfs-factor));
+      $fs-min: $rfs-base-font-size + (calc($fs / $rfs-factor));
 
       // Calculate difference between given font-size and minimum font-size for given font-size
       $fs-diff: $fs - $fs-min;

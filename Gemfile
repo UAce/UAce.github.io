@@ -7,11 +7,11 @@ gem "html-proofer"
 gem "jemoji"
 gem "mini_magick"
 gem "kramdown", "~> 2.4.0"
+gem "kramdown-parser-gfm", "~> 1.1"
 gem "i18n", "~> 1.0"
 gem "bootstrap", "~> 4.4.1"
 gem "concurrent-ruby", "~> 1.1.6"
 gem "execjs", "~> 2.7.0"
-gem "bundler", "~> 2.3.5"
 
 group :jekyll_plugins do
   gem "jekyll-sitemap"
