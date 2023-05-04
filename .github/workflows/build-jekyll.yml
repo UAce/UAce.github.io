@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        run: |
+          chmod +x ./script/cibuild
+          ./script/cibuild
 
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v3
@@ -18,11 +21,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-     
-     - name: Build
-        run: |
-          chmod +x ./script/cibuild
-          ./script/cibuild
 
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.4.0
