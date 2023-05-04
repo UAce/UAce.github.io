@@ -2,7 +2,6 @@
 // Released under MIT and copyright 2014 Waybury.
 // https://useiconic.com/open
 
-
 // Checkboxes and radios
 //
 // Base class takes care of all the key behavioral aspects.
@@ -24,7 +23,9 @@
   left: 0;
   z-index: -1; // Put the input behind the label so it doesn't overlay text
   width: $custom-control-indicator-size;
-  height: ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2;
+  height: calc(
+    ($font-size-base * $line-height-base + $custom-control-indicator-size) / 2
+  );
   opacity: 0;
 
   &:checked ~ .custom-control-label::before {
@@ -81,7 +82,9 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top: calc(
+      ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2
+    );
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
@@ -89,14 +92,17 @@
     pointer-events: none;
     content: "";
     background-color: $custom-control-indicator-bg;
-    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
+    border: $custom-control-indicator-border-color solid
+      $custom-control-indicator-border-width;
     @include box-shadow($custom-control-indicator-box-shadow);
   }
 
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2;
+    top: calc(
+      ($font-size-base * $line-height-base - $custom-control-indicator-size) / 2
+    );
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
@@ -105,7 +111,6 @@
     background: no-repeat 50% / #{$custom-control-indicator-bg-size};
   }
 }
-
 
 // Checkboxes
 //
@@ -129,7 +134,9 @@
       @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
-      background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
+      background-image: escape-svg(
+        $custom-checkbox-indicator-icon-indeterminate
+      );
     }
   }
 
@@ -166,7 +173,6 @@
   }
 }
 
-
 // switches
 //
 // Tweak a few things for switches
@@ -184,21 +190,35 @@
     }
 
     &::after {
-      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
-      left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
+      top: add(
+        calc(
+          ($font-size-base * $line-height-base - $custom-control-indicator-size) /
+            2
+        ),
+        $custom-control-indicator-border-width * 2
+      );
+      left: add(
+        -($custom-switch-width + $custom-control-gutter),
+        $custom-control-indicator-border-width * 2
+      );
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
       background-color: $custom-control-indicator-border-color;
       // stylelint-disable-next-line property-blacklist
       border-radius: $custom-switch-indicator-border-radius;
-      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+      @include transition(
+        transform 0.15s ease-in-out,
+        $custom-forms-transition
+      );
     }
   }
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       background-color: $custom-control-indicator-bg;
-      transform: translateX($custom-switch-width - $custom-control-indicator-size);
+      transform: translateX(
+        $custom-switch-width - $custom-control-indicator-size
+      );
     }
   }
 
@@ -208,7 +228,6 @@
     }
   }
 }
-
 
 // Select
 //
@@ -220,7 +239,9 @@
   display: inline-block;
   width: 100%;
   height: $custom-select-height;
-  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding: $custom-select-padding-y
+    ($custom-select-padding-x + $custom-select-indicator-padding)
+    $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
   @include font-size($custom-select-font-size);
   font-weight: $custom-select-font-weight;
@@ -292,7 +313,6 @@
   padding-left: $custom-select-padding-x-lg;
   @include font-size($custom-select-font-size-lg);
 }
-
 
 // File
 //
@@ -367,7 +387,9 @@
     content: "Browse";
     @include gradient-bg($custom-file-button-bg);
     border-left: inherit;
-    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+    @include border-radius(
+      0 $custom-file-border-radius $custom-file-border-radius 0
+    );
   }
 }
 
@@ -379,7 +401,10 @@
 
 .custom-range {
   width: 100%;
-  height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
+  height: add(
+    $custom-range-thumb-height,
+    $custom-range-thumb-focus-box-shadow-width * 2
+  );
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
@@ -389,9 +414,15 @@
 
     // Pseudo-elements must be split across multiple rulesets to have an effect.
     // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb { box-shadow: $custom-range-thumb-focus-box-shadow; }
-    &::-moz-range-thumb     { box-shadow: $custom-range-thumb-focus-box-shadow; }
-    &::-ms-thumb            { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-webkit-slider-thumb {
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
+    &::-moz-range-thumb {
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
+    &::-ms-thumb {
+      box-shadow: $custom-range-thumb-focus-box-shadow;
+    }
   }
 
   &::-moz-focus-outer {
@@ -401,7 +432,9 @@
   &::-webkit-slider-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
+    margin-top: calc(
+      ($custom-range-track-height - $custom-range-thumb-height) / 2
+    ); // Webkit specific
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
@@ -456,7 +489,7 @@
     height: $custom-range-thumb-height;
     margin-top: 0; // Edge specific
     margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
-    margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
+    margin-left: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
     @include gradient-bg($custom-range-thumb-bg);
     border: $custom-range-thumb-border;
     @include border-radius($custom-range-thumb-border-radius);
@@ -476,7 +509,7 @@
     cursor: $custom-range-track-cursor;
     background-color: transparent;
     border-color: transparent;
-    border-width: $custom-range-thumb-height / 2;
+    border-width: calc($custom-range-thumb-height / 2);
     @include box-shadow($custom-range-track-box-shadow);
   }
 

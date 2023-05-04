@@ -48,7 +48,7 @@
 }
 
 .card-subtitle {
-  margin-top: -$card-spacer-y / 2;
+  margin-top: calc(-1 * $card-spacer-y / 2);
   margin-bottom: 0;
 }
 
@@ -78,7 +78,9 @@
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {
-    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    @include border-radius(
+      $card-inner-border-radius $card-inner-border-radius 0 0
+    );
   }
 
   + .list-group {
@@ -94,25 +96,26 @@
   border-top: $card-border-width solid $card-border-color;
 
   &:last-child {
-    @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
+    @include border-radius(
+      0 0 $card-inner-border-radius $card-inner-border-radius
+    );
   }
 }
-
 
 //
 // Header navs
 //
 
 .card-header-tabs {
-  margin-right: -$card-spacer-x / 2;
+  margin-right: calc(-1 * $card-spacer-x / 2);
   margin-bottom: -$card-spacer-y;
-  margin-left: -$card-spacer-x / 2;
+  margin-left: calc(-1 * $card-spacer-x / 2);
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -$card-spacer-x / 2;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: calc(-1 * $card-spacer-x / 2);
+  margin-left: calc(-1 * $card-spacer-x / 2);
 }
 
 // Card image
@@ -142,7 +145,6 @@
   @include border-bottom-radius($card-inner-border-radius);
 }
 
-
 // Card deck
 
 .card-deck {
@@ -165,7 +167,6 @@
     }
   }
 }
-
 
 //
 // Card groups
@@ -229,7 +230,6 @@
   }
 }
 
-
 //
 // Columns
 //
@@ -251,7 +251,6 @@
     }
   }
 }
-
 
 //
 // Accordion

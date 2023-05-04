@@ -3,7 +3,6 @@
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and stuff
 
-
 .modal-open {
   // Kill the scroll on the body
   overflow: hidden;
@@ -131,8 +130,12 @@
   background-color: $modal-backdrop-bg;
 
   // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.show { opacity: $modal-backdrop-opacity; }
+  &.fade {
+    opacity: 0;
+  }
+  &.show {
+    opacity: $modal-backdrop-opacity;
+  }
 }
 
 // Modal header
@@ -148,7 +151,8 @@
   .close {
     padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+    margin: (-$modal-header-padding-y) (-$modal-header-padding-x)
+      (-$modal-header-padding-y) auto;
   }
 }
 
@@ -174,7 +178,7 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding - $modal-footer-margin-between / 2;
+  padding: $modal-inner-padding - calc($modal-footer-margin-between / 2);
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
   @include border-bottom-radius($modal-content-inner-border-radius);
 
@@ -183,7 +187,7 @@
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
   // stylelint-disable-next-line selector-max-universal
   > * {
-    margin: $modal-footer-margin-between / 2;
+    margin: calc($modal-footer-margin-between / 2);
   }
 }
 
@@ -224,7 +228,9 @@
     @include box-shadow($modal-content-box-shadow-sm-up);
   }
 
-  .modal-sm { max-width: $modal-sm; }
+  .modal-sm {
+    max-width: $modal-sm;
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -235,5 +241,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
+  .modal-xl {
+    max-width: $modal-xl;
+  }
 }
