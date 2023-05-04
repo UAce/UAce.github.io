@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.8.6"
+gem "jekyll", "~> 3.8.7"
 gem "json"
 gem "hash-joiner"
 gem "html-proofer"
@@ -9,7 +9,7 @@ gem "mini_magick"
 gem "bootstrap", "~> 4.4.1"
 gem "concurrent-ruby", "~> 1.1.6"
 gem "execjs", "~> 2.7.0"
-gem "bundler", "~> 2.2.16"
+gem "bundler", "~> 2.3.5"
 
 group :jekyll_plugins do
   gem "jekyll-sitemap"
