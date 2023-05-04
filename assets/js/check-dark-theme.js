@@ -1,0 +1,1 @@
+const theme=localStorage.getItem("theme");"dark"===theme&&document.documentElement.setAttribute("data-theme","dark");

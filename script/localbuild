@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+JEKYLL_ENV=development bundle exec jekyll build --destination _site
+[ ! -f ./_site/.nojekyll ] && touch ./_site/.nojekyll
+bundle exec htmlproofer --check-html \
+        --internal-domains localhost:4000 \
+        --assume-extension \
+        --disable-external \
+        _site
