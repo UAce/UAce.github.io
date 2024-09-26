@@ -11,11 +11,11 @@
   list:
     - C
     - Java
-    - SQL
+    - SQL (PostgreSQL)
     - HTML5 & CSS3/SASS
     - "Full Stack Development: AngularJS - Flask - Jinja2, ReactJS - NodeJS"
     - Native Android Development
-    - "CI/CD: GitLab, Jenkins, TravisCI"
-    - "Infrastructure as Code: Ansible, Terraform"
-    - "Cloud Platform: Ormuco IaaS, AWS"
+    - "CI/CD: GiHub Actions, GitLab, Jenkins, TravisCI"
+    - "Infrastructure as Code: Terraform, Ansible"
+    - "Cloud Platform: Ormuco IaaS, AWS, GCP"
     - OpenStack
