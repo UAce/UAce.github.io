@@ -1,16 +1,16 @@
 - name: Receipt Keeper (On-Hold)
   description: |
-    Receipt Keeper is a mobile app that allows to store receipts.<br>
+    Receipt Keeper is a mobile app that allows to store receipts.
     <br><br> <b>Tools used</b>: Flutter, C# .NET, PostgreSQL
     <br> <b><a class="" href="https://github.com/UAce/receipt-keeper" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/receipt_keeper.jpg
       alt: Sign Up
-      style: "width: 100%; max-width: 400px;"
+      style: "width: 100%; max-width: 300px;"
 
 - name: Komeet (On-Hold)
   description: |
-    Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.<br>
+    Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.
     <br><br> <b>Tools used</b>: ReactJS, Ant Design, NodeJS, ExpressJS, TypeScript, MongoDB
     <br> <b><a class="" href="https://github.com/UAce/Komeet-Frontend" target="_blank">View Frontend Project on GitHub</a></b>, <b><a class="" href="https://github.com/UAce/Komeet-Backend" target="_blank">View Backend Project on GitHub</a></b>
   # You can access it via <a class="text accent" href="https://komeet.dev" target="_blank">komeet.dev</a>.
