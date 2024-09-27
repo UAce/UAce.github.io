@@ -1,4 +1,4 @@
-- name: Receipt Keeper (On-Hold)
+- name: Receipt Keeper (Incomplete)
   description: |
     Receipt Keeper is a mobile app that allows to store receipts.
     <br><br> <b>Tools used</b>: Flutter, C# .NET, PostgreSQL
@@ -8,7 +8,7 @@
       alt: Sign Up
       style: "width: 100%; max-width: 300px;"
 
-- name: Komeet (On-Hold)
+- name: Komeet (Incomplete)
   description: |
     Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.
     <br><br> <b>Tools used</b>: ReactJS, Ant Design, NodeJS, ExpressJS, TypeScript, MongoDB

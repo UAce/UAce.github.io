@@ -5,17 +5,16 @@
     - Bash
     - Kubernetes
     - Docker
-    - GIT Version Control
-    - Windows & Linux
+    - REST / GraphQL
+    - Git Version Control
 - name: Experience with
   list:
-    - C
+    - C/C#
     - Java
     - SQL (PostgreSQL)
     - HTML5 & CSS3/SASS
-    - "Full Stack Development: AngularJS - Flask - Jinja2, ReactJS - NodeJS"
+    - "Full Stack Development: AngularJS - Flask, React - NodeJS"
     - Native Android Development
-    - "CI/CD: GiHub Actions, GitLab, Jenkins, TravisCI"
+    - "CI/CD: GiHub Actions, GitLab, Jenkins"
     - "Infrastructure as Code: Terraform, Ansible"
-    - "Cloud Platform: Ormuco IaaS, AWS, GCP"
-    - OpenStack
+    - "Cloud Platform: GCP, AWS, OpenStack"
