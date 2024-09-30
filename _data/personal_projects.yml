@@ -6,8 +6,13 @@
   images:
     - path: assets/images/demo/receipt_keeper_get_started.jpg
       alt: Get Started
-    - path: assets/images/demo/receipt_keeper.jpg
+      style: "width: 100%; max-width: 250px;"
+    - path: assets/images/demo/receipt_keeper_sign_up.jpg
       alt: Sign Up
+      style: "width: 100%; max-width: 250px;"
+    - path: assets/images/demo/receipt_keeper_sign_in.png
+      alt: Sign In
+      style: "width: 100%; max-width: 250px;"
 
 - name: Komeet (Incomplete)
   description: |
