@@ -4,6 +4,9 @@
     <br><br> <b>Tools used</b>: Flutter, C# .NET, PostgreSQL
     <br> <b><a class="" href="https://github.com/UAce/receipt-keeper" target="_blank">View Project on GitHub</a></b>
   images:
+    - path: assets/images/demo/receipt_keeper_get_started.jpg
+      alt: Get Started
+      style: "width: 100%; max-width: 300px;"
     - path: assets/images/demo/receipt_keeper.jpg
       alt: Sign Up
       style: "width: 100%; max-width: 300px;"
