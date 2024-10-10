@@ -1,7 +1,19 @@
+- name: Finni Health Patient Dashboard
+  description: |
+    This is a take-home project I built for an interview, designed to help healthcare providers efficiently manage patient information. The app allows providers to easily list, view, edit, add, and delete patient profiles, streamlining patient management and enhancing care delivery.
+    <br><br> <b>Built with</b>: Firebase Authentication, React (TypeScript), RTK-Query, Material-UI, Express (TypeScript), MongoDB
+    <br> <b><a class="" href="https://github.com/UAce/FinniHealthTakehome" target="_blank">View Project on GitHub</a></b>
+    <br>
+    <br>
+    <video width="500" controls style="border-radius: 8px">
+      <source src="https://private-user-images.githubusercontent.com/19378441/374827070-f0e7ee17-aabd-435f-94ff-73a4aca71495.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjg1MzIzMTIsIm5iZiI6MTcyODUzMjAxMiwicGF0aCI6Ii8xOTM3ODQ0MS8zNzQ4MjcwNzAtZjBlN2VlMTctYWFiZC00MzVmLTk0ZmYtNzNhNGFjYTcxNDk1Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMTAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDEwVDAzNDY1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk3YWM4NjNhMDMxODM4NmRmNDMxOTBjYmI5MmQ3ZDRjY2U3YzgwMWQyNDJjMzVkZGJmYzFmNWJlNGZiZWJmNzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.6NFdP9KMfi045IkP1-qAvC_XTJdLilFALZSFpv4_EfY" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
 - name: Receipt Keeper (Incomplete)
   description: |
-    Receipt Keeper is a mobile app that allows to store receipts.
-    <br><br> <b>Tools used</b>: Flutter, C# .NET, PostgreSQL
+    Receipt Keeper is a mobile app that allows to manage receipts.
+    <br><br> <b>Built with</b>: Firebase Authentication, Flutter (Dart), C# .NET, PostgreSQL
     <br> <b><a class="" href="https://github.com/UAce/receipt-keeper" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/receipt_keeper_get_started.jpg
@@ -17,7 +29,7 @@
 - name: Komeet (Incomplete)
   description: |
     Komeet is Web app that allows you to organize events with friends. In other words, a modern version of when2meet.
-    <br><br> <b>Tools used</b>: ReactJS, Ant Design, NodeJS, ExpressJS, TypeScript, MongoDB
+    <br><br> <b>Built with</b>: React (TypeScript), Ant Design, Express (TypeScript), MongoDB
     <br> <b><a class="" href="https://github.com/UAce/Komeet-Frontend" target="_blank">View Frontend Project on GitHub</a></b>, <b><a class="" href="https://github.com/UAce/Komeet-Backend" target="_blank">View Backend Project on GitHub</a></b>
   # You can access it via <a class="text accent" href="https://komeet.dev" target="_blank">komeet.dev</a>.
   images:
@@ -31,7 +43,7 @@
     the user via email or sms when the watcher condition is met. It's useful for tracking
     lists or values on the internet, e.g. New items, Price changes, etc.
 
-    <br><br> <b>Tools used</b>: Python3, Selenium WebDriver, Beautiful Soup 4, Twilio Email/SMS API, Tox
+    <br><br> <b>Built with</b>: Python3, Selenium WebDriver, Beautiful Soup 4, Twilio Email/SMS API, Tox
     <br> <b><a class="" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View Project on GitHub</a></b>
   images:
 
@@ -46,7 +58,7 @@
         href="https://chrome.google.com/webstore/detail/youtubestopwatch/ibaejmohdpnppkglomilmholhndaobag"
         target="_blank">Download Extension</a>
     </span><br>
-     <br><b>Tools used</b>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
+     <br><b>Built with</b>: HTML5, CSS3, Javascript, JQuery, Chrome APIs, Chart.js
      <br> <b><a class="" href="https://github.com/UAce/YouTubeStopwatch" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/ytsw_modal.png
@@ -59,7 +71,7 @@
     Native android mobile game where the player's only task is to eliminate monsters (shamelessly stolen) from MapleStory. 
     As they level up, players will acquire new skills, unlock new maps and encounter new monsters. If the player is lucky,
     they will encounter a boss. This was initially made as a joke but it turned out to be quite fun and a good experience.
-    <br><br> <b>Tools used</b>: Android Studio, Java, GSON
+    <br><br> <b>Built with</b>: Android Studio, Java, GSON
     <br> <b><a class="" href="https://github.com/UAce/MobSlayer" target="_blank">View Project on GitHub</a></b>
   images:
     - path: assets/images/demo/menu.png
@@ -74,6 +86,6 @@
 #   description: |
 #     A CLI tool for Secure GGGolf that uses web scraping to allow user to find available time slots
 #     and make golf course reservations for wanted time slots. This was a summer project.
-#     <br><br> <b>Tools used</b>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
+#     <br><br> <b>Built with</b>: Python, Docopt, Requests HTTP Library, Beautiful Soup Library
 #     <br> <b><a class="" href="https://github.com/UAce/WebsiteWatcher" target="_blank">View Project on GitHub</a></b>
 #   images:

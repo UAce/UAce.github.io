@@ -1,6 +1,6 @@
 - name: Comfortable with
   list:
-    - JavaScript/TypeScript
+    - JavaScript / TypeScript
     - Python
     - Bash
     - Kubernetes
@@ -9,9 +9,10 @@
     - Git Version Control
 - name: Experience with
   list:
-    - C/C#
+    - C / C#
     - Java
-    - SQL (PostgreSQL)
+    - SQL (PostgreSQL) / noSQL (MongoDB)
+    - Auth0 / Firebase Authentication
     - HTML5 & CSS3/SASS
     - "Full Stack Development: AngularJS - Flask, ReactJS - NodeJS"
     - Native Android Development
