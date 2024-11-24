@@ -5,3 +5,19 @@
 .home-section {
   padding-bottom: 2rem;
 }
+
+.activities {
+  a {
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted var(--highlight-hover-color); //
+    color: var(--highlight-color); //
+    font-weight: 500;
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: var(--highlight-hover-color); //
+      border-bottom: 1px solid var(--highlight-hover-color); //
+      cursor: pointer;
+    }
+  }
+}

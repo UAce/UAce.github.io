@@ -19,7 +19,7 @@ html[data-theme="light"] {
   // navbar
   --navbar-background-color: hsl(0, 5%, 100%);
   --navbar-background-hover-color: hsl(0, 0%, 92%);
-  --navbar-box-shadow-color: rgba(0, 0, 0, 0.5);
+  --navbar-box-shadow-color: rgba(0, 0, 0, 0.4);
 
   // tag
   --tag-background-color: #d8e8f5;
@@ -42,7 +42,7 @@ html[data-theme="light"] {
 
   // Shade
   --shade-background-color: #fafafa;
-  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --box-shadow-color: rgba(0, 0, 0, 0.11);
 
   // Table
   --table-box-shadow-color: rgba(0, 0, 0, 0.2);
@@ -71,7 +71,7 @@ html[data-theme="dark"] {
   // navbar
   --navbar-background-color: hsl(0, 0%, 11%);
   --navbar-background-hover-color: hsl(0, 0%, 0%);
-  --navbar-box-shadow-color: rgba(255, 255, 255, 0.05);
+  --navbar-box-shadow-color: rgba(0, 0, 0, 0.6);
 
   // tag
   --tag-background-color: #004478;
@@ -94,7 +94,7 @@ html[data-theme="dark"] {
 
   // Shade
   --shade-background-color: #292929;
-  --box-shadow-color: rgba(80, 80, 80, 0.5);
+  --box-shadow-color: rgba(110, 110, 110, 0.15);
 
   // Table
   --table-box-shadow-color: rgba(97, 97, 97, 0.05);

@@ -7,23 +7,31 @@ title: Home
 {% assign id = 1 %}
 {% include canvas.html %}
 <div class="home">
-    <div class="row mx-auto add-padding-top-large add-padding-bottom-large">
-        <div class="col-md-4 offset-md-3 align-self-center intro-text text_right">
+    <div class="container row mx-auto add-padding-top-large add-padding-bottom-large" style="gap: 15px; justify-content: space-evenly">
+        <div class="align-self-center intro-text text_right" style="max-width: 500px;">
             <h1 class="add-padding-small">Hi, I'm Yueh 🐢</h1>
-            <p>
-                I'm a full-stack developer with a heavy focus on backend and some DevOps experience. This is my personal website/blog that started as a summer project in 2020 to practice HTML and CSS.
-            </p>
+            <div style="padding: 16px; border-radius: 12px; background: var(--shade-background-color)">
+                <p>
+                    I started this website as a summer project in 2020 to practice HTML and CSS.
+                </p>
+                <p>
+                    Over time, it evolved into a space where I showcase my projects and professional experience—like an interactive resume.
+                </p>
+                <span>
+                    Thanks for stopping by!
+                </span>
+            </div>
         </div>
-        <div class="col-md-3 align-self-center">
+        <div class="align-self-center" style="max-width:350px">
             {% image yueh.png alt="Me" class="avatar img-fluid img-thumbnail" %}
         </div>
     </div>
     <div class="container add-padding-top-large add-padding-bottom-large">
-        <div class="home-section">
+        <div class="home-section activities">
             <h1 class="add-padding-small">Recent Activities</h1>
             <hr>
             <p>
-                Backend development in NodeJS with TypeScript and a bit of frontend development in ReactJS. I'm interested in learning more about mobile development. I recently tried making a small project with Flutter.
+                I just started a new position as a Senior Software Developer at <a href="https://www.finnihealth.com/" target="_blank">Finni Health</a>!!
             </p>
         </div>
         <div class="home-section">
@@ -33,11 +41,11 @@ title: Home
                 <div class="container add-margin-top-normal add-margin-bottom-large">
                     <div class="list-group">
                         {% for post in site.posts limit: 2 %}
-                        <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action">
-                            <span class="article-date col-2">
+                        <a href="{{ post.url }}" class="row article-item list-group-item list-group-item-action" style="display: flex">
+                            <span class="article-date col-2" style="align-self: center;">
                                 {{ post.date | date: "%b %d, %Y" }}
                             </span>
-                            <span class="article-title col-8">{{ post.title }}</span>
+                            <span class="article-title col-8" style="align-self: center;">{{ post.title }}</span>
                             <span class="article-label {{ post.label }} col-1">{{ post.label | capitalize }}</span>
                         </a>
                         {% endfor %}
