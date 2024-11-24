@@ -1,42 +1,54 @@
+- title: Senior Full-stack Developer
+  companyLegalName: Journey Health Technologies U.S. Inc.
+  companyName: Finni Health
+  image: assets/images/company/finni-health-logo.jpeg
+  url: https://www.finnihealth.com/
+  period: November 2024 – Present
+
 - title: Backend Developer
-  company: Mercantile Financial Technologies Inc.
-  image: company/mercantile-logo.png
+  companyLegalName: Mercantile Financial Technologies Inc.
+  companyName: Mercantile
+  image: assets/images/company/mercantile-logo.jpeg
   url: https://www.getmercantile.com/
-  location: Montreal, CA
-  period: July 2021 – Present
+  period: July 2021 – November 2024
   description: Architected and built the identity decisioning module during the minimal viable product (MVP) development. Work closely with other departments (credit, compliance and finance) to integrate third-party services for identity decisioning, check issuing, credit reporting, and accounting. Actively participated in design meetings and develop new features. Full-stack development on the internal admin dashboard.
-- title: Full Stack Developer
-  company: Ormuco Inc.
-  image: company/ormuco-logo.png
+
+- title: Full-stack Developer
+  companyLegalName: Ormuco Inc.
+  companyName: Ormuco
+  image: assets/images/company/ormuco-logo.jpeg
   url: https://ormuco.com/
-  location: Montreal, CA
   period: January 2020 – July 2021
   description: Designed and built backend microservices in NodeJS with TypeScript for a virtual operating system and integrated them with Cloud services. Developed frontend features in ReactJS and managed production-ready Kubernetes clusters. Created CI/CD pipelines in GitLab for all microservices.
-- title: Full Stack Developer Intern
-  company: Ormuco Inc.
-  image: company/ormuco-logo.png
+
+- title: Full-stack Developer Intern
+  companyLegalName: Ormuco Inc.
+  companyName: Ormuco
+  image: assets/images/company/ormuco-logo.jpeg
   url: https://ormuco.com/
-  location: Montreal, CA
   period: February 2019 – December 2019
   description: Worked in a fast-paced environment with passionate developers to develop and maintain Ormuco's IaaS (Infrastructure as a Service) platform. Enhanced my JavaScript skills and learned AngularJS, Flask, Jinja2 and SASS through this experience. Worked to improve the Ormuco IaaS platform UI, to improve existing features and to add new features to the platform such as Workflow as a Service (OpenStack Mistral). Worked largely with OpenStack products and performed QA/UAT testing.
+
 - title: System Administrator DevOps Intern
-  company: Broadsign International Inc.
-  image: company/broadsign-logo.png
+  companyLegalName: Broadsign International Inc.
+  companyName: Broadsign
+  image: assets/images/company/broadsign-logo.jpeg
   url: https://broadsign.com/
-  location: Montreal, CA
   period: September 2018 – April 2019
   description: Investigated different logs aggregation/processing tools and created a proof of concept for centralized logging management solution using AWS CloudWatch. Implemented functionality to dynamically create CloudWatch agent configuration files per environment and projects using ERB templates and Chef. Wrote Terraform and Cloudformation scripts to provision AWS resources.
+
 - title: Software Developer DevOps Intern
-  company: Ericsson Canada Inc.
-  image: company/ericsson-logo.png
+  companyLegalName: Ericsson Canada Inc.
+  companyName: Ericsson Canada
+  image: assets/images/company/ericsson-logo.jpeg
   url: https://www.ericsson.ca/en
-  location: Montreal, CA
   period: January 2018 – April 2018
   description: Provisioned virtual machines in staging environment with Ansible. Created and set up Docker containers for functional tests. Wrote Jenkins 2 declarative pipeline scripts (groovy) to automate builds and deployments. Wrote bash scripts to automate the generation of daily reports for the overnight load test results and publish them on Discousrse via their API.
+
 - title: Software Engineering Intern
-  company: Bombardier Transportation Canada Inc.
-  image: company/bombardier-transportation-logo.png
-  url: https://www.bombardier.com/en/transportation.html
-  location: Montreal, CA
+  companyLegalName: Bombardier Transportation Canada Inc.
+  companyName: Bombardier Transportation
+  image: assets/images/company/bombardier-logo.jpeg
+  url: https://www.bombardier.com/
   period: May 2017 – August 2017
   description: Worked with a group of interns using Scrum methodology to develop a CLI tool in Python to automate the deployment of train softwares and operating systems in AZUR metros. Created a Grafana dashboard to show metrics for team productivity. The data was obtained from JIRA via REST API and stored in MariaDB.

@@ -1,14 +1,14 @@
 - name: Finni Health Patient Dashboard
   description: |
     This is a take-home project I built for an interview, designed to help healthcare providers efficiently manage patient information. The app allows providers to easily list, view, edit, add, and delete patient profiles, streamlining patient management and enhancing care delivery.
-    <br><br> <b>Built with</b>: Firebase Authentication, React (TypeScript), RTK-Query, Material-UI, Express (TypeScript), MongoDB
-    <br> <b><a class="" href="https://github.com/UAce/FinniHealthTakehome" target="_blank">View Project on GitHub</a></b>
+    <br><br> <b>Built with</b>: Firebase Authentication, React (TypeScript), RTK-Query, Material UI v5, Express (TypeScript), MongoDB
     <br>
     <br>
     <video width="500" controls style="border-radius: 8px">
       <source src="https://storage.googleapis.com/public-storage.yueh.dev/github/finni-health-demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
+  #  <br> <b><a class="" href="https://github.com/UAce/FinniHealthTakehome" target="_blank">View Project on GitHub</a></b>
 
 - name: Receipt Keeper (Incomplete)
   description: |

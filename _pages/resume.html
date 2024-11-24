@@ -33,13 +33,20 @@ permalink: /resume
         <div class="col-md-7 add-margin-left-small">
             {% for item in site.data.work_experiences %}
             <div class="{% if forloop.last %}{% else %} add-margin-bottom-large {% endif %}">
-                <h2 class="subtitle">{{ item.title }}</h2>
-                <span class="company">
-                    <a href="{{ item.url }}" target="_blank">
-                        {{ item.company }}
-                    </a>
-                    , {{ item.location }}, {{ item.period }}
-                </span>
+                <div class="job-header-container">
+                    <div class="job-header-logo">
+                        <img src="{{ item.image }}" height="60" style="padding-right: 4px; align-self: center;"/>
+                    </div>
+                    <div class="job-header-description">
+                        <h2 class="subtitle">{{ item.title }}</h2>
+                        <span class="company">
+                            <a href="{{ item.url }}" target="_blank" title="{{ item.companyLegalName }}">
+                                {{ item.companyName }}
+                            </a>
+                        </span>
+                        <span class="job-header-period">{{ item.period }}</span>
+                    </div>
+                </div>
                 <p class="description text-left">
                     {{ item.description }}
                 </p>

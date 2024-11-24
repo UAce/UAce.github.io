@@ -23,6 +23,7 @@
       li:before {
         @include dot;
         color: var(--main-text-color);
+        margin-right: 0.3rem;
       }
     }
   }

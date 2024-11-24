@@ -16,10 +16,12 @@ permalink: /about
     </div>
     <div class="about-section row shade add-padding-normal">
         <div class="col-md-5 offset-md-2 align-self-center transition hidden-right text_left" data-threshold="0">
-            <h2 class="add-padding-bottom-medium">About Me:</h2>
+            <h2 class="add-padding-bottom-medium">More About Me:</h2>
             <ul>
                 {% for item in site.data.about %}
-                <li>{{ item }}</li>
+                <li>
+                    <strong>{{ item.title }}</strong>: {{item.description}}
+                </li>
                 {% endfor %}
             </ul>
         </div>

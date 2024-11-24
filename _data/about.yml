@@ -1,9 +1,23 @@
-- I dance 🕺
-- I play violin 🎻
-- I have a cat 😸
-- I speak 4 languages 💬
-- I love rice 🍚
-- I love making puns 🤣
-- I love the color red 🟥
-- I am an anime connoisseur 🧐
-- I am a local guide on Google Maps 🍽
+- title: 🕺 K-pop dancer
+  description: I used to do dance covers
+
+- title: 🎻 Violonist
+  description: I've been playing violin since I was 8
+
+- title: 😸 Cat lover
+  description: I'm the proud owner of a very cute cat
+
+- title: 💬 Polyglot
+  description: I can speak four languages
+
+- title: 🍚 Rice is life
+  description: I just can't live without rice
+
+- title: 🤣 Pun Master
+  description: I can never resist a good pun
+
+- title: 🟥 Colour Red
+  description: This colour speaks to my soul
+
+- title: 🎬 Anime Enthusiast
+  description: I am something of a connoisseur
