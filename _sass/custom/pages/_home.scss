@@ -6,6 +6,15 @@
   padding-bottom: 2rem;
 }
 
+.home-description {
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--shade-background-color);
+  box-shadow: 0 1px 1px var(--box-shadow-color),
+    0 2px 2px var(--box-shadow-color), 0 4px 4px var(--box-shadow-color),
+    0 8px 8px var(--box-shadow-color), 0 16px 16px var(--box-shadow-color);
+}
+
 .activities {
   a {
     transition: color 0.3s ease;

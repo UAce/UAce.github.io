@@ -6,11 +6,11 @@ title: Home
 {% assign tag = 'home' %}
 {% assign id = 1 %}
 {% include canvas.html %}
-<div class="home">
-    <div class="container row mx-auto add-padding-top-large add-padding-bottom-large" style="gap: 15px; justify-content: space-evenly">
+<div class="home container">
+    <div class="container row mx-auto add-padding-top-large add-padding-bottom-large" style="gap: 20px; justify-content: space-evenly">
         <div class="align-self-center intro-text text_right" style="max-width: 500px;">
             <h1 class="add-padding-small">Hi, I'm Yueh 🐢</h1>
-            <div style="padding: 16px; border-radius: 12px; background: var(--shade-background-color)">
+            <div class="home-description">
                 <p>
                     I started this website as a summer project in 2020 to practice HTML and CSS.
                 </p>
@@ -22,7 +22,7 @@ title: Home
                 </span>
             </div>
         </div>
-        <div class="align-self-center" style="max-width:350px">
+        <div class="align-self-center" style="max-width:300px;">
             {% image yueh.png alt="Me" class="avatar img-fluid img-thumbnail" %}
         </div>
     </div>
