@@ -1,11 +1,12 @@
-- title: Senior Fullstack Developer
+- title: Senior Software Developer
   companyLegalName: Journey Health Technologies U.S. Inc.
   companyName: Finni Health
   image: assets/images/company/finni-health-logo.jpeg
   url: https://www.finnihealth.com/
   period: November 2024 – Present
+  description: Built and released the company’s first mobile app on iOS and Android using React Native. Improved backend stability by reducing technical debt and adding better error handling and logging. Ship new features and bug fixes regularly across the stack (web, mobile, backend). Collaborate with design and product to plan features, scope projects, and drive delivery end to end.
 
-- title: Backend Developer
+- title: Software Developer
   companyLegalName: Mercantile Financial Technologies Inc.
   companyName: Mercantile
   image: assets/images/company/mercantile-logo.jpeg
@@ -13,7 +14,7 @@
   period: July 2021 – November 2024
   description: Architected and built the identity decisioning module during the minimal viable product (MVP) development. Work closely with other departments (credit, compliance and finance) to integrate third-party services for identity decisioning, check issuing, credit reporting, and accounting. Actively participated in design meetings and develop new features. Fullstack development on the internal admin dashboard.
 
-- title: Fullstack Developer
+- title: Software Developer
   companyLegalName: Ormuco Inc.
   companyName: Ormuco
   image: assets/images/company/ormuco-logo.jpeg
@@ -21,7 +22,7 @@
   period: January 2020 – July 2021
   description: Designed and built backend microservices in NodeJS with TypeScript for a virtual operating system and integrated them with Cloud services. Developed frontend features in ReactJS and managed production-ready Kubernetes clusters. Created CI/CD pipelines in GitLab for all microservices.
 
-- title: Fullstack Developer Intern
+- title: Software Developer Intern
   companyLegalName: Ormuco Inc.
   companyName: Ormuco
   image: assets/images/company/ormuco-logo.jpeg
@@ -43,7 +44,7 @@
   image: assets/images/company/ericsson-logo.jpeg
   url: https://www.ericsson.ca/en
   period: January 2018 – April 2018
-  description: Provisioned virtual machines in staging environment with Ansible. Created and set up Docker containers for functional tests. Wrote Jenkins 2 declarative pipeline scripts (groovy) to automate builds and deployments. Wrote bash scripts to automate the generation of daily reports for the overnight load test results and publish them on Discousrse via their API.
+  description: Provisioned virtual machines in staging environment with Ansible. Created and set up Docker containers for functional tests. Wrote Jenkins 2 declarative pipeline scripts (groovy) to automate builds and deployments. Wrote bash scripts to automate the generation of daily reports for the overnight load test results and publish them on Discourse via their API.
 
 - title: Software Engineering Intern
   companyLegalName: Bombardier Transportation Canada Inc.
