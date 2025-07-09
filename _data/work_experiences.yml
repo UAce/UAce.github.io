@@ -4,7 +4,7 @@
   image: assets/images/company/finni-health-logo.jpeg
   url: https://www.finnihealth.com/
   period: November 2024 – Present
-  description: Built and released the company’s first mobile app on iOS and Android using React Native. Improved backend stability by reducing technical debt and adding better error handling and logging. Ship new features and bug fixes regularly across the stack (web, mobile, backend). Collaborate with design and product to plan features, scope projects, and drive delivery end to end.
+  description: Built and released the company’s first mobile app on iOS and Android using React Native. Improved backend stability by reducing technical debt and standardizing error handling and logging. Ship new features and bug fixes regularly across the stack (web, mobile, backend). Collaborate with design and product to plan features, scope projects, and drive delivery end to end.
 
 - title: Software Developer
   companyLegalName: Mercantile Financial Technologies Inc.
